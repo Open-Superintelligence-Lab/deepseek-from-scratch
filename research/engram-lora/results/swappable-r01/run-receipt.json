@@ -1,0 +1,26 @@
+{
+  "protocol_sha256": "715a453220a2edef9e07a3e84509c6f3986d9a1baa60fe1c0ca0cec1c0119e4d",
+  "script_sha256": "51523547b889e3fdcca7e57a694ad8511f2df7db50c7034875b57b7f43fec52d",
+  "started_unix": 1789993465.6897986,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "methods": [
+    "lora8",
+    "engram-small",
+    "lora32",
+    "engram-large"
+  ],
+  "learning_rates": [
+    0.0003,
+    0.001
+  ],
+  "training_blocks_per_domain": 512,
+  "epochs": 2,
+  "effective_batch": 8,
+  "microbatch": 1,
+  "context": 128,
+  "gpu_contended": true
+}

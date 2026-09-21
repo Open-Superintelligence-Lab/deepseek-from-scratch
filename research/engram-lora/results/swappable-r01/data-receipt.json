@@ -1,0 +1,4444 @@
+{
+  "finance": {
+    "sources": [
+      {
+        "file": "fiqa/corpus/corpus-00000-of-00001.parquet",
+        "sha256": "b36bb07dab3bfad488190818828e749a52faf5ba391c1d51dac8b06064576f99"
+      }
+    ],
+    "raw_documents": 57638,
+    "duplicate_or_empty": 40,
+    "split_available": {
+      "train": 45925,
+      "validation": 5643,
+      "test": 6030
+    },
+    "selected": {
+      "train": {
+        "documents": [
+          {
+            "id": "196156",
+            "repository": null
+          },
+          {
+            "id": "120321",
+            "repository": null
+          },
+          {
+            "id": "301242",
+            "repository": null
+          },
+          {
+            "id": "53278",
+            "repository": null
+          },
+          {
+            "id": "232211",
+            "repository": null
+          },
+          {
+            "id": "455168",
+            "repository": null
+          },
+          {
+            "id": "559538",
+            "repository": null
+          },
+          {
+            "id": "391825",
+            "repository": null
+          },
+          {
+            "id": "526334",
+            "repository": null
+          },
+          {
+            "id": "886",
+            "repository": null
+          },
+          {
+            "id": "445722",
+            "repository": null
+          },
+          {
+            "id": "81016",
+            "repository": null
+          },
+          {
+            "id": "316535",
+            "repository": null
+          },
+          {
+            "id": "294386",
+            "repository": null
+          },
+          {
+            "id": "285177",
+            "repository": null
+          },
+          {
+            "id": "369359",
+            "repository": null
+          },
+          {
+            "id": "475736",
+            "repository": null
+          },
+          {
+            "id": "306363",
+            "repository": null
+          },
+          {
+            "id": "497701",
+            "repository": null
+          },
+          {
+            "id": "349611",
+            "repository": null
+          },
+          {
+            "id": "212851",
+            "repository": null
+          },
+          {
+            "id": "168667",
+            "repository": null
+          },
+          {
+            "id": "491064",
+            "repository": null
+          },
+          {
+            "id": "120438",
+            "repository": null
+          },
+          {
+            "id": "132091",
+            "repository": null
+          },
+          {
+            "id": "474184",
+            "repository": null
+          },
+          {
+            "id": "271023",
+            "repository": null
+          },
+          {
+            "id": "213938",
+            "repository": null
+          },
+          {
+            "id": "281919",
+            "repository": null
+          },
+          {
+            "id": "364873",
+            "repository": null
+          },
+          {
+            "id": "440469",
+            "repository": null
+          },
+          {
+            "id": "347696",
+            "repository": null
+          },
+          {
+            "id": "276633",
+            "repository": null
+          },
+          {
+            "id": "169373",
+            "repository": null
+          },
+          {
+            "id": "269410",
+            "repository": null
+          },
+          {
+            "id": "511510",
+            "repository": null
+          },
+          {
+            "id": "507604",
+            "repository": null
+          },
+          {
+            "id": "178748",
+            "repository": null
+          },
+          {
+            "id": "146277",
+            "repository": null
+          },
+          {
+            "id": "257122",
+            "repository": null
+          },
+          {
+            "id": "64030",
+            "repository": null
+          },
+          {
+            "id": "544381",
+            "repository": null
+          },
+          {
+            "id": "565614",
+            "repository": null
+          },
+          {
+            "id": "562137",
+            "repository": null
+          },
+          {
+            "id": "172168",
+            "repository": null
+          },
+          {
+            "id": "554588",
+            "repository": null
+          },
+          {
+            "id": "119448",
+            "repository": null
+          },
+          {
+            "id": "587514",
+            "repository": null
+          },
+          {
+            "id": "153097",
+            "repository": null
+          },
+          {
+            "id": "154154",
+            "repository": null
+          },
+          {
+            "id": "421618",
+            "repository": null
+          },
+          {
+            "id": "208128",
+            "repository": null
+          },
+          {
+            "id": "317752",
+            "repository": null
+          },
+          {
+            "id": "185300",
+            "repository": null
+          },
+          {
+            "id": "460146",
+            "repository": null
+          },
+          {
+            "id": "599092",
+            "repository": null
+          },
+          {
+            "id": "436622",
+            "repository": null
+          },
+          {
+            "id": "593055",
+            "repository": null
+          },
+          {
+            "id": "410223",
+            "repository": null
+          },
+          {
+            "id": "72088",
+            "repository": null
+          },
+          {
+            "id": "524511",
+            "repository": null
+          },
+          {
+            "id": "562511",
+            "repository": null
+          },
+          {
+            "id": "134213",
+            "repository": null
+          },
+          {
+            "id": "150170",
+            "repository": null
+          },
+          {
+            "id": "351088",
+            "repository": null
+          },
+          {
+            "id": "574583",
+            "repository": null
+          },
+          {
+            "id": "481241",
+            "repository": null
+          },
+          {
+            "id": "436119",
+            "repository": null
+          },
+          {
+            "id": "342113",
+            "repository": null
+          },
+          {
+            "id": "536212",
+            "repository": null
+          },
+          {
+            "id": "482095",
+            "repository": null
+          },
+          {
+            "id": "3525",
+            "repository": null
+          },
+          {
+            "id": "4091",
+            "repository": null
+          },
+          {
+            "id": "283490",
+            "repository": null
+          },
+          {
+            "id": "308006",
+            "repository": null
+          },
+          {
+            "id": "597674",
+            "repository": null
+          },
+          {
+            "id": "384903",
+            "repository": null
+          },
+          {
+            "id": "161062",
+            "repository": null
+          },
+          {
+            "id": "81416",
+            "repository": null
+          },
+          {
+            "id": "535388",
+            "repository": null
+          },
+          {
+            "id": "368649",
+            "repository": null
+          },
+          {
+            "id": "513322",
+            "repository": null
+          },
+          {
+            "id": "141983",
+            "repository": null
+          },
+          {
+            "id": "478291",
+            "repository": null
+          },
+          {
+            "id": "381112",
+            "repository": null
+          },
+          {
+            "id": "285255",
+            "repository": null
+          },
+          {
+            "id": "548619",
+            "repository": null
+          },
+          {
+            "id": "477300",
+            "repository": null
+          },
+          {
+            "id": "122329",
+            "repository": null
+          },
+          {
+            "id": "57402",
+            "repository": null
+          },
+          {
+            "id": "401368",
+            "repository": null
+          },
+          {
+            "id": "556549",
+            "repository": null
+          },
+          {
+            "id": "368806",
+            "repository": null
+          },
+          {
+            "id": "401272",
+            "repository": null
+          },
+          {
+            "id": "116474",
+            "repository": null
+          },
+          {
+            "id": "30159",
+            "repository": null
+          },
+          {
+            "id": "56483",
+            "repository": null
+          },
+          {
+            "id": "104448",
+            "repository": null
+          },
+          {
+            "id": "589601",
+            "repository": null
+          },
+          {
+            "id": "431568",
+            "repository": null
+          },
+          {
+            "id": "425228",
+            "repository": null
+          },
+          {
+            "id": "425902",
+            "repository": null
+          },
+          {
+            "id": "510935",
+            "repository": null
+          },
+          {
+            "id": "168320",
+            "repository": null
+          },
+          {
+            "id": "494553",
+            "repository": null
+          },
+          {
+            "id": "467129",
+            "repository": null
+          },
+          {
+            "id": "120056",
+            "repository": null
+          },
+          {
+            "id": "326355",
+            "repository": null
+          },
+          {
+            "id": "327903",
+            "repository": null
+          },
+          {
+            "id": "551492",
+            "repository": null
+          },
+          {
+            "id": "358343",
+            "repository": null
+          },
+          {
+            "id": "78637",
+            "repository": null
+          },
+          {
+            "id": "262925",
+            "repository": null
+          },
+          {
+            "id": "68767",
+            "repository": null
+          },
+          {
+            "id": "268385",
+            "repository": null
+          },
+          {
+            "id": "48678",
+            "repository": null
+          },
+          {
+            "id": "361119",
+            "repository": null
+          },
+          {
+            "id": "531782",
+            "repository": null
+          },
+          {
+            "id": "416588",
+            "repository": null
+          },
+          {
+            "id": "98673",
+            "repository": null
+          },
+          {
+            "id": "318142",
+            "repository": null
+          },
+          {
+            "id": "42083",
+            "repository": null
+          },
+          {
+            "id": "83972",
+            "repository": null
+          },
+          {
+            "id": "215225",
+            "repository": null
+          },
+          {
+            "id": "386216",
+            "repository": null
+          },
+          {
+            "id": "492293",
+            "repository": null
+          },
+          {
+            "id": "57584",
+            "repository": null
+          },
+          {
+            "id": "512106",
+            "repository": null
+          },
+          {
+            "id": "580244",
+            "repository": null
+          },
+          {
+            "id": "223070",
+            "repository": null
+          },
+          {
+            "id": "357551",
+            "repository": null
+          },
+          {
+            "id": "102209",
+            "repository": null
+          },
+          {
+            "id": "66397",
+            "repository": null
+          },
+          {
+            "id": "167088",
+            "repository": null
+          },
+          {
+            "id": "473428",
+            "repository": null
+          },
+          {
+            "id": "88157",
+            "repository": null
+          },
+          {
+            "id": "99658",
+            "repository": null
+          },
+          {
+            "id": "157292",
+            "repository": null
+          },
+          {
+            "id": "44223",
+            "repository": null
+          },
+          {
+            "id": "186313",
+            "repository": null
+          },
+          {
+            "id": "426049",
+            "repository": null
+          },
+          {
+            "id": "511616",
+            "repository": null
+          },
+          {
+            "id": "83016",
+            "repository": null
+          },
+          {
+            "id": "277161",
+            "repository": null
+          },
+          {
+            "id": "190601",
+            "repository": null
+          },
+          {
+            "id": "586061",
+            "repository": null
+          },
+          {
+            "id": "437640",
+            "repository": null
+          },
+          {
+            "id": "589950",
+            "repository": null
+          },
+          {
+            "id": "374797",
+            "repository": null
+          },
+          {
+            "id": "323916",
+            "repository": null
+          },
+          {
+            "id": "168599",
+            "repository": null
+          },
+          {
+            "id": "114960",
+            "repository": null
+          },
+          {
+            "id": "97348",
+            "repository": null
+          },
+          {
+            "id": "273989",
+            "repository": null
+          },
+          {
+            "id": "199672",
+            "repository": null
+          },
+          {
+            "id": "576438",
+            "repository": null
+          },
+          {
+            "id": "134494",
+            "repository": null
+          },
+          {
+            "id": "214927",
+            "repository": null
+          },
+          {
+            "id": "171905",
+            "repository": null
+          },
+          {
+            "id": "273199",
+            "repository": null
+          },
+          {
+            "id": "160173",
+            "repository": null
+          },
+          {
+            "id": "88864",
+            "repository": null
+          },
+          {
+            "id": "485318",
+            "repository": null
+          },
+          {
+            "id": "306232",
+            "repository": null
+          },
+          {
+            "id": "30563",
+            "repository": null
+          },
+          {
+            "id": "47127",
+            "repository": null
+          },
+          {
+            "id": "312657",
+            "repository": null
+          },
+          {
+            "id": "39260",
+            "repository": null
+          },
+          {
+            "id": "403701",
+            "repository": null
+          },
+          {
+            "id": "582831",
+            "repository": null
+          },
+          {
+            "id": "296101",
+            "repository": null
+          },
+          {
+            "id": "542024",
+            "repository": null
+          },
+          {
+            "id": "104351",
+            "repository": null
+          },
+          {
+            "id": "585706",
+            "repository": null
+          },
+          {
+            "id": "118996",
+            "repository": null
+          },
+          {
+            "id": "420486",
+            "repository": null
+          },
+          {
+            "id": "4541",
+            "repository": null
+          },
+          {
+            "id": "490798",
+            "repository": null
+          },
+          {
+            "id": "357302",
+            "repository": null
+          },
+          {
+            "id": "339326",
+            "repository": null
+          },
+          {
+            "id": "349544",
+            "repository": null
+          },
+          {
+            "id": "158558",
+            "repository": null
+          },
+          {
+            "id": "121860",
+            "repository": null
+          },
+          {
+            "id": "278629",
+            "repository": null
+          },
+          {
+            "id": "426852",
+            "repository": null
+          },
+          {
+            "id": "434297",
+            "repository": null
+          },
+          {
+            "id": "260383",
+            "repository": null
+          },
+          {
+            "id": "278656",
+            "repository": null
+          },
+          {
+            "id": "500283",
+            "repository": null
+          },
+          {
+            "id": "197850",
+            "repository": null
+          },
+          {
+            "id": "450720",
+            "repository": null
+          },
+          {
+            "id": "140307",
+            "repository": null
+          },
+          {
+            "id": "543312",
+            "repository": null
+          },
+          {
+            "id": "77781",
+            "repository": null
+          },
+          {
+            "id": "24323",
+            "repository": null
+          },
+          {
+            "id": "414188",
+            "repository": null
+          },
+          {
+            "id": "11665",
+            "repository": null
+          },
+          {
+            "id": "539107",
+            "repository": null
+          },
+          {
+            "id": "330743",
+            "repository": null
+          },
+          {
+            "id": "27724",
+            "repository": null
+          },
+          {
+            "id": "243451",
+            "repository": null
+          },
+          {
+            "id": "588668",
+            "repository": null
+          },
+          {
+            "id": "87435",
+            "repository": null
+          },
+          {
+            "id": "540517",
+            "repository": null
+          },
+          {
+            "id": "373346",
+            "repository": null
+          },
+          {
+            "id": "424046",
+            "repository": null
+          },
+          {
+            "id": "169688",
+            "repository": null
+          },
+          {
+            "id": "141375",
+            "repository": null
+          },
+          {
+            "id": "359201",
+            "repository": null
+          },
+          {
+            "id": "487435",
+            "repository": null
+          },
+          {
+            "id": "29790",
+            "repository": null
+          },
+          {
+            "id": "516038",
+            "repository": null
+          },
+          {
+            "id": "478628",
+            "repository": null
+          },
+          {
+            "id": "524763",
+            "repository": null
+          },
+          {
+            "id": "357717",
+            "repository": null
+          },
+          {
+            "id": "21404",
+            "repository": null
+          },
+          {
+            "id": "216356",
+            "repository": null
+          },
+          {
+            "id": "102549",
+            "repository": null
+          },
+          {
+            "id": "314611",
+            "repository": null
+          },
+          {
+            "id": "500882",
+            "repository": null
+          },
+          {
+            "id": "414596",
+            "repository": null
+          },
+          {
+            "id": "251009",
+            "repository": null
+          },
+          {
+            "id": "486281",
+            "repository": null
+          },
+          {
+            "id": "337121",
+            "repository": null
+          },
+          {
+            "id": "477635",
+            "repository": null
+          },
+          {
+            "id": "4539",
+            "repository": null
+          },
+          {
+            "id": "344415",
+            "repository": null
+          },
+          {
+            "id": "326905",
+            "repository": null
+          },
+          {
+            "id": "43524",
+            "repository": null
+          },
+          {
+            "id": "555650",
+            "repository": null
+          },
+          {
+            "id": "443823",
+            "repository": null
+          },
+          {
+            "id": "269386",
+            "repository": null
+          },
+          {
+            "id": "428123",
+            "repository": null
+          },
+          {
+            "id": "70907",
+            "repository": null
+          },
+          {
+            "id": "427805",
+            "repository": null
+          },
+          {
+            "id": "570787",
+            "repository": null
+          },
+          {
+            "id": "296844",
+            "repository": null
+          },
+          {
+            "id": "188822",
+            "repository": null
+          },
+          {
+            "id": "367047",
+            "repository": null
+          },
+          {
+            "id": "539208",
+            "repository": null
+          },
+          {
+            "id": "498288",
+            "repository": null
+          },
+          {
+            "id": "567834",
+            "repository": null
+          },
+          {
+            "id": "556289",
+            "repository": null
+          },
+          {
+            "id": "367155",
+            "repository": null
+          },
+          {
+            "id": "20662",
+            "repository": null
+          },
+          {
+            "id": "519753",
+            "repository": null
+          },
+          {
+            "id": "537214",
+            "repository": null
+          },
+          {
+            "id": "503516",
+            "repository": null
+          },
+          {
+            "id": "122177",
+            "repository": null
+          },
+          {
+            "id": "101462",
+            "repository": null
+          },
+          {
+            "id": "120028",
+            "repository": null
+          },
+          {
+            "id": "326958",
+            "repository": null
+          },
+          {
+            "id": "121100",
+            "repository": null
+          },
+          {
+            "id": "446208",
+            "repository": null
+          },
+          {
+            "id": "307246",
+            "repository": null
+          },
+          {
+            "id": "585975",
+            "repository": null
+          },
+          {
+            "id": "150278",
+            "repository": null
+          },
+          {
+            "id": "363820",
+            "repository": null
+          },
+          {
+            "id": "534806",
+            "repository": null
+          },
+          {
+            "id": "146531",
+            "repository": null
+          },
+          {
+            "id": "282577",
+            "repository": null
+          },
+          {
+            "id": "477054",
+            "repository": null
+          },
+          {
+            "id": "425352",
+            "repository": null
+          },
+          {
+            "id": "421724",
+            "repository": null
+          },
+          {
+            "id": "363444",
+            "repository": null
+          },
+          {
+            "id": "273721",
+            "repository": null
+          },
+          {
+            "id": "556237",
+            "repository": null
+          },
+          {
+            "id": "431457",
+            "repository": null
+          },
+          {
+            "id": "517488",
+            "repository": null
+          },
+          {
+            "id": "242171",
+            "repository": null
+          },
+          {
+            "id": "219927",
+            "repository": null
+          },
+          {
+            "id": "248545",
+            "repository": null
+          },
+          {
+            "id": "428911",
+            "repository": null
+          },
+          {
+            "id": "264554",
+            "repository": null
+          },
+          {
+            "id": "307845",
+            "repository": null
+          },
+          {
+            "id": "5728",
+            "repository": null
+          },
+          {
+            "id": "414932",
+            "repository": null
+          },
+          {
+            "id": "273789",
+            "repository": null
+          },
+          {
+            "id": "179986",
+            "repository": null
+          },
+          {
+            "id": "431840",
+            "repository": null
+          },
+          {
+            "id": "493676",
+            "repository": null
+          },
+          {
+            "id": "107520",
+            "repository": null
+          },
+          {
+            "id": "309913",
+            "repository": null
+          },
+          {
+            "id": "387165",
+            "repository": null
+          },
+          {
+            "id": "472915",
+            "repository": null
+          },
+          {
+            "id": "247773",
+            "repository": null
+          },
+          {
+            "id": "517428",
+            "repository": null
+          },
+          {
+            "id": "180501",
+            "repository": null
+          },
+          {
+            "id": "332203",
+            "repository": null
+          },
+          {
+            "id": "166173",
+            "repository": null
+          },
+          {
+            "id": "245834",
+            "repository": null
+          },
+          {
+            "id": "593197",
+            "repository": null
+          },
+          {
+            "id": "392503",
+            "repository": null
+          },
+          {
+            "id": "305907",
+            "repository": null
+          },
+          {
+            "id": "154107",
+            "repository": null
+          },
+          {
+            "id": "239617",
+            "repository": null
+          },
+          {
+            "id": "210972",
+            "repository": null
+          },
+          {
+            "id": "381512",
+            "repository": null
+          },
+          {
+            "id": "59124",
+            "repository": null
+          },
+          {
+            "id": "451307",
+            "repository": null
+          },
+          {
+            "id": "530631",
+            "repository": null
+          },
+          {
+            "id": "13933",
+            "repository": null
+          },
+          {
+            "id": "129364",
+            "repository": null
+          },
+          {
+            "id": "598225",
+            "repository": null
+          },
+          {
+            "id": "90290",
+            "repository": null
+          },
+          {
+            "id": "586843",
+            "repository": null
+          },
+          {
+            "id": "334105",
+            "repository": null
+          },
+          {
+            "id": "484129",
+            "repository": null
+          },
+          {
+            "id": "73100",
+            "repository": null
+          },
+          {
+            "id": "543807",
+            "repository": null
+          },
+          {
+            "id": "171557",
+            "repository": null
+          },
+          {
+            "id": "146639",
+            "repository": null
+          },
+          {
+            "id": "220077",
+            "repository": null
+          },
+          {
+            "id": "253778",
+            "repository": null
+          },
+          {
+            "id": "325075",
+            "repository": null
+          },
+          {
+            "id": "299430",
+            "repository": null
+          },
+          {
+            "id": "529032",
+            "repository": null
+          },
+          {
+            "id": "277305",
+            "repository": null
+          },
+          {
+            "id": "353268",
+            "repository": null
+          },
+          {
+            "id": "367558",
+            "repository": null
+          },
+          {
+            "id": "122607",
+            "repository": null
+          },
+          {
+            "id": "415649",
+            "repository": null
+          },
+          {
+            "id": "393285",
+            "repository": null
+          },
+          {
+            "id": "537466",
+            "repository": null
+          },
+          {
+            "id": "374030",
+            "repository": null
+          },
+          {
+            "id": "201954",
+            "repository": null
+          },
+          {
+            "id": "563465",
+            "repository": null
+          },
+          {
+            "id": "142866",
+            "repository": null
+          },
+          {
+            "id": "417062",
+            "repository": null
+          },
+          {
+            "id": "149692",
+            "repository": null
+          },
+          {
+            "id": "488117",
+            "repository": null
+          },
+          {
+            "id": "262441",
+            "repository": null
+          },
+          {
+            "id": "285643",
+            "repository": null
+          },
+          {
+            "id": "1392",
+            "repository": null
+          },
+          {
+            "id": "261373",
+            "repository": null
+          },
+          {
+            "id": "447605",
+            "repository": null
+          },
+          {
+            "id": "326982",
+            "repository": null
+          },
+          {
+            "id": "399672",
+            "repository": null
+          },
+          {
+            "id": "332858",
+            "repository": null
+          },
+          {
+            "id": "240865",
+            "repository": null
+          },
+          {
+            "id": "433801",
+            "repository": null
+          },
+          {
+            "id": "88677",
+            "repository": null
+          },
+          {
+            "id": "419327",
+            "repository": null
+          },
+          {
+            "id": "305794",
+            "repository": null
+          },
+          {
+            "id": "165025",
+            "repository": null
+          },
+          {
+            "id": "374868",
+            "repository": null
+          },
+          {
+            "id": "425452",
+            "repository": null
+          },
+          {
+            "id": "99279",
+            "repository": null
+          },
+          {
+            "id": "59495",
+            "repository": null
+          },
+          {
+            "id": "102928",
+            "repository": null
+          },
+          {
+            "id": "77771",
+            "repository": null
+          },
+          {
+            "id": "579328",
+            "repository": null
+          },
+          {
+            "id": "13318",
+            "repository": null
+          },
+          {
+            "id": "259989",
+            "repository": null
+          },
+          {
+            "id": "574387",
+            "repository": null
+          },
+          {
+            "id": "235958",
+            "repository": null
+          },
+          {
+            "id": "135247",
+            "repository": null
+          },
+          {
+            "id": "219990",
+            "repository": null
+          },
+          {
+            "id": "178",
+            "repository": null
+          }
+        ],
+        "filtered_shared_64_token_spans": 0,
+        "blocks": 512,
+        "tokens": 65536,
+        "tensor_sha256": "cad44a829cbe356d459ffd62a651c53960db6914733f79246e07e137c73fe69d"
+      },
+      "validation": {
+        "documents": [
+          {
+            "id": "432424",
+            "repository": null
+          },
+          {
+            "id": "445813",
+            "repository": null
+          },
+          {
+            "id": "52252",
+            "repository": null
+          },
+          {
+            "id": "208276",
+            "repository": null
+          },
+          {
+            "id": "25250",
+            "repository": null
+          },
+          {
+            "id": "248916",
+            "repository": null
+          },
+          {
+            "id": "435733",
+            "repository": null
+          },
+          {
+            "id": "122638",
+            "repository": null
+          },
+          {
+            "id": "231662",
+            "repository": null
+          },
+          {
+            "id": "240232",
+            "repository": null
+          },
+          {
+            "id": "80939",
+            "repository": null
+          },
+          {
+            "id": "262528",
+            "repository": null
+          },
+          {
+            "id": "158975",
+            "repository": null
+          },
+          {
+            "id": "26014",
+            "repository": null
+          },
+          {
+            "id": "161068",
+            "repository": null
+          },
+          {
+            "id": "308255",
+            "repository": null
+          },
+          {
+            "id": "212911",
+            "repository": null
+          },
+          {
+            "id": "292330",
+            "repository": null
+          },
+          {
+            "id": "289175",
+            "repository": null
+          },
+          {
+            "id": "370046",
+            "repository": null
+          },
+          {
+            "id": "58672",
+            "repository": null
+          },
+          {
+            "id": "260385",
+            "repository": null
+          },
+          {
+            "id": "335248",
+            "repository": null
+          },
+          {
+            "id": "462114",
+            "repository": null
+          },
+          {
+            "id": "140579",
+            "repository": null
+          },
+          {
+            "id": "501548",
+            "repository": null
+          },
+          {
+            "id": "78791",
+            "repository": null
+          },
+          {
+            "id": "247124",
+            "repository": null
+          },
+          {
+            "id": "529565",
+            "repository": null
+          },
+          {
+            "id": "83680",
+            "repository": null
+          },
+          {
+            "id": "319386",
+            "repository": null
+          },
+          {
+            "id": "361971",
+            "repository": null
+          },
+          {
+            "id": "390709",
+            "repository": null
+          },
+          {
+            "id": "79375",
+            "repository": null
+          },
+          {
+            "id": "2440",
+            "repository": null
+          },
+          {
+            "id": "449408",
+            "repository": null
+          },
+          {
+            "id": "59023",
+            "repository": null
+          },
+          {
+            "id": "308970",
+            "repository": null
+          },
+          {
+            "id": "527521",
+            "repository": null
+          },
+          {
+            "id": "182055",
+            "repository": null
+          },
+          {
+            "id": "289120",
+            "repository": null
+          }
+        ],
+        "filtered_shared_64_token_spans": 0,
+        "blocks": 64,
+        "tokens": 8192,
+        "tensor_sha256": "f983fdf755b5a0aca130277f157a1b55b13fbbf045eb92817c80c27a584fbdc1"
+      },
+      "test": {
+        "documents": [
+          {
+            "id": "297421",
+            "repository": null
+          },
+          {
+            "id": "457873",
+            "repository": null
+          },
+          {
+            "id": "124687",
+            "repository": null
+          },
+          {
+            "id": "115294",
+            "repository": null
+          },
+          {
+            "id": "133463",
+            "repository": null
+          },
+          {
+            "id": "60750",
+            "repository": null
+          },
+          {
+            "id": "158313",
+            "repository": null
+          },
+          {
+            "id": "340723",
+            "repository": null
+          },
+          {
+            "id": "396285",
+            "repository": null
+          },
+          {
+            "id": "213361",
+            "repository": null
+          },
+          {
+            "id": "541709",
+            "repository": null
+          },
+          {
+            "id": "208898",
+            "repository": null
+          },
+          {
+            "id": "346531",
+            "repository": null
+          },
+          {
+            "id": "248794",
+            "repository": null
+          },
+          {
+            "id": "143249",
+            "repository": null
+          },
+          {
+            "id": "109652",
+            "repository": null
+          },
+          {
+            "id": "66431",
+            "repository": null
+          },
+          {
+            "id": "381104",
+            "repository": null
+          },
+          {
+            "id": "272844",
+            "repository": null
+          },
+          {
+            "id": "334577",
+            "repository": null
+          },
+          {
+            "id": "363306",
+            "repository": null
+          },
+          {
+            "id": "15921",
+            "repository": null
+          },
+          {
+            "id": "381471",
+            "repository": null
+          },
+          {
+            "id": "221040",
+            "repository": null
+          },
+          {
+            "id": "459052",
+            "repository": null
+          },
+          {
+            "id": "415915",
+            "repository": null
+          },
+          {
+            "id": "155677",
+            "repository": null
+          },
+          {
+            "id": "484689",
+            "repository": null
+          },
+          {
+            "id": "351497",
+            "repository": null
+          },
+          {
+            "id": "449940",
+            "repository": null
+          },
+          {
+            "id": "143493",
+            "repository": null
+          },
+          {
+            "id": "126565",
+            "repository": null
+          },
+          {
+            "id": "191766",
+            "repository": null
+          },
+          {
+            "id": "162523",
+            "repository": null
+          },
+          {
+            "id": "316651",
+            "repository": null
+          },
+          {
+            "id": "209224",
+            "repository": null
+          },
+          {
+            "id": "397166",
+            "repository": null
+          },
+          {
+            "id": "529852",
+            "repository": null
+          },
+          {
+            "id": "248630",
+            "repository": null
+          },
+          {
+            "id": "476913",
+            "repository": null
+          },
+          {
+            "id": "561205",
+            "repository": null
+          },
+          {
+            "id": "374544",
+            "repository": null
+          },
+          {
+            "id": "458933",
+            "repository": null
+          },
+          {
+            "id": "520799",
+            "repository": null
+          },
+          {
+            "id": "569455",
+            "repository": null
+          },
+          {
+            "id": "304559",
+            "repository": null
+          }
+        ],
+        "filtered_shared_64_token_spans": 0,
+        "blocks": 64,
+        "tokens": 8192,
+        "tensor_sha256": "f30214a3438ee96b88b52d1559a418ac78096a7ea0fe0554d6da42105baac2cf"
+      }
+    }
+  },
+  "code": {
+    "sources": [
+      {
+        "file": "codesearchnet/ruby/test-00000-of-00001.parquet",
+        "sha256": "2be89df4c1d2c58c6b9606de028262a3a12bd3a0046ed478e9b3135d617c233f"
+      },
+      {
+        "file": "codesearchnet/ruby/train-00000-of-00001.parquet",
+        "sha256": "f2f6c43532ac60c922bb96229e752986fd638144ad8d171d09d4561142ad1c10"
+      },
+      {
+        "file": "codesearchnet/ruby/validation-00000-of-00001.parquet",
+        "sha256": "5872bc60e85ce36a017d01bf0c5f1706e58f42772110ee84c1e91f002b14c54b"
+      }
+    ],
+    "raw_documents": 53279,
+    "duplicate_or_empty": 0,
+    "split_available": {
+      "validation": 4502,
+      "train": 44099,
+      "test": 4678
+    },
+    "selected": {
+      "train": {
+        "documents": [
+          {
+            "id": "https://github.com/ksylvest/attached/blob/6ef5681efd94807d334b12d8229b57ac472a6576/lib/attached/attatcher.rb#L131-L138",
+            "repository": "ksylvest/attached"
+          },
+          {
+            "id": "https://github.com/anthonator/dirigible/blob/829b265ae4e54e3d4b284900b2a51a707afb6105/lib/dirigible/configuration.rb#L53-L60",
+            "repository": "anthonator/dirigible"
+          },
+          {
+            "id": "https://github.com/gcao/aspector/blob/c82396dc8678bf632959fdaf25aa28e76b0e4605/lib/aspector/interception.rb#L97-L125",
+            "repository": "gcao/aspector"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_web/lib/2018-02-01/generated/azure_mgmt_web/diagnostics.rb#L2910-L2913",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/stympy/faker/blob/cc9f09e287fea252339c485046fe99a9ff41df07/lib/helpers/unique_generator.rb#L18-L31",
+            "repository": "stympy/faker"
+          },
+          {
+            "id": "https://github.com/tario/imageruby/blob/ba38c3e4a5c8c068566501f0e73357fd219535e4/lib/imageruby/pureruby.rb#L55-L84",
+            "repository": "tario/imageruby"
+          },
+          {
+            "id": "https://github.com/livingsocial/ganapati/blob/c583dfbbe12b417323e54aab3aa1ed80dc38f649/lib/ganapati/client.rb#L36-L42",
+            "repository": "livingsocial/ganapati"
+          },
+          {
+            "id": "https://github.com/nestor-custodio/crapi/blob/cd4741a7106135c0c9c2d99630487c43729ca801/lib/crapi/client.rb#L112-L118",
+            "repository": "nestor-custodio/crapi"
+          },
+          {
+            "id": "https://github.com/paddor/cztop/blob/d20ee44775d05b60f40fffd1287a9b01270ab853/lib/cztop/beacon.rb#L66-L70",
+            "repository": "paddor/cztop"
+          },
+          {
+            "id": "https://github.com/envato/zxcvbn-ruby/blob/fc69afd08f5fb0c8361d52461750b716c925cb11/lib/zxcvbn/scorer.rb#L91-L100",
+            "repository": "envato/zxcvbn-ruby"
+          },
+          {
+            "id": "https://github.com/matiaskorhonen/monit/blob/ace938155259e269e4ba492bec6e24502d33a8cf/lib/monit/status.rb#L78-L102",
+            "repository": "matiaskorhonen/monit"
+          },
+          {
+            "id": "https://github.com/mattbrictson/airbrussh/blob/eac9bbe3fbf0990cf655746c36a9ba4e1c47950d/lib/airbrussh/configuration.rb#L47-L51",
+            "repository": "mattbrictson/airbrussh"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_stor_simple8000_series/lib/2017-06-01/generated/azure_mgmt_stor_simple8000_series/device_settings.rb#L1071-L1074",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/jico/automata/blob/177cea186de1d55be2f1d2ed1a78c313f74945a1/lib/automata/turing.rb#L84-L92",
+            "repository": "jico/automata"
+          },
+          {
+            "id": "https://github.com/yohoushi/multiforecast-client/blob/0c25f60f9930aeb8837061df025ddbfd8677e74e/lib/multiforecast/client.rb#L174-L176",
+            "repository": "yohoushi/multiforecast-client"
+          },
+          {
+            "id": "https://github.com/dmlond/spreadsheet_agent/blob/8fb21508470c41a1100289f4b0b52847b6d52d79/lib/spreadsheet_agent/runner.rb#L152-L155",
+            "repository": "dmlond/spreadsheet_agent"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_cognitiveservices_computervision/lib/2.0/generated/azure_cognitiveservices_computervision/computer_vision_client.rb#L73-L76",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/takanamito/happybirthday/blob/f9f6eae14eb92debdec2733593b114f58bab34e6/lib/happybirthday/birthday.rb#L14-L17",
+            "repository": "takanamito/happybirthday"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_event_grid/lib/2019-02-01-preview/generated/azure_mgmt_event_grid/domains.rb#L230-L233",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/rogerleite/http_monkey/blob/b57a972e97c60a017754200eef2094562ca546ef/lib/http_monkey/configuration/behaviours.rb#L47-L55",
+            "repository": "rogerleite/http_monkey"
+          },
+          {
+            "id": "https://github.com/aws/aws-sdk-ruby/blob/e28b8d320ddf7b6ee0161bdd9d00fb786d99b63d/gems/aws-sdk-autoscaling/lib/aws-sdk-autoscaling/auto_scaling_group.rb#L947-L964",
+            "repository": "aws/aws-sdk-ruby"
+          },
+          {
+            "id": "https://github.com/jeremyz/edoors-ruby/blob/4f065f63125907b3a4f72fbab8722c58ccab41c1/lib/edoors/particle.rb#L212-L222",
+            "repository": "jeremyz/edoors-ruby"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_customer_insights/lib/2017-01-01/generated/azure_mgmt_customer_insights/kpi.rb#L237-L239",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/ThoughtWorksStudios/oauth2_provider/blob/d54702f194edd05389968cf8947465860abccc5d/tools/jruby-1.5.1/lib/ruby/1.9/rdoc/rdoc.rb#L146-L174",
+            "repository": "ThoughtWorksStudios/oauth2_provider"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_cognitiveservices_luisauthoring/lib/2.0/generated/azure_cognitiveservices_luisauthoring/model.rb#L5550-L5553",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/phallguy/shog/blob/294637aa2103d93a82e6f1df74ea35deb0dc04eb/lib/shog/formatter.rb#L38-L48",
+            "repository": "phallguy/shog"
+          },
+          {
+            "id": "https://github.com/jekyll/classifier-reborn/blob/849ba0834c5a9be78147a9072e599187e2203fce/lib/classifier-reborn/lsi.rb#L133-L165",
+            "repository": "jekyll/classifier-reborn"
+          },
+          {
+            "id": "https://github.com/copiousfreetime/kjess/blob/e42e21ffb3700b55b634711d6b461c329129a32f/lib/kjess/socket.rb#L160-L174",
+            "repository": "copiousfreetime/kjess"
+          },
+          {
+            "id": "https://github.com/solutious/rudy/blob/52627b6228a29243b22ffeb188546f33aec95343/lib/rudy/metadata.rb#L220-L227",
+            "repository": "solutious/rudy"
+          },
+          {
+            "id": "https://github.com/jpablobr/active_paypal_adaptive_payment/blob/e2b215fda00d9430c4b2433c592718b128da92e6/lib/active_merchant/billing/gateways/paypal_adaptive_payments/ext.rb#L18-L27",
+            "repository": "jpablobr/active_paypal_adaptive_payment"
+          },
+          {
+            "id": "https://github.com/mongodb/mongoid/blob/56976e32610f4c2450882b0bfe14da099f0703f4/lib/mongoid/atomic.rb#L249-L259",
+            "repository": "mongodb/mongoid"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_recovery_services_site_recovery/lib/2018-01-10/generated/azure_mgmt_recovery_services_site_recovery/replication_protection_containers.rb#L1144-L1153",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/tzinfo/tzinfo/blob/8fdf06ed9a4b935864e19794187d091219de481a/lib/tzinfo/timezone.rb#L743-L745",
+            "repository": "tzinfo/tzinfo"
+          },
+          {
+            "id": "https://github.com/gambol99/optionscrapper/blob/d4f3b96c5210943c216d28fd0d2bd2252fe08a34/lib/optionscrapper/optionsparser.rb#L125-L155",
+            "repository": "gambol99/optionscrapper"
+          },
+          {
+            "id": "https://github.com/keithrbennett/trick_bag/blob/a3886a45f32588aba751d13aeba42ae680bcd203/lib/trick_bag/validations/object_validations.rb#L11-L14",
+            "repository": "keithrbennett/trick_bag"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_media_services/lib/2015-10-01/generated/azure_mgmt_media_services/media_service_operations.rb#L436-L439",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/opulent/opulent/blob/7b219bd4f54b404e8f43955b8e70925a01814b59/lib/opulent/parser/text.rb#L99-L148",
+            "repository": "opulent/opulent"
+          },
+          {
+            "id": "https://github.com/bdwyertech/newrelic-management/blob/265f0024b52d1fed476f35448b6b518453b4b1a6/lib/newrelic-management/util.rb#L60-L65",
+            "repository": "bdwyertech/newrelic-management"
+          },
+          {
+            "id": "https://github.com/nilsding/Empyrean/blob/e652fb8966dfcd32968789af75e8d5a4f63134ec/lib/empyrean/configloader.rb#L40-L62",
+            "repository": "nilsding/Empyrean"
+          },
+          {
+            "id": "https://github.com/rightscale/right_link/blob/b33a209c20a8a0942dd9f1fe49a08030d4ca209f/scripts/ohai_runner.rb#L29-L36",
+            "repository": "rightscale/right_link"
+          },
+          {
+            "id": "https://github.com/cknadler/nidyx/blob/75150a165a1f125599fbcbb981d0382689edc98b/lib/nidyx/mapper.rb#L11-L17",
+            "repository": "cknadler/nidyx"
+          },
+          {
+            "id": "https://github.com/alexreisner/geocoder/blob/e087dc2759264ee6f307b926bb2de4ec2406859e/lib/geocoder/lookups/latlon.rb#L43-L56",
+            "repository": "alexreisner/geocoder"
+          },
+          {
+            "id": "https://github.com/ckruse/CFPropertyList/blob/fa05fa4d0078a61c7b67f3ed5e50a3ca223e2134/lib/cfpropertylist/rbCFTypes.rb#L254-L258",
+            "repository": "ckruse/CFPropertyList"
+          },
+          {
+            "id": "https://github.com/leonhartX/danger-eslint/blob/f51dca105e8c87326b35a27e9a349cd486e7a5e2/lib/eslint/plugin.rb#L35-L40",
+            "repository": "leonhartX/danger-eslint"
+          },
+          {
+            "id": "https://github.com/dicom/rtkit/blob/08248bf294769ae5b45ed4a9671f0620d5740252/lib/rtkit/structure_set.rb#L321-L327",
+            "repository": "dicom/rtkit"
+          },
+          {
+            "id": "https://github.com/sds/haml-lint/blob/024c773667e54cf88db938c2b368977005d70ee8/lib/haml_lint/utils.rb#L108-L122",
+            "repository": "sds/haml-lint"
+          },
+          {
+            "id": "https://github.com/jgraichen/msgr/blob/c3d3fabfe9cadd1522cf636298a5086a3f991c7d/lib/msgr/client.rb#L63-L74",
+            "repository": "jgraichen/msgr"
+          },
+          {
+            "id": "https://github.com/pythonicrubyist/creek/blob/1a5c99032ee736e8f24ebd524adffba068d236b4/lib/creek/sheet.rb#L144-L157",
+            "repository": "pythonicrubyist/creek"
+          },
+          {
+            "id": "https://github.com/devxoul/CocoaSeeds/blob/c0fcc7b3fe0b039d3f25c95559f7cf8935774065/lib/cocoaseeds/core.rb#L394-L401",
+            "repository": "devxoul/CocoaSeeds"
+          },
+          {
+            "id": "https://github.com/ronyv89/skydrive/blob/6cf7b692f64c6f00a81bc7ca6fffca3020244072/lib/skydrive/operations.rb#L189-L191",
+            "repository": "ronyv89/skydrive"
+          },
+          {
+            "id": "https://github.com/moio/tetra/blob/de06d766502b885bd62bd7cd9dc8da678abd7cb0/lib/tetra/facades/git.rb#L49-L59",
+            "repository": "moio/tetra"
+          },
+          {
+            "id": "https://github.com/sds/overcommit/blob/35d60adb41da942178b789560968e3ad030b0ac7/lib/overcommit/hook_context/pre_commit.rb#L46-L72",
+            "repository": "sds/overcommit"
+          },
+          {
+            "id": "https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin/blob/85e0e7972e6a4f94d5e7ab470ff0360905e11e4a/lib/jekyll-multiple-languages-plugin.rb#L425-L460",
+            "repository": "Anthony-Gaudino/jekyll-multiple-languages-plugin"
+          },
+          {
+            "id": "https://github.com/StuartApp/h3_ruby/blob/f32e91fe1d4d1b1428e940941cb51f0ea260c46d/lib/h3/unidirectional_edges.rb#L100-L105",
+            "repository": "StuartApp/h3_ruby"
+          },
+          {
+            "id": "https://github.com/komasaru/eph_bpn/blob/7281e0023e91593f6f89a6fed05a2e39dfb59ac3/lib/eph_bpn/compute.rb#L488-L497",
+            "repository": "komasaru/eph_bpn"
+          },
+          {
+            "id": "https://github.com/butchmarshall/active_record_survey/blob/cd0df44863c6cb158d129365f874156ac1ea7b9d/lib/active_record_survey/node/answer.rb#L34-L51",
+            "repository": "butchmarshall/active_record_survey"
+          },
+          {
+            "id": "https://github.com/ShipCompliant/ship_compliant-ruby/blob/aa12852a58cd6cb7939eb9fbb7fdc03e46e18197/lib/ship_compliant/order_search.rb#L86-L90",
+            "repository": "ShipCompliant/ship_compliant-ruby"
+          },
+          {
+            "id": "https://github.com/isabanin/mercurial-ruby/blob/d7cc2d3bfeaa7564f6ea8d622fbddd92ca5a3d0a/lib/mercurial-ruby/factories/commit_factory.rb#L34-L40",
+            "repository": "isabanin/mercurial-ruby"
+          },
+          {
+            "id": "https://github.com/healthfinch/allscripts-unity-client/blob/fd9b7148cb6fe806a3f9dba70c138ba8c5e75985/lib/allscripts_unity_client/client.rb#L291-L311",
+            "repository": "healthfinch/allscripts-unity-client"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_graph_rbac/lib/1.6/generated/azure_graph_rbac/applications.rb#L760-L763",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/mongoid/moped/blob/cf817ca58a85ed567c2711e4eada163018bde3cf/lib/moped/authenticatable.rb#L62-L87",
+            "repository": "mongoid/moped"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_logic/lib/2016-06-01/generated/azure_mgmt_logic/workflow_trigger_histories.rb#L244-L247",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/danger/danger/blob/0d6d09f2d949c287fe75202d947374042b0679f4/lib/danger/danger_core/dangerfile.rb#L147-L170",
+            "repository": "danger/danger"
+          },
+          {
+            "id": "https://github.com/jm81/svn-fixture/blob/6a6a9de5bd9fdca67ac1733c11a25f38ee5a33ac/lib/svn-fixture/repository.rb#L113-L121",
+            "repository": "jm81/svn-fixture"
+          },
+          {
+            "id": "https://github.com/Clever/clever-ruby/blob/f9f19496c33699c4adfdebfbc7f118e75007b9e2/lib/clever-ruby/api/data_api.rb#L682-L685",
+            "repository": "Clever/clever-ruby"
+          },
+          {
+            "id": "https://github.com/hicknhack-software/rails-disco/blob/5d1f2801a41dc2a1c9f745499bd32c8f634dcc43/active_event/lib/active_event/event_source_server.rb#L94-L100",
+            "repository": "hicknhack-software/rails-disco"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_network/lib/2019-02-01/generated/azure_mgmt_network/vpn_connections.rb#L465-L467",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/toptal/crystalball/blob/9cb62597425e0d0d3e8b428c7d08d3940a43fdea/lib/crystalball/source_diff.rb#L40-L45",
+            "repository": "toptal/crystalball"
+          },
+          {
+            "id": "https://github.com/infertux/bashcov/blob/40730ae72b286e7508937e187fc000715d8a6892/lib/bashcov/xtrace.rb#L84-L103",
+            "repository": "infertux/bashcov"
+          },
+          {
+            "id": "https://github.com/Falkor/falkorlib/blob/1a6d732e8fd5550efb7c98a87ee97fcd2e051858/lib/falkorlib/common.rb#L143-L149",
+            "repository": "Falkor/falkorlib"
+          },
+          {
+            "id": "https://github.com/PublicHealthEngland/ndr_ui/blob/1fb8ef2eb8bfed43ff54cf4b9cafe53b3d1843ec/app/helpers/ndr_ui/bootstrap_helper.rb#L213-L218",
+            "repository": "PublicHealthEngland/ndr_ui"
+          },
+          {
+            "id": "https://github.com/simukappu/activity_notification/blob/7f0f0ea8db1e69d7806f5b0685e226452714847a/lib/activity_notification/apis/subscription_api.rb#L147-L152",
+            "repository": "simukappu/activity_notification"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_api_management/lib/2018-01-01/generated/azure_mgmt_api_management/identity_provider.rb#L154-L156",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/epuber-io/epuber/blob/4d736deb3f18c034fc93fcb95cfb9bf03b63c252/lib/epuber/compiler.rb#L112-L136",
+            "repository": "epuber-io/epuber"
+          },
+          {
+            "id": "https://github.com/KatanaCode/evvnt/blob/e13f6d84af09a71819356620fb25685a6cd159c9/lib/evvnt/class_template_methods.rb#L28-L32",
+            "repository": "KatanaCode/evvnt"
+          },
+          {
+            "id": "https://github.com/bmuller/ankusa/blob/af946f130aa63532fdb67d8382cfaaf81b38027b/lib/ankusa/naive_bayes.rb#L20-L32",
+            "repository": "bmuller/ankusa"
+          },
+          {
+            "id": "https://github.com/simonrepp/titlekit/blob/65d3743378aaf54544efb7c642cfc656085191db/lib/titlekit/job.rb#L150-L169",
+            "repository": "simonrepp/titlekit"
+          },
+          {
+            "id": "https://github.com/brasten/scruffy/blob/4aad4f9ab2b946ba0f6e6251dc7eb3b9747a4e9e/lib/scruffy/renderers/base.rb#L24-L47",
+            "repository": "brasten/scruffy"
+          },
+          {
+            "id": "https://github.com/dapi/gritter_notices/blob/739b49ac96ba733e5276677a04bd8c5e4a73716d/lib/gritter_notices/active_record.rb#L19-L30",
+            "repository": "dapi/gritter_notices"
+          },
+          {
+            "id": "https://github.com/dkd/paymill-ruby/blob/4dd177faf1e5c08dae0c66fe493ccce535c9c97d/lib/paymill/subscription.rb#L10-L16",
+            "repository": "dkd/paymill-ruby"
+          },
+          {
+            "id": "https://github.com/activescaffold/active_scaffold/blob/1954f85b5395d09de09fa86f3ea70c29bbee2612/lib/active_scaffold/responds_to_parent.rb#L7-L40",
+            "repository": "activescaffold/active_scaffold"
+          },
+          {
+            "id": "https://github.com/github/octofacts/blob/0fe4f4bc1de16f41f6ef2eb45eb1d2d687617ce7/lib/octofacts_updater/fact.rb#L26-L44",
+            "repository": "github/octofacts"
+          },
+          {
+            "id": "https://github.com/dorack/jiralicious/blob/e907cba8618fb15893b62666e195a5288a9899d8/lib/jiralicious/session.rb#L25-L38",
+            "repository": "dorack/jiralicious"
+          },
+          {
+            "id": "https://github.com/fuminori-ido/edgarj/blob/1648ab180f1f4adaeea03d54b645f58f3702a2bf/app/controllers/edgarj/edgarj_controller.rb#L221-L228",
+            "repository": "fuminori-ido/edgarj"
+          },
+          {
+            "id": "https://github.com/emonti/rstruct/blob/0146955514ee53e5aff5e3b30ccf7d271cb47dac/lib/rstruct/base_types/packed_type.rb#L28-L43",
+            "repository": "emonti/rstruct"
+          },
+          {
+            "id": "https://github.com/rom-rb/rom/blob/7245b8cb6dadb5a9413606997a0294dd4a956f19/core/lib/rom/relation.rb#L219-L227",
+            "repository": "rom-rb/rom"
+          },
+          {
+            "id": "https://github.com/paradox460/snoo/blob/83cbfe4973eeff5a0c7426f4a23457a420273261/lib/snoo/account.rb#L50-L55",
+            "repository": "paradox460/snoo"
+          },
+          {
+            "id": "https://github.com/scrapper/fit4ruby/blob/ec0781abad95c1fea8998640e49873186e9f67d9/lib/fit4ruby/Monitoring_B.rb#L97-L114",
+            "repository": "scrapper/fit4ruby"
+          },
+          {
+            "id": "https://github.com/dorack/jiralicious/blob/e907cba8618fb15893b62666e195a5288a9899d8/lib/jiralicious/cookie_session.rb#L24-L35",
+            "repository": "dorack/jiralicious"
+          },
+          {
+            "id": "https://github.com/blotto/thermometer/blob/bb436c4f3b2ebce23aa1ed51d551ab7a165aedfa/lib/thermometer/configuration.rb#L95-L105",
+            "repository": "blotto/thermometer"
+          },
+          {
+            "id": "https://github.com/movitto/rjr/blob/219f970fbe3a1298d59fc820fdcf968d527fd567/lib/rjr/dispatcher.rb#L75-L83",
+            "repository": "movitto/rjr"
+          },
+          {
+            "id": "https://github.com/mare-imbrium/canis/blob/8bce60ff9dad321e299a6124620deb4771740b0b/lib/canis/core/util/oldwidgetshortcuts.rb#L195-L217",
+            "repository": "mare-imbrium/canis"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_labservices/lib/2018-10-15/generated/azure_mgmt_labservices/environment_settings.rb#L963-L966",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/zombor/Validator/blob/d0503c8c1c64ba3d90ccb8afe8d3e7ebfa030be8/lib/validation/validator.rb#L101-L105",
+            "repository": "zombor/Validator"
+          },
+          {
+            "id": "https://github.com/jmettraux/ruote/blob/30a6bb88a4e48ed2e1b9089754f1c8be8c1a879c/lib/ruote/exp/flow_expression.rb#L1041-L1085",
+            "repository": "jmettraux/ruote"
+          },
+          {
+            "id": "https://github.com/hawkular/hawkular-client-ruby/blob/3b07729c2ab359e3199c282e199a3f1699ddc49c/lib/hawkular/alerts/alerts_api.rb#L254-L261",
+            "repository": "hawkular/hawkular-client-ruby"
+          },
+          {
+            "id": "https://github.com/elifoster/weatheruby/blob/4d97db082448765b67ef5112c89346e502a74858/lib/weather/planner.rb#L244-L248",
+            "repository": "elifoster/weatheruby"
+          },
+          {
+            "id": "https://github.com/oscar-stack/vagrant-auto_network/blob/5b4b4d5b5cb18dc1417e91650adb713b9f54ab01/lib/auto_network/settings.rb#L60-L71",
+            "repository": "oscar-stack/vagrant-auto_network"
+          },
+          {
+            "id": "https://github.com/58bits/partial-date/blob/1760d33bda3da42bb8c3f67fb63dd6bc5dc70bea/lib/partial-date/date.rb#L166-L172",
+            "repository": "58bits/partial-date"
+          },
+          {
+            "id": "https://github.com/zires/open_qq/blob/14bb3dba0aff3152307bd82d69b602e1a7a4ac9e/lib/open_qq/gateway.rb#L92-L102",
+            "repository": "zires/open_qq"
+          },
+          {
+            "id": "https://github.com/iyuuya/jkf/blob/4fd229c50737cab7b41281238880f1414e55e061/lib/jkf/parser/csa.rb#L469-L494",
+            "repository": "iyuuya/jkf"
+          },
+          {
+            "id": "https://github.com/MrEmelianenko/drape/blob/cc9e8d55341d3145317d425031f5cb46f9cba552/lib/drape/automatic_delegation.rb#L6-L11",
+            "repository": "MrEmelianenko/drape"
+          },
+          {
+            "id": "https://github.com/rightscale/right_chimp/blob/290d3e01f7bf4b505722a080cb0abbb0314222f8/lib/right_chimp/chimp.rb#L256-L300",
+            "repository": "rightscale/right_chimp"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_sql/lib/2014-04-01/generated/azure_mgmt_sql/databases.rb#L996-L1012",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/rubiii/ambience/blob/25f6e4a94cbed60c719307616fa37a23ecd0fbc2/lib/ambience/config.rb#L85-L87",
+            "repository": "rubiii/ambience"
+          },
+          {
+            "id": "https://github.com/jekyll/jekyll/blob/fd74fe3e93a1fb506fa6621a2e271d7b9c5c3e3b/lib/jekyll/page.rb#L132-L137",
+            "repository": "jekyll/jekyll"
+          },
+          {
+            "id": "https://github.com/sass/ruby-sass/blob/7a50eae567260a23d3bbf4d5aaf1a76db43dec32/lib/sass/script/value/number.rb#L265-L268",
+            "repository": "sass/ruby-sass"
+          },
+          {
+            "id": "https://github.com/mongoid/moped/blob/cf817ca58a85ed567c2711e4eada163018bde3cf/lib/moped/cursor.rb#L46-L53",
+            "repository": "mongoid/moped"
+          },
+          {
+            "id": "https://github.com/aws/aws-sdk-ruby/blob/e28b8d320ddf7b6ee0161bdd9d00fb786d99b63d/gems/aws-sdk-core/lib/aws-sdk-core/endpoint_cache.rb#L62-L67",
+            "repository": "aws/aws-sdk-ruby"
+          },
+          {
+            "id": "https://github.com/meineerde/rackstash/blob/b610a2157187dd05ef8d500320aa846234487b01/lib/rackstash/buffer.rb#L336-L343",
+            "repository": "meineerde/rackstash"
+          },
+          {
+            "id": "https://github.com/reidmorrison/jruby-jms/blob/cdc2ce1daf643474110146a7505dad5e427030d3/lib/jms/session_pool.rb#L139-L148",
+            "repository": "reidmorrison/jruby-jms"
+          },
+          {
+            "id": "https://github.com/couchrest/couchrest_extended_document/blob/71511202ae10d3010dcf7b98fcba017cb37c76da/lib/couchrest/extended_document.rb#L200-L212",
+            "repository": "couchrest/couchrest_extended_document"
+          },
+          {
+            "id": "https://github.com/natritmeyer/site_prism/blob/f208a6f6b44744869fe170168d326927f6077e94/lib/site_prism/element_checker.rb#L41-L48",
+            "repository": "natritmeyer/site_prism"
+          },
+          {
+            "id": "https://github.com/samvera/hyrax/blob/e2b4f56e829a53b1f11296324736e9d5b8c9ee5f/app/controllers/hyrax/file_sets_controller.rb#L55-L65",
+            "repository": "samvera/hyrax"
+          },
+          {
+            "id": "https://github.com/ianwhite/pickle/blob/3970158227375dc62dc8ae7b79305c013b783c7d/lib/pickle/session.rb#L65-L71",
+            "repository": "ianwhite/pickle"
+          },
+          {
+            "id": "https://github.com/roma/roma/blob/3dea10df0171742c314ff48f2ed4eebaafc80abf/lib/roma/tools/mkconfig.rb#L577-L595",
+            "repository": "roma/roma"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_iot_hub/lib/2017-01-19/generated/azure_mgmt_iot_hub/iot_hub_resource.rb#L2947-L2956",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/rightscale/right_chimp/blob/290d3e01f7bf4b505722a080cb0abbb0314222f8/lib/right_chimp/chimp.rb#L1209-L1269",
+            "repository": "rightscale/right_chimp"
+          },
+          {
+            "id": "https://github.com/mare-imbrium/canis/blob/8bce60ff9dad321e299a6124620deb4771740b0b/lib/canis/core/include/listselectionmodel.rb#L175-L186",
+            "repository": "mare-imbrium/canis"
+          },
+          {
+            "id": "https://github.com/blambeau/yargi/blob/100141e96d245a0a8211cd4f7590909be149bc3c/lib/yargi/digraph.rb#L53-L59",
+            "repository": "blambeau/yargi"
+          },
+          {
+            "id": "https://github.com/cisco/cisco-network-node-utils/blob/a617a9ef9d6bd18f35f2e2f2591033e1ddd46145/lib/cisco_node_utils/router_ospf_area.rb#L326-L341",
+            "repository": "cisco/cisco-network-node-utils"
+          },
+          {
+            "id": "https://github.com/reinteractive/wallaby/blob/85b86e5e661d68a62aa8ae25d39c4f545c5ac36e/lib/helpers/wallaby/links_helper.rb#L90-L104",
+            "repository": "reinteractive/wallaby"
+          },
+          {
+            "id": "https://github.com/manojmj92/fulfil-ruby/blob/f47832eeb4137c8cc531fab4c1f9a181e6be5652/lib/fulfil/request.rb#L37-L41",
+            "repository": "manojmj92/fulfil-ruby"
+          },
+          {
+            "id": "https://github.com/paddor/cztop/blob/d20ee44775d05b60f40fffd1287a9b01270ab853/lib/cztop/config/serialization.rb#L28-L33",
+            "repository": "paddor/cztop"
+          },
+          {
+            "id": "https://github.com/cloudfoundry/vcap-common/blob/8d2825c7c678ffa3cf1854a635c7c4722fd054e5/lib/vcap/common.rb#L203-L225",
+            "repository": "cloudfoundry/vcap-common"
+          },
+          {
+            "id": "https://github.com/mkdynamic/vss/blob/f4e62e94f0381174f26debc5c31d282997591188/lib/vss/engine.rb#L13-L29",
+            "repository": "mkdynamic/vss"
+          },
+          {
+            "id": "https://github.com/intercom/cocoapods-mangle/blob/aaec3e68b578eb61185aa0895568a9316c24a05c/lib/cocoapods_mangle/config.rb#L63-L75",
+            "repository": "intercom/cocoapods-mangle"
+          },
+          {
+            "id": "https://github.com/ytti/oxidized/blob/0cf095b01612c30a635a6c26843f02af20631823/lib/oxidized/output/gitcrypt.rb#L139-L168",
+            "repository": "ytti/oxidized"
+          },
+          {
+            "id": "https://github.com/chef/chef-apply/blob/f3619c5af73714cfec942cbd1dae05c510c467e3/lib/chef_apply/target_resolver.rb#L78-L84",
+            "repository": "chef/chef-apply"
+          },
+          {
+            "id": "https://github.com/square/connect-ruby-sdk/blob/798eb9ded716f23b9f1518386f1c311a34bca8bf/lib/square_connect/api/v1_items_api.rb#L215-L218",
+            "repository": "square/connect-ruby-sdk"
+          },
+          {
+            "id": "https://github.com/amatsuda/rfd/blob/403c0bc0ff0a9da1d21220b479d5a42008512b78/lib/rfd.rb#L641-L652",
+            "repository": "amatsuda/rfd"
+          },
+          {
+            "id": "https://github.com/threez/mapkit/blob/ffd212e6748b457c946f82cf4556a61d68e0939a/lib/mapkit.rb#L98-L105",
+            "repository": "threez/mapkit"
+          },
+          {
+            "id": "https://github.com/roo-rb/roo/blob/4ec1104f0c3c2a29711c0c907371cd2be12bcc3c/lib/roo/utils.rb#L45-L54",
+            "repository": "roo-rb/roo"
+          },
+          {
+            "id": "https://github.com/enkessler/cucumber_analytics/blob/a74642d30b3566fc11fb43c920518fea4587c6bd/lib/cucumber_analytics/feature.rb#L79-L89",
+            "repository": "enkessler/cucumber_analytics"
+          },
+          {
+            "id": "https://github.com/redding/logsly/blob/a17040f0dc8f73a476616bd0ad036c2ff3e4ccaf/lib/logsly/logging182/stats.rb#L60-L71",
+            "repository": "redding/logsly"
+          },
+          {
+            "id": "https://github.com/obrie/turntabler/blob/e2240f1a5d210a33c05c5b2261d291089cdcf1c6/lib/turntabler/room_directory.rb#L99-L104",
+            "repository": "obrie/turntabler"
+          },
+          {
+            "id": "https://github.com/mare-imbrium/canis/blob/8bce60ff9dad321e299a6124620deb4771740b0b/lib/canis/core/util/extras/bottomline.rb#L1524-L1590",
+            "repository": "mare-imbrium/canis"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_kusto/lib/2017-09-07-privatepreview/generated/azure_mgmt_kusto/event_hub_connections.rb#L380-L396",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/CocoaPods/Xcodeproj/blob/3be1684437a6f8e69c7836ad4c85a2b78663272f/spec/spec_helper/project_helper.rb#L29-L68",
+            "repository": "CocoaPods/Xcodeproj"
+          },
+          {
+            "id": "https://github.com/ThoughtWorksStudios/oauth2_provider/blob/d54702f194edd05389968cf8947465860abccc5d/tools/jruby-1.5.1/lib/ruby/site_ruby/shared/ffi/platform/i386-solaris/zlib.rb#L1241-L1255",
+            "repository": "ThoughtWorksStudios/oauth2_provider"
+          },
+          {
+            "id": "https://github.com/sds/overcommit/blob/35d60adb41da942178b789560968e3ad030b0ac7/lib/overcommit/configuration.rb#L157-L179",
+            "repository": "sds/overcommit"
+          },
+          {
+            "id": "https://github.com/splunk/fluent-plugin-splunk-hec/blob/fe0dbc68cfc0bd8e0818c2ddc92d0610de14fec9/lib/fluent/plugin/out_splunk_hec.rb#L375-L404",
+            "repository": "splunk/fluent-plugin-splunk-hec"
+          },
+          {
+            "id": "https://github.com/aerospike/aerospike-client-ruby/blob/e9d61b8c87e1ec67cb0d70772051f86353b1de45/lib/aerospike/client.rb#L138-L142",
+            "repository": "aerospike/aerospike-client-ruby"
+          },
+          {
+            "id": "https://github.com/kul1/mindapp2/blob/ac6df8033e2912363448a5df68415abaad9ee6a6/lib/mindapp2/helpers.rb#L204-L271",
+            "repository": "kul1/mindapp2"
+          },
+          {
+            "id": "https://github.com/googleads/google-api-ads-ruby/blob/bf8ede5dda838bbd6161f4eb7d66b4654ae6e46b/ads_common/lib/ads_common/results_extractor.rb#L242-L251",
+            "repository": "googleads/google-api-ads-ruby"
+          },
+          {
+            "id": "https://github.com/localytics/hollaback/blob/3a958d59145d0bea63be792e4d4d7df127f60850/lib/hollaback/sequence.rb#L22-L26",
+            "repository": "localytics/hollaback"
+          },
+          {
+            "id": "https://github.com/dicom/rtkit/blob/08248bf294769ae5b45ed4a9671f0620d5740252/lib/rtkit/dose_volume.rb#L288-L302",
+            "repository": "dicom/rtkit"
+          },
+          {
+            "id": "https://github.com/heroku/databasedotcom/blob/a9173ff9c47bf2321a6959c9616d00cb6d8e93be/lib/databasedotcom/client.rb#L189-L198",
+            "repository": "heroku/databasedotcom"
+          },
+          {
+            "id": "https://github.com/tinbka/rmtools/blob/bfb54f07d3d7622ec45994f93af294243982cee0/lib/rmtools/xml/node.rb#L78-L91",
+            "repository": "tinbka/rmtools"
+          },
+          {
+            "id": "https://github.com/LoyaltyNZ/hoodoo/blob/905940121917ecbb66364bca3455b94b1636470f/lib/hoodoo/logger/logger.rb#L111-L117",
+            "repository": "LoyaltyNZ/hoodoo"
+          },
+          {
+            "id": "https://github.com/astjohn/cornerstone/blob/d7af7c06288477c961f3e328b8640df4be337301/app/models/cornerstone/discussion.rb#L56-L64",
+            "repository": "astjohn/cornerstone"
+          },
+          {
+            "id": "https://github.com/Mange/roadie/blob/afda57d66b7653a0978604f1d81cccd93e8748c9/lib/roadie/url_rewriter.rb#L21-L32",
+            "repository": "Mange/roadie"
+          },
+          {
+            "id": "https://github.com/jmdeldin/cross_validation/blob/048938169231f051c1612af608cde673ccc77529/lib/cross_validation/confusion_matrix.rb#L73-L76",
+            "repository": "jmdeldin/cross_validation"
+          },
+          {
+            "id": "https://github.com/rightscale/right_agent/blob/64c68c162692f0a70543d10def5e4bf56505bd82/lib/right_agent/clients/base_retry_client.rb#L551-L560",
+            "repository": "rightscale/right_agent"
+          },
+          {
+            "id": "https://github.com/Homebrew/ruby-macho/blob/a1dedc25bc78a9bd6366988d12e122ee3d420e8c/lib/macho/fat_file.rb#L256-L262",
+            "repository": "Homebrew/ruby-macho"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_container_registry/lib/2018-02-01-preview/generated/azure_mgmt_container_registry/build_tasks.rb#L657-L659",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_cognitiveservices_luisauthoring/lib/2.0/generated/azure_cognitiveservices_luisauthoring/model.rb#L755-L757",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_cdn/lib/2017-10-12/generated/azure_mgmt_cdn/cdn_management_client.rb#L156-L159",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/sandipransing/rails_tiny_mce/blob/4e91040e62784061aa7cca37fd8a95a87df379ce/plugins/paperclip/lib/paperclip/geometry.rb#L85-L95",
+            "repository": "sandipransing/rails_tiny_mce"
+          },
+          {
+            "id": "https://github.com/dmacvicar/bicho/blob/fff403fcc5b1e1b6c81defd7c6434e9499aa1a63/lib/bicho/client.rb#L245-L253",
+            "repository": "dmacvicar/bicho"
+          },
+          {
+            "id": "https://github.com/easydatawarehousing/opal-ferro/blob/0cc0c19a956cbc2d9ce99c1539cb774a02cb9ca7/opal/opal-ferro/ferro_compositor.js.rb#L44-L59",
+            "repository": "easydatawarehousing/opal-ferro"
+          },
+          {
+            "id": "https://github.com/CocoaPods/Xcodeproj/blob/3be1684437a6f8e69c7836ad4c85a2b78663272f/lib/xcodeproj/config.rb#L104-L110",
+            "repository": "CocoaPods/Xcodeproj"
+          },
+          {
+            "id": "https://github.com/sergey-koba-mobidev/boxroom-engine/blob/ce7a6b3fc6a1e5c36021429c0d337fab71993427/app/controllers/boxroom/users_controller.rb#L34-L40",
+            "repository": "sergey-koba-mobidev/boxroom-engine"
+          },
+          {
+            "id": "https://github.com/softlayer/softlayer-ruby/blob/48d7e0e36a3b02d832e7e303a513020a8fbde93b/lib/softlayer/ImageTemplate.rb#L175-L192",
+            "repository": "softlayer/softlayer-ruby"
+          },
+          {
+            "id": "https://github.com/larskanis/pkcs11/blob/4f39c54a932face8b3d87c157d8d56469c43c6bc/lib/pkcs11/session.rb#L436-L449",
+            "repository": "larskanis/pkcs11"
+          },
+          {
+            "id": "https://github.com/mkdynamic/wcag_color_contrast/blob/f6e05ef0887edcbfab4b04ff7729b51213df8aa9/lib/wcag_color_contrast.rb#L41-L48",
+            "repository": "mkdynamic/wcag_color_contrast"
+          },
+          {
+            "id": "https://github.com/bogdanRada/celluloid_pubsub/blob/e5558257c04e553b49e08ce27c130d572ada210d/lib/celluloid_pubsub/reactor.rb#L71-L77",
+            "repository": "bogdanRada/celluloid_pubsub"
+          },
+          {
+            "id": "https://github.com/marcandre/scheherazade/blob/321e8e5f9f84c777168de10de8df6075141be215/lib/scheherazade/story.rb#L117-L133",
+            "repository": "marcandre/scheherazade"
+          },
+          {
+            "id": "https://github.com/dicom/ruby-dicom/blob/3ffcfe21edc8dcd31298f945781990789fc832ab/lib/dicom/stream.rb#L134-L138",
+            "repository": "dicom/ruby-dicom"
+          },
+          {
+            "id": "https://github.com/msimonborg/lazy_record/blob/eb01764f873b50feb6eca98273b23ff122fb2e06/lib/lazy_record/methods.rb#L28-L36",
+            "repository": "msimonborg/lazy_record"
+          },
+          {
+            "id": "https://github.com/Falkor/falkorlib/blob/1a6d732e8fd5550efb7c98a87ee97fcd2e051858/lib/falkorlib/git/base.rb#L282-L290",
+            "repository": "Falkor/falkorlib"
+          },
+          {
+            "id": "https://github.com/PixarAnimationStudios/ruby-jss/blob/4ab645bfaec8b2edb1ea146bfc2b10f0d62edee9/lib/jss/api_object/mdm.rb#L1033-L1035",
+            "repository": "PixarAnimationStudios/ruby-jss"
+          },
+          {
+            "id": "https://github.com/datasift/datasift-ruby/blob/d724e4ff15d178f196001ea5a517a981dc56c18c/lib/pylon.rb#L181-L190",
+            "repository": "datasift/datasift-ruby"
+          },
+          {
+            "id": "https://github.com/rapid7/nexpose-client/blob/933fc8c0c85ba11d3e17db1d7f4542816f400d71/lib/nexpose/tag.rb#L9-L16",
+            "repository": "rapid7/nexpose-client"
+          },
+          {
+            "id": "https://github.com/square/connect-ruby-sdk/blob/798eb9ded716f23b9f1518386f1c311a34bca8bf/lib/square_connect/models/list_customers_request.rb#L95-L101",
+            "repository": "square/connect-ruby-sdk"
+          },
+          {
+            "id": "https://github.com/biola/turnout/blob/9c57f9d75e31904bc345ecceb9ec392ce3fdb634/lib/turnout/maintenance_file.rb#L97-L101",
+            "repository": "biola/turnout"
+          },
+          {
+            "id": "https://github.com/simukappu/activity_notification/blob/7f0f0ea8db1e69d7806f5b0685e226452714847a/lib/activity_notification/helpers/view_helpers.rb#L233-L238",
+            "repository": "simukappu/activity_notification"
+          },
+          {
+            "id": "https://github.com/rakeoe/rakeoe/blob/af7713fb238058509a34103829e37a62873c4ecb/lib/rakeoe/toolchain.rb#L512-L528",
+            "repository": "rakeoe/rakeoe"
+          },
+          {
+            "id": "https://github.com/postmodern/deployml/blob/4369d4ea719e41f0dc3aa6496e6422ad476b0dda/lib/deployml/environment.rb#L182-L189",
+            "repository": "postmodern/deployml"
+          },
+          {
+            "id": "https://github.com/ytti/oxidized/blob/0cf095b01612c30a635a6c26843f02af20631823/lib/oxidized/output/git.rb#L97-L103",
+            "repository": "ytti/oxidized"
+          },
+          {
+            "id": "https://github.com/CiscoSystems/ropenstack/blob/77dcb332711da2a35fe5abf2b6c63a0415c0bf69/lib/ropenstack/networking.rb#L27-L33",
+            "repository": "CiscoSystems/ropenstack"
+          },
+          {
+            "id": "https://github.com/deivid-rodriguez/byebug/blob/bf41a63858a648baa7fb621600d6451786d1572a/lib/byebug/interface.rb#L54-L62",
+            "repository": "deivid-rodriguez/byebug"
+          },
+          {
+            "id": "https://github.com/brendanhay/amqp-subscribe-many/blob/6832204579ae46c2bd8703977682750f21bdf74e/lib/messaging/client.rb#L62-L81",
+            "repository": "brendanhay/amqp-subscribe-many"
+          },
+          {
+            "id": "https://github.com/aws/aws-sdk-ruby/blob/e28b8d320ddf7b6ee0161bdd9d00fb786d99b63d/gems/aws-sdk-s3/lib/aws-sdk-s3/object_summary.rb#L394-L401",
+            "repository": "aws/aws-sdk-ruby"
+          },
+          {
+            "id": "https://github.com/randym/axlsx/blob/c593a08b2a929dac7aa8dc418b55e26b4c49dc34/lib/axlsx/drawing/num_data_source.rb#L48-L59",
+            "repository": "randym/axlsx"
+          },
+          {
+            "id": "https://github.com/cyberarm/rewrite-gameoverseer/blob/279ba63868ad11aa2c937fc6c2544049f05d4bca/lib/gameoverseer/services/service.rb#L108-L110",
+            "repository": "cyberarm/rewrite-gameoverseer"
+          },
+          {
+            "id": "https://github.com/ianfixes/arduino_ci/blob/cb3fe8df14a744b9a3bc5cdc0168f820f78cde57/lib/arduino_ci/arduino_downloader_windows.rb#L60-L66",
+            "repository": "ianfixes/arduino_ci"
+          },
+          {
+            "id": "https://github.com/mrackwitz/CLIntegracon/blob/b675f23762d10e527487aa5576d6a77f9c623485/lib/CLIntegracon/formatter.rb#L59-L63",
+            "repository": "mrackwitz/CLIntegracon"
+          },
+          {
+            "id": "https://github.com/duckinator/inq/blob/e23a250aca4a62702cb5f3ee87cf26012e5a8344/lib/inq/date_time_helpers.rb#L17-L22",
+            "repository": "duckinator/inq"
+          },
+          {
+            "id": "https://github.com/youcune/yo_client/blob/a966c9d2d454315cb77deda1b8487255e48d5673/lib/yo_client.rb#L21-L26",
+            "repository": "youcune/yo_client"
+          },
+          {
+            "id": "https://github.com/daws/exact_target_sdk/blob/64fde8f61356a5f0c75586a10b07d175adfeac12/lib/exact_target_sdk/client.rb#L78-L99",
+            "repository": "daws/exact_target_sdk"
+          },
+          {
+            "id": "https://github.com/rleemorlang/historian/blob/84b1c96ecfa0e3d1cdf9f0a6f70a4b5eee5a1854/lib/historian/history_file.rb#L72-L85",
+            "repository": "rleemorlang/historian"
+          },
+          {
+            "id": "https://github.com/sass/ruby-sass/blob/7a50eae567260a23d3bbf4d5aaf1a76db43dec32/lib/sass/script/functions.rb#L1986-L1993",
+            "repository": "sass/ruby-sass"
+          },
+          {
+            "id": "https://github.com/nbulaj/proxy_fetcher/blob/da2e067acd930886d894490e229ba094f7f5ea53/lib/proxy_fetcher/manager.rb#L31-L52",
+            "repository": "nbulaj/proxy_fetcher"
+          },
+          {
+            "id": "https://github.com/piotrmurach/github/blob/8702452c66bea33c9388550aed9e9974f76aaef1/lib/github_api/client/search.rb#L72-L77",
+            "repository": "piotrmurach/github"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_policy_insights/lib/2018-07-01-preview/generated/azure_mgmt_policy_insights/remediations.rb#L2077-L2079",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/attr-encrypted/attr_encrypted/blob/11df93aef14c661dd0c03169d382a0412f93124e/lib/attr_encrypted.rb#L349-L353",
+            "repository": "attr-encrypted/attr_encrypted"
+          },
+          {
+            "id": "https://github.com/spikegrobstein/capnotify/blob/b21ea876ae2a04e8090206a687436565051f0e08/lib/capnotify/plugin.rb#L134-L145",
+            "repository": "spikegrobstein/capnotify"
+          },
+          {
+            "id": "https://github.com/wapcaplet/kelp/blob/592fe188db5a3d05e6120ed2157ad8d781601b7a/lib/kelp/dropdown.rb#L28-L48",
+            "repository": "wapcaplet/kelp"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_network/lib/2017-11-01/generated/azure_mgmt_network/express_route_circuit_authorizations.rb#L220-L223",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/zuazo/dockerspec/blob/cb3868684cc2fdf39cf9e807d6a8844944275fff/lib/dockerspec/builder.rb#L313-L317",
+            "repository": "zuazo/dockerspec"
+          },
+          {
+            "id": "https://github.com/komasaru/eph_jpl/blob/34e8ebd2e0809f48f8f57fb9a5967bc5be25b8f0/lib/eph_jpl/argument.rb#L12-L23",
+            "repository": "komasaru/eph_jpl"
+          },
+          {
+            "id": "https://github.com/sgillesp/taxonomite/blob/731b42d0dfa1f52b39d050026f49b2d205407ff8/lib/taxonomite/taxonomy.rb#L91-L98",
+            "repository": "sgillesp/taxonomite"
+          },
+          {
+            "id": "https://github.com/modernistik/parse-stack/blob/23730f8faa20ff90d994cdb5771096c9a9a5bdff/lib/parse/model/associations/relation_collection_proxy.rb#L81-L96",
+            "repository": "modernistik/parse-stack"
+          },
+          {
+            "id": "https://github.com/matadon/mizuno/blob/506beb09571f0398d5851366d3c9779c14b061fb/lib/mizuno/server.rb#L60-L122",
+            "repository": "matadon/mizuno"
+          },
+          {
+            "id": "https://github.com/rhomobile/rhodes/blob/3c5f87b1a44f0ba2865ca0e1dd780dd202f64872/res/build-tools/ruby-standalone/212/usr/local/lib/ruby/2.1.0/webrick/cookie.rb#L93-L104",
+            "repository": "rhomobile/rhodes"
+          },
+          {
+            "id": "https://github.com/elcuervo/airplay/blob/bdd6ad507a2337dd0c2bc729eb9d6cc37ec18411/lib/airplay/group.rb#L34-L37",
+            "repository": "elcuervo/airplay"
+          },
+          {
+            "id": "https://github.com/bradleypriest/pxpay/blob/ba8822adb2349007b85ad2ddeb8d924695983dfa/lib/pxpay/notification.rb#L17-L25",
+            "repository": "bradleypriest/pxpay"
+          },
+          {
+            "id": "https://github.com/arnau/ISO8601/blob/2b6e860f4052ce5b85c63814796f23b284644e0d/lib/iso8601/time.rb#L117-L135",
+            "repository": "arnau/ISO8601"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_cognitiveservices_face/lib/1.0/generated/azure_cognitiveservices_face/large_face_list_operations.rb#L1199-L1201",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/CocoaPods/Xcodeproj/blob/3be1684437a6f8e69c7836ad4c85a2b78663272f/lib/xcodeproj/config.rb#L296-L310",
+            "repository": "CocoaPods/Xcodeproj"
+          },
+          {
+            "id": "https://github.com/cookpad/rrrspec/blob/a5bde2b062ce68b1e32b8caddf194389c2ce28b0/rrrspec-client/lib/rrrspec/redis_models.rb#L607-L610",
+            "repository": "cookpad/rrrspec"
+          },
+          {
+            "id": "https://github.com/stevegraham/slanger/blob/f26f80c675dc4d853bce401743779a6959981af1/lib/slanger/channel.rb#L84-L88",
+            "repository": "stevegraham/slanger"
+          },
+          {
+            "id": "https://github.com/Beagle123/visualruby/blob/245e22864c9d7c7c4e6f92562447caa5d6a705a9/lib/Alert.rb#L23-L44",
+            "repository": "Beagle123/visualruby"
+          },
+          {
+            "id": "https://github.com/drewtempelmeyer/tax_cloud/blob/ace4fae5586bc993e10a39989efbd048849ecad0/lib/tax_cloud/address.rb#L33-L36",
+            "repository": "drewtempelmeyer/tax_cloud"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_network/lib/2017-03-30/generated/azure_mgmt_network/network_interfaces.rb#L455-L458",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_container_registry/lib/2018-09-01/generated/azure_mgmt_container_registry/runs.rb#L447-L450",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/bloom-lang/bud/blob/9b665b9140cb2a36611391a0a51fa746175e1db4/lib/bud/executor/join.rb#L140-L154",
+            "repository": "bloom-lang/bud"
+          },
+          {
+            "id": "https://github.com/pluginaweek/enumerate_by/blob/6a7c1ce54602a352b3286dee633c3dc7f687ea97/lib/enumerate_by.rb#L218-L225",
+            "repository": "pluginaweek/enumerate_by"
+          },
+          {
+            "id": "https://github.com/ndlib/rof/blob/18a8cc009540a868447952eed82de035451025e8/lib/rof/compare_rof.rb#L51-L57",
+            "repository": "ndlib/rof"
+          },
+          {
+            "id": "https://github.com/itrp/itrp-client/blob/80294aa93d7a64c1966d06d4f12ed24b606e3078/lib/itrp/client.rb#L122-L148",
+            "repository": "itrp/itrp-client"
+          },
+          {
+            "id": "https://github.com/burtlo/metro/blob/5fd7d1fd433f3aece8451af8098b23bb14007227/lib/metro/events/event_dictionary.rb#L29-L32",
+            "repository": "burtlo/metro"
+          },
+          {
+            "id": "https://github.com/cheezy/page-object/blob/850d775bf63768fbb1551a34480195785fe8e193/lib/page-object/accessors.rb#L64-L76",
+            "repository": "cheezy/page-object"
+          },
+          {
+            "id": "https://github.com/metanorma/iso-bib-item/blob/205ef2b5e4ce626cf9b65f3c39f613825b10db03/lib/iso_bib_item/series.rb#L57-L68",
+            "repository": "metanorma/iso-bib-item"
+          },
+          {
+            "id": "https://github.com/InfoTech/salesforce_ar_sync/blob/3f6351fe462cc7374b8f00c0f36e8c8cfd9c39c4/lib/salesforce_ar_sync/salesforce_sync.rb#L155-L170",
+            "repository": "InfoTech/salesforce_ar_sync"
+          },
+          {
+            "id": "https://github.com/sosedoff/xml-sitemap/blob/a9b510d49297d219c5b19a9c778cb8c6f0f1ae16/lib/xml-sitemap/index.rb#L56-L65",
+            "repository": "sosedoff/xml-sitemap"
+          },
+          {
+            "id": "https://github.com/cdarne/triton/blob/196ce7784fc414d9751a3492427b506054203185/lib/triton/messenger.rb#L36-L42",
+            "repository": "cdarne/triton"
+          },
+          {
+            "id": "https://github.com/qoobaa/s3/blob/2c1960a0b012f6ad1c9d1e5baf49c4148b5472fa/lib/s3/bucket.rb#L85-L89",
+            "repository": "qoobaa/s3"
+          },
+          {
+            "id": "https://github.com/hramos/helpscout/blob/764d860a4724e88105e16a36bd43c75f2e30a6e6/lib/helpscout/client.rb#L527-L539",
+            "repository": "hramos/helpscout"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_customer_insights/lib/2017-01-01/generated/azure_mgmt_customer_insights/connector_mappings.rb#L357-L360",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/jondkinney/docusign_rest/blob/f93eaff7b649336ef54fe5310c4c00d74531e5e1/lib/docusign_rest/client.rb#L224-L249",
+            "repository": "jondkinney/docusign_rest"
+          },
+          {
+            "id": "https://github.com/brianjlandau/unobtrusive_date_picker/blob/fd15b829a92951c4a7550c0644502587040fdedc/lib/unobtrusive_date_picker.rb#L86-L91",
+            "repository": "brianjlandau/unobtrusive_date_picker"
+          },
+          {
+            "id": "https://github.com/osorubeki-fujita/odpt_tokyo_metro/blob/3407a6dbaf0687ddca6478100f43047cad27ebd9/lib/tokyo_metro/class_name_library/static/station.rb#L63-L102",
+            "repository": "osorubeki-fujita/odpt_tokyo_metro"
+          },
+          {
+            "id": "https://github.com/jondkinney/docusign_rest/blob/f93eaff7b649336ef54fe5310c4c00d74531e5e1/lib/docusign_rest/client.rb#L1683-L1706",
+            "repository": "jondkinney/docusign_rest"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_compute/lib/2018-06-01/generated/azure_mgmt_compute/gallery_images.rb#L360-L362",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/BadrIT/translation_center/blob/439cbf70323e629a630fe939d02b44361afae13e/app/controllers/translation_center/application_controller.rb#L19-L24",
+            "repository": "BadrIT/translation_center"
+          },
+          {
+            "id": "https://github.com/Bandwidth/ruby-bandwidth/blob/896df7a12e2992b5558514db943997d930ef416f/lib/bandwidth/domain.rb#L80-L84",
+            "repository": "Bandwidth/ruby-bandwidth"
+          },
+          {
+            "id": "https://github.com/igrigorik/http-2/blob/d52934f144db97fc7534e4c6025ed6ae86909b6a/lib/http/2/stream.rb#L283-L549",
+            "repository": "igrigorik/http-2"
+          },
+          {
+            "id": "https://github.com/reinteractive/wallaby/blob/85b86e5e661d68a62aa8ae25d39c4f545c5ac36e/lib/concerns/wallaby/shared_helpers.rb#L13-L17",
+            "repository": "reinteractive/wallaby"
+          },
+          {
+            "id": "https://github.com/samstokes/avro-registered-schema-decoder-gem/blob/90a104d841c97b95146b551e2fe8508f4aa1a69f/lib/avro/registered_schema_decoder.rb#L61-L72",
+            "repository": "samstokes/avro-registered-schema-decoder-gem"
+          },
+          {
+            "id": "https://github.com/aws/aws-sdk-ruby/blob/e28b8d320ddf7b6ee0161bdd9d00fb786d99b63d/gems/aws-sdk-sqs/lib/aws-sdk-sqs/queue.rb#L695-L709",
+            "repository": "aws/aws-sdk-ruby"
+          },
+          {
+            "id": "https://github.com/larskanis/libusb/blob/ddeaa43f6cde868171fa08744e6c95e96a594766/lib/libusb/dev_handle.rb#L257-L262",
+            "repository": "larskanis/libusb"
+          },
+          {
+            "id": "https://github.com/david942j/rbelftools/blob/9a453ac31d72eae3b8b99d5dbd361c101577d58e/lib/elftools/dynamic.rb#L19-L29",
+            "repository": "david942j/rbelftools"
+          },
+          {
+            "id": "https://github.com/rberger/asi_bod/blob/7aa6c86f996bf856f83d84bb6f0a22dbe257f925/lib/asi_bod/asi.rb#L29-L33",
+            "repository": "rberger/asi_bod"
+          },
+          {
+            "id": "https://github.com/barkerest/barkest_core/blob/3eeb025ec870888cacbc9bae252a39ebf9295f61/app/helpers/barkest_core/form_helper.rb#L304-L313",
+            "repository": "barkerest/barkest_core"
+          },
+          {
+            "id": "https://github.com/fastlane/fastlane/blob/457c5d647c77f0e078dafa5129da616914e002c5/deliver/lib/deliver/upload_metadata.rb#L284-L331",
+            "repository": "fastlane/fastlane"
+          },
+          {
+            "id": "https://github.com/mochnatiy/flexible_accessibility/blob/ffd7f76e0765aa28909625b3bfa282264b8a5195/lib/flexible_accessibility/route_provider.rb#L96-L106",
+            "repository": "mochnatiy/flexible_accessibility"
+          },
+          {
+            "id": "https://github.com/cryptape/ruby-devp2p/blob/75a085971316507040fcfede3546ae95204dadad/lib/devp2p/command.rb#L73-L79",
+            "repository": "cryptape/ruby-devp2p"
+          },
+          {
+            "id": "https://github.com/crate/crate_ruby/blob/64015c0ad2ae7914329f8107eae6b689e45a48af/lib/crate_ruby/client.rb#L115-L132",
+            "repository": "crate/crate_ruby"
+          },
+          {
+            "id": "https://github.com/ddfreyne/cri/blob/4e4abafb352be093b63e0773e1d1d8869fc2ace9/lib/cri/parser.rb#L102-L126",
+            "repository": "ddfreyne/cri"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_network/lib/2018-07-01/generated/azure_mgmt_network/network_watchers.rb#L1076-L1092",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/easydatawarehousing/opal-ferro/blob/0cc0c19a956cbc2d9ce99c1539cb774a02cb9ca7/opal/opal-ferro/ferro_elementary.js.rb#L76-L81",
+            "repository": "easydatawarehousing/opal-ferro"
+          },
+          {
+            "id": "https://github.com/rightscale/right_chimp/blob/290d3e01f7bf4b505722a080cb0abbb0314222f8/lib/right_chimp/chimp.rb#L507-L537",
+            "repository": "rightscale/right_chimp"
+          },
+          {
+            "id": "https://github.com/Dahie/caramelize/blob/6bb93b65924edaaf071a8b3947d0545d5759bc5d/lib/caramelize/filters/wikka_to_markdown.rb#L5-L37",
+            "repository": "Dahie/caramelize"
+          },
+          {
+            "id": "https://github.com/github/elastomer-client/blob/b02aa42f23df9776443449d44c176f1dcea5e08d/lib/elastomer/client/bulk.rb#L60-L72",
+            "repository": "github/elastomer-client"
+          },
+          {
+            "id": "https://github.com/LucasAndrad/InoxConverter/blob/c7dd8ac2c6ee8f9447b6302ec7ba8b3a55d4e6a3/lib/inox_converter/converter.rb#L13-L33",
+            "repository": "LucasAndrad/InoxConverter"
+          },
+          {
+            "id": "https://github.com/huerlisi/i18n_rails_helpers/blob/4faa6d84ebb4465798246d2bb6d6e353a21d5de8/lib/i18n_rails_helpers/controller_helpers.rb#L12-L15",
+            "repository": "huerlisi/i18n_rails_helpers"
+          },
+          {
+            "id": "https://github.com/activescaffold/active_scaffold/blob/1954f85b5395d09de09fa86f3ea70c29bbee2612/lib/active_scaffold/data_structures/sorting.rb#L123-L143",
+            "repository": "activescaffold/active_scaffold"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_operational_insights/lib/2015-03-20/generated/azure_mgmt_operational_insights/workspaces.rb#L141-L144",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/jeffnyman/tapestry/blob/da28652dd6de71e415cd2c01afd89f641938a05b/lib/tapestry/factory.rb#L86-L90",
+            "repository": "jeffnyman/tapestry"
+          },
+          {
+            "id": "https://github.com/dicom/ruby-dicom/blob/3ffcfe21edc8dcd31298f945781990789fc832ab/lib/dicom/link.rb#L1120-L1138",
+            "repository": "dicom/ruby-dicom"
+          },
+          {
+            "id": "https://github.com/pengwynn/buzzsprout/blob/6a4bf696efc086ef6d009293ece21e001fc133cd/lib/buzzsprout/episode.rb#L32-L36",
+            "repository": "pengwynn/buzzsprout"
+          },
+          {
+            "id": "https://github.com/openplaces/bigindex/blob/c2612327b31dfd3271dfcde17389f0852459f565/lib/big_index/model.rb#L358-L382",
+            "repository": "openplaces/bigindex"
+          },
+          {
+            "id": "https://github.com/trampoline/rews/blob/3f18671a25750b9045714af587c1989679f84de8/lib/rews/util.rb#L91-L102",
+            "repository": "trampoline/rews"
+          },
+          {
+            "id": "https://github.com/mxenabled/action_subscriber/blob/4bfd11b09b649d06bc5c8734ceb9e8f99211fa0c/lib/action_subscriber/configuration.rb#L112-L120",
+            "repository": "mxenabled/action_subscriber"
+          },
+          {
+            "id": "https://github.com/CloudStack-extras/knife-cloudstack/blob/7fa996cabac740b8c29e7b0c84508134372823bd/lib/knife-cloudstack/connection.rb#L478-L491",
+            "repository": "CloudStack-extras/knife-cloudstack"
+          },
+          {
+            "id": "https://github.com/rightscale/right_link/blob/b33a209c20a8a0942dd9f1fe49a08030d4ca209f/lib/instance/multi_thread_bundle_queue.rb#L71-L75",
+            "repository": "rightscale/right_link"
+          },
+          {
+            "id": "https://github.com/robfors/quack_concurrency/blob/fb42bbd48b4e4994297431e926bbbcc777a3cd08/lib/quack_concurrency/condition_variable.rb#L107-L111",
+            "repository": "robfors/quack_concurrency"
+          },
+          {
+            "id": "https://github.com/pwnall/authpwn_rails/blob/de3bd612a00025e8dc8296a73abe3acba948db17/lib/authpwn_rails/session_controller.rb#L292-L316",
+            "repository": "pwnall/authpwn_rails"
+          },
+          {
+            "id": "https://github.com/Telestream/telestream-cloud-ruby-sdk/blob/c232427aa3e84688ba41ec28e5bef1cc72832bf4/flip/lib/telestream_cloud_flip/models/profile_body.rb#L1499-L1505",
+            "repository": "Telestream/telestream-cloud-ruby-sdk"
+          },
+          {
+            "id": "https://github.com/infinitered/rmq/blob/a8329e1574ce3275c9fe56b91127c8b5e4b7693e/motion/ruby_motion_query/subviews.rb#L120-L126",
+            "repository": "infinitered/rmq"
+          },
+          {
+            "id": "https://github.com/schrodingersbox/status_cat/blob/af56e3e79999d4a608ab6fe682e0a7c76becd6ca/app/helpers/status_cat/status_helper.rb#L88-L93",
+            "repository": "schrodingersbox/status_cat"
+          },
+          {
+            "id": "https://github.com/SciRuby/daru/blob/d17887e279c27e2b2ec7a252627c04b4b03c0a7a/lib/daru/index/index.rb#L112-L120",
+            "repository": "SciRuby/daru"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_customer_insights/lib/2017-01-01/generated/azure_mgmt_customer_insights/images.rb#L145-L148",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/regru/reg_api2-ruby/blob/82fadffc9da6534761003b8a33edb77ab617df70/lib/reg_api2/sym_hash.rb#L42-L44",
+            "repository": "regru/reg_api2-ruby"
+          },
+          {
+            "id": "https://github.com/rightscale/right_agent/blob/64c68c162692f0a70543d10def5e4bf56505bd82/lib/right_agent/agent.rb#L870-L887",
+            "repository": "rightscale/right_agent"
+          },
+          {
+            "id": "https://github.com/drish/hyperb/blob/637de68dc304d8d07470a771f499e33f227955f4/lib/hyperb/funcs/funcs.rb#L37-L41",
+            "repository": "drish/hyperb"
+          },
+          {
+            "id": "https://github.com/puppetlabs/beaker-openstack/blob/129227e23f3fbc412d5b9f6e46ced3b059af9e19/lib/beaker/hypervisor/openstack.rb#L282-L299",
+            "repository": "puppetlabs/beaker-openstack"
+          },
+          {
+            "id": "https://github.com/couchrest/couchrest/blob/cdd3ad30b9fa9aad5464cb4647c18c198b2c48d9/lib/couchrest/database.rb#L80-L82",
+            "repository": "couchrest/couchrest"
+          },
+          {
+            "id": "https://github.com/oauth-xx/oauth-ruby/blob/cb9b9db64f520dc0ee87fe6e4fe82a7601cffb14/lib/oauth/consumer.rb#L205-L209",
+            "repository": "oauth-xx/oauth-ruby"
+          },
+          {
+            "id": "https://github.com/bjoernalbers/aruba-doubles/blob/5e835bf60fef4bdf903c225a7c29968d17899516/lib/aruba-doubles/double.rb#L113-L119",
+            "repository": "bjoernalbers/aruba-doubles"
+          },
+          {
+            "id": "https://github.com/meew0/discordrb/blob/764298a1ff0be69a1853b510d736f21c2b91a2fe/lib/discordrb/bot.rb#L457-L485",
+            "repository": "meew0/discordrb"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_cognitiveservices_contentmoderator/lib/1.0/generated/azure_cognitiveservices_contentmoderator/image_moderation.rb#L1277-L1280",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/metanorma/isodoc/blob/b8b51a28f9aecb7ce3ec1028317e94d0d623036a/lib/isodoc/function/cleanup.rb#L158-L161",
+            "repository": "metanorma/isodoc"
+          },
+          {
+            "id": "https://github.com/holtrop/rscons/blob/4967f89a769a7b5c6ca91377526e3f53ceabd6a3/lib/rscons/environment.rb#L228-L233",
+            "repository": "holtrop/rscons"
+          },
+          {
+            "id": "https://github.com/ThoughtWorksStudios/oauth2_provider/blob/d54702f194edd05389968cf8947465860abccc5d/tools/jruby-1.5.1/lib/ruby/1.8/uri/mailto.rb#L241-L261",
+            "repository": "ThoughtWorksStudios/oauth2_provider"
+          },
+          {
+            "id": "https://github.com/batter/s3_cors_fileupload/blob/5d40dfd9d2bec536debf207cb44a6740387178e7/lib/s3_cors_fileupload/rails/form_helper.rb#L48-L94",
+            "repository": "batter/s3_cors_fileupload"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_service_fabric/lib/6.2.0.9/generated/azure_service_fabric/service_fabric_client_apis.rb#L19322-L19324",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/jgoizueta/flt/blob/068869cfb81fe339658348490f4ea1294facfffa/lib/flt/trigonometry.rb#L457-L465",
+            "repository": "jgoizueta/flt"
+          },
+          {
+            "id": "https://github.com/victords/minigl/blob/a7117a566141cd922a4fd90ab71ba63ed8a92080/lib/minigl/game_object.rb#L84-L107",
+            "repository": "victords/minigl"
+          },
+          {
+            "id": "https://github.com/puppetlabs/beaker-pe/blob/703e17ae8cfcb4a38a50a9adb1437c3f0ff6aa17/lib/beaker-pe/install/feature_flags.rb#L42-L51",
+            "repository": "puppetlabs/beaker-pe"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_links/lib/2016-09-01/generated/azure_mgmt_links/resource_links.rb#L746-L755",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/hashicorp/vault-ruby/blob/02f0532a802ba1a2a0d8703a4585dab76eb9d864/lib/vault/persistent.rb#L841-L863",
+            "repository": "hashicorp/vault-ruby"
+          },
+          {
+            "id": "https://github.com/delano/rye/blob/9b3893b2bcd9d578b81353a9186f2bd671aa1253/lib/rye/rap.rb#L69-L74",
+            "repository": "delano/rye"
+          },
+          {
+            "id": "https://github.com/logicminds/rubyipmi/blob/516dfb0d5f8aa126159a5f5c25d60ab5c98f862f/lib/rubyipmi/ipmitool/commands/bmc.rb#L54-L82",
+            "repository": "logicminds/rubyipmi"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_api_management/lib/2016-07-07/generated/azure_mgmt_api_management/product_groups.rb#L294-L297",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/david942j/seccomp-tools/blob/8dfc288a28eab2d683d1a4cc0fed405d75dc5595/lib/seccomp-tools/syscall.rb#L41-L46",
+            "repository": "david942j/seccomp-tools"
+          },
+          {
+            "id": "https://github.com/jgoizueta/numerals/blob/a195e75f689af926537f791441bf8d11590c99c0/lib/numerals/rounding.rb#L209-L217",
+            "repository": "jgoizueta/numerals"
+          },
+          {
+            "id": "https://github.com/simukappu/activity_notification/blob/7f0f0ea8db1e69d7806f5b0685e226452714847a/lib/activity_notification/models/concerns/target.rb#L462-L467",
+            "repository": "simukappu/activity_notification"
+          },
+          {
+            "id": "https://github.com/lsegal/yard/blob/12f56cf7d58e7025085f00b9f9f2f62c24b13d93/lib/yard/rubygems/hook.rb#L162-L170",
+            "repository": "lsegal/yard"
+          },
+          {
+            "id": "https://github.com/emq/workable/blob/15b1410e97dd25ef28f6a0938f21efbb168f0ad2/lib/workable/client.rb#L144-L150",
+            "repository": "emq/workable"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_logic/lib/2015-02-01-preview/generated/azure_mgmt_logic/workflow_access_keys.rb#L244-L246",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/obrie/turntabler/blob/e2240f1a5d210a33c05c5b2261d291089cdcf1c6/lib/turntabler/authorized_user.rb#L250-L261",
+            "repository": "obrie/turntabler"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_service_fabric/lib/6.2.0.9/generated/azure_service_fabric/service_fabric_client_apis.rb#L10404-L10407",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/mikamai/akamai_api/blob/a6bc1369e118bb298c71019c9788e5c9bd1753c8/lib/akamai_api/eccu/soap_body.rb#L82-L91",
+            "repository": "mikamai/akamai_api"
+          },
+          {
+            "id": "https://github.com/wardencommunity/warden/blob/b7ff0f4ffacd7ad5a9b5a0191f1da0c7a64b2c2c/lib/warden/manager.rb#L112-L131",
+            "repository": "wardencommunity/warden"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_analysis_services/lib/2017-08-01-beta/generated/azure_mgmt_analysis_services/servers.rb#L1273-L1275",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/botanicus/rango/blob/b8904453f3b7d3cd65e2bcc5236bfe645aa78e8e/lib/rango/controller.rb#L83-L89",
+            "repository": "botanicus/rango"
+          },
+          {
+            "id": "https://github.com/MagicTheGathering/mtg-sdk-ruby/blob/fbe3503ad76d4ca0252d4130daa68e3d087a67cd/lib/mtg_sdk/query_builder.rb#L37-L64",
+            "repository": "MagicTheGathering/mtg-sdk-ruby"
+          },
+          {
+            "id": "https://github.com/eprothro/cassie/blob/63e71d12d3549882147e715e427a16fd8e0aa210/lib/cassie/statements/execution.rb#L59-L62",
+            "repository": "eprothro/cassie"
+          },
+          {
+            "id": "https://github.com/brianmichel/BadFruit/blob/dab9c28d4bcd79d64829239abf6a816bbbcc73a6/lib/badfruit/Movies/movies.rb#L25-L36",
+            "repository": "brianmichel/BadFruit"
+          },
+          {
+            "id": "https://github.com/puppetlabs/puppet/blob/4baeed97cbb7571ddc6635f0a24debe2e8b22cd3/lib/puppet/functions.rb#L678-L680",
+            "repository": "puppetlabs/puppet"
+          },
+          {
+            "id": "https://github.com/michaeledgar/laser/blob/0e38780eb44466ae35f33d28ec75536a4f3a969b/lib/laser/analysis/lexical_analysis.rb#L135-L139",
+            "repository": "michaeledgar/laser"
+          },
+          {
+            "id": "https://github.com/cerebris/jsonapi-resources/blob/1ac6bba777e364eaa36706f888792b99b63d8d1a/lib/jsonapi/resource_id_tree.rb#L102-L110",
+            "repository": "cerebris/jsonapi-resources"
+          },
+          {
+            "id": "https://github.com/raulanatol/el_finder_s3/blob/df7e9d5792949f466cafecdbac9b6289ebbe4224/lib/el_finder_s3/connector.rb#L78-L120",
+            "repository": "raulanatol/el_finder_s3"
+          },
+          {
+            "id": "https://github.com/auser/poolparty/blob/8b4af051833addd84f4282bcedbdffa814d8e033/lib/poolparty/chef_solo.rb#L27-L52",
+            "repository": "auser/poolparty"
+          },
+          {
+            "id": "https://github.com/ScottZg/itools/blob/eae7f791a158edafe7a6284c113e58ea5cc1e079/lib/itools/find_unuse_img.rb#L23-L30",
+            "repository": "ScottZg/itools"
+          },
+          {
+            "id": "https://github.com/fastlane/fastlane/blob/457c5d647c77f0e078dafa5129da616914e002c5/spaceship/lib/spaceship/tunes/tunes_client.rb#L1292-L1350",
+            "repository": "fastlane/fastlane"
+          },
+          {
+            "id": "https://github.com/mare-imbrium/canis/blob/8bce60ff9dad321e299a6124620deb4771740b0b/lib/canis/core/util/app.rb#L265-L299",
+            "repository": "mare-imbrium/canis"
+          },
+          {
+            "id": "https://github.com/WeAreFarmGeek/diplomat/blob/cb6d06dc4ec965c30bbaf22017fd0db64b9b7677/lib/diplomat/maintenance.rb#L28-L39",
+            "repository": "WeAreFarmGeek/diplomat"
+          },
+          {
+            "id": "https://github.com/PeterCamilleri/mini_readline/blob/45175ee01653a184b8ba04b2e8691dce5b26a1b5/lib/mini_readline/read_line/edit/edit_window/sync_window.rb#L22-L34",
+            "repository": "PeterCamilleri/mini_readline"
+          },
+          {
+            "id": "https://github.com/colincasey/arcserver.rb/blob/2d9e65e61079e97662e245cb600731efeca46eeb/lib/arcserver/map_server.rb#L31-L38",
+            "repository": "colincasey/arcserver.rb"
+          },
+          {
+            "id": "https://github.com/floere/phony/blob/9ca50743499cf478a25fdb927bcdacd29d2c90c7/lib/phony/country_codes.rb#L95-L114",
+            "repository": "floere/phony"
+          },
+          {
+            "id": "https://github.com/mhenrixon/sidekiq-unique-jobs/blob/2944b97c720528f53962ccfd17d43ac939a77f46/lib/sidekiq_unique_jobs/scripts.rb#L33-L39",
+            "repository": "mhenrixon/sidekiq-unique-jobs"
+          },
+          {
+            "id": "https://github.com/mattray/spiceweasel/blob/c7f01a127a542989f8525486890cf12249b6db44/lib/spiceweasel/environments.rb#L74-L96",
+            "repository": "mattray/spiceweasel"
+          },
+          {
+            "id": "https://github.com/tribune/is_it_working/blob/44645f8f676dd9fd25cff2d93cfdff0876cef36d/lib/is_it_working/filter.rb#L30-L43",
+            "repository": "tribune/is_it_working"
+          },
+          {
+            "id": "https://github.com/JackDanger/permanent_records/blob/ad44a5fe091376fb791bf9c7b469e8513b8fa04e/lib/permanent_records.rb#L153-L158",
+            "repository": "JackDanger/permanent_records"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_sql/lib/2015-05-01-preview/generated/azure_mgmt_sql/failover_groups.rb#L415-L431",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/chicks/sugarcrm/blob/360060139b13788a7ec462c6ecd08d3dbda9849a/lib/sugarcrm/associations/association.rb#L98-L109",
+            "repository": "chicks/sugarcrm"
+          },
+          {
+            "id": "https://github.com/kudelabs/textilize/blob/93b098e6fca0d98c99ab28cbe9602520d4b170c1/lib/textilize/helper.rb#L30-L33",
+            "repository": "kudelabs/textilize"
+          },
+          {
+            "id": "https://github.com/reinteractive/wallaby/blob/85b86e5e661d68a62aa8ae25d39c4f545c5ac36e/lib/helpers/wallaby/base_helper.rb#L50-L59",
+            "repository": "reinteractive/wallaby"
+          },
+          {
+            "id": "https://github.com/weenhanceit/gaapi/blob/20d25bd06b2e0cccc86ca1ea1baaac6be045355a/lib/gaapi/row.rb#L87-L114",
+            "repository": "weenhanceit/gaapi"
+          },
+          {
+            "id": "https://github.com/cisco/cisco-network-node-utils/blob/a617a9ef9d6bd18f35f2e2f2591033e1ddd46145/lib/cisco_node_utils/bgp.rb#L472-L479",
+            "repository": "cisco/cisco-network-node-utils"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_network/lib/2018-08-01/generated/azure_mgmt_network/network_watchers.rb#L729-L745",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/cmer/nobspw/blob/6cd079a9e6f18c38230547e8d2141ed70db4e029/lib/nobspw/validation_methods.rb#L94-L104",
+            "repository": "cmer/nobspw"
+          },
+          {
+            "id": "https://github.com/PixarAnimationStudios/ruby-jss/blob/4ab645bfaec8b2edb1ea146bfc2b10f0d62edee9/lib/jss/api_object/computer_invitation.rb#L192-L206",
+            "repository": "PixarAnimationStudios/ruby-jss"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_sql/lib/2017-03-01-preview/generated/azure_mgmt_sql/server_dns_aliases.rb#L620-L622",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/adimichele/hubspot-ruby/blob/8eb0a64dd0c14c79e631e81bfdc169583e775a46/lib/hubspot/blog.rb#L45-L60",
+            "repository": "adimichele/hubspot-ruby"
+          },
+          {
+            "id": "https://github.com/honeybadger-io/honeybadger-ruby/blob/dc4af07c347814c2c8a71778c5bcd4d6979b4638/lib/honeybadger/notice.rb#L195-L223",
+            "repository": "honeybadger-io/honeybadger-ruby"
+          },
+          {
+            "id": "https://github.com/kevgo/active_cucumber/blob/9f3609abbfe2c4c3534c2c64d2f638a6bb6347cf/lib/active_cucumber/active_record_builder.rb#L27-L30",
+            "repository": "kevgo/active_cucumber"
+          },
+          {
+            "id": "https://github.com/rightscale/right_link/blob/b33a209c20a8a0942dd9f1fe49a08030d4ca209f/lib/instance/cook/executable_sequence.rb#L561-L566",
+            "repository": "rightscale/right_link"
+          },
+          {
+            "id": "https://github.com/theforeman/foreman-tasks/blob/d99094fa99d6b34324e6c8d10da4d012675c6e36/app/models/foreman_tasks/lock.rb#L53-L63",
+            "repository": "theforeman/foreman-tasks"
+          },
+          {
+            "id": "https://github.com/scrapper/perobs/blob/1c9327656912cf96683849f92d260546af856adf/lib/perobs/SpaceTreeNode.rb#L483-L515",
+            "repository": "scrapper/perobs"
+          },
+          {
+            "id": "https://github.com/HewlettPackard/hpe3par_ruby_sdk/blob/f8cfc6e597741be593cf7fe013accadf982ee68b/lib/Hpe3parSdk/client.rb#L1814-L1821",
+            "repository": "HewlettPackard/hpe3par_ruby_sdk"
+          },
+          {
+            "id": "https://github.com/kkaempf/ruby-wbem/blob/ce813d911b8b67ef23fb6171f6910ebbca602121/lib/wbem/wsman.rb#L381-L405",
+            "repository": "kkaempf/ruby-wbem"
+          },
+          {
+            "id": "https://github.com/activeadmin/inherited_resources/blob/2ba6982ddd6a56e7ef9ed7396473e5500ad77126/lib/inherited_resources/class_methods.rb#L229-L233",
+            "repository": "activeadmin/inherited_resources"
+          },
+          {
+            "id": "https://github.com/andrewpthorp/espn/blob/3aa3ae249db1c663e92d04204a9d77bcb70eca40/lib/espn/request.rb#L63-L75",
+            "repository": "andrewpthorp/espn"
+          },
+          {
+            "id": "https://github.com/chef/chef-zero/blob/5873d906942770a34f0cf0fed05973ec3240a275/lib/chef_zero/server.rb#L358-L372",
+            "repository": "chef/chef-zero"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_event_hub/lib/2018-01-01-preview/generated/azure_mgmt_event_hub/namespaces.rb#L655-L657",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_service_fabric/lib/6.2.0.9/generated/azure_service_fabric/service_fabric_client_apis.rb#L21013-L21016",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/gdelugre/origami/blob/ac1df803517601d486556fd40af5d422a6f4378e/lib/origami/pdf.rb#L789-L976",
+            "repository": "gdelugre/origami"
+          },
+          {
+            "id": "https://github.com/Yellowen/Faalis/blob/d12abdb8559dabbf6b2044e3ba437038527039b2/lib/faalis/dashboard/sections/resources_index.rb#L29-L53",
+            "repository": "Yellowen/Faalis"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_iot_central/lib/2017-07-01-privatepreview/generated/azure_mgmt_iot_central/apps.rb#L702-L704",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/devrandom/net_dav/blob/dd41e51dee05d81f7eb4256dce3f263f8d12e44e/lib/net/dav.rb#L641-L647",
+            "repository": "devrandom/net_dav"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_storage/lib/2018-07-01/generated/azure_mgmt_storage/blob_containers.rb#L1741-L1744",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/mabarroso/lleidasms/blob/419d37d9a25cc73548e5d9e8ac86bc24f35793ee/lib/lleidasms/client.rb#L209-L219",
+            "repository": "mabarroso/lleidasms"
+          },
+          {
+            "id": "https://github.com/arkes/sorting_table_for/blob/cfc41f033ed1babd9b3536cd63ef854eafb6e94e/lib/sorting_table_for/format_cell.rb#L160-L168",
+            "repository": "arkes/sorting_table_for"
+          },
+          {
+            "id": "https://github.com/attachmentsme/ruby-box/blob/34f52ae3a0de73e54808f514aba9b4ad820d75f4/lib/ruby-box/item.rb#L98-L118",
+            "repository": "attachmentsme/ruby-box"
+          },
+          {
+            "id": "https://github.com/mkdynamic/vss/blob/f4e62e94f0381174f26debc5c31d282997591188/lib/vss/engine.rb#L59-L73",
+            "repository": "mkdynamic/vss"
+          },
+          {
+            "id": "https://github.com/acquia/sf-sdk-ruby/blob/c0e9f2a72cd111b1d3213d012bfe7868d88eb1f8/lib/sfrest/update.rb#L16-L23",
+            "repository": "acquia/sf-sdk-ruby"
+          },
+          {
+            "id": "https://github.com/dicom/rtkit/blob/08248bf294769ae5b45ed4a9671f0620d5740252/lib/rtkit/structure_set.rb#L333-L339",
+            "repository": "dicom/rtkit"
+          },
+          {
+            "id": "https://github.com/subimage/cashboard-rb/blob/320e311ea1549cdd0dada0f8a0a4f9942213b28f/lib/cashboard/errors.rb#L39-L46",
+            "repository": "subimage/cashboard-rb"
+          },
+          {
+            "id": "https://github.com/puppetlabs/beaker-answers/blob/3193bf986fd1842f2c7d8940a88df36db4200f3f/lib/beaker-answers/answers.rb#L221-L227",
+            "repository": "puppetlabs/beaker-answers"
+          },
+          {
+            "id": "https://github.com/sxross/MotionModel/blob/37bf447b6c9bdc2158f320cef40714f41132c542/motion/adapters/array_finder_query.rb#L222-L228",
+            "repository": "sxross/MotionModel"
+          },
+          {
+            "id": "https://github.com/tzinfo/tzinfo/blob/8fdf06ed9a4b935864e19794187d091219de481a/lib/tzinfo/datetime_with_offset.rb#L115-L117",
+            "repository": "tzinfo/tzinfo"
+          },
+          {
+            "id": "https://github.com/kickstarter/amazon_flex_pay/blob/5a4cbc608b41858a2db2f6a44884aa4efee77c1e/lib/amazon_flex_pay/pipelines/base.rb#L15-L23",
+            "repository": "kickstarter/amazon_flex_pay"
+          },
+          {
+            "id": "https://github.com/rakeoe/rakeoe/blob/af7713fb238058509a34103829e37a62873c4ecb/lib/rakeoe/binary_base.rb#L369-L374",
+            "repository": "rakeoe/rakeoe"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_web/lib/2015-08-01/generated/azure_mgmt_web/app_service_certificate_orders.rb#L1517-L1519",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/NetcomKassel/smb-client/blob/5f6a24e5e7cc279ec5bb09f42efa1f4184444bcd/lib/smb/client/client.rb#L76-L108",
+            "repository": "NetcomKassel/smb-client"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_recovery_services_site_recovery/lib/2018-01-10/generated/azure_mgmt_recovery_services_site_recovery/replication_protected_items.rb#L498-L501",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/kpumuk/meta-tags/blob/03585f95edf96cd17024c5c155ce46ec8bc47232/lib/meta_tags/meta_tags_collection.rb#L113-L121",
+            "repository": "kpumuk/meta-tags"
+          },
+          {
+            "id": "https://github.com/lulibrary/aspire/blob/623f481a2e79b9cb0b5feb923da438eb1ed2abfe/lib/aspire/util.rb#L30-L34",
+            "repository": "lulibrary/aspire"
+          },
+          {
+            "id": "https://github.com/matiasbattocchia/datamancer/blob/b4081b98269c92999c183d345201900e56f0950d/lib/datamancer/datastream.rb#L142-L160",
+            "repository": "matiasbattocchia/datamancer"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_web/lib/2018-02-01/generated/azure_mgmt_web/app_service_environments.rb#L2644-L2647",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/wvanbergen/chunky_png/blob/691f8cb0fbe1816474bf8af8dbea4fb53debb816/lib/chunky_png/color.rb#L983-L986",
+            "repository": "wvanbergen/chunky_png"
+          },
+          {
+            "id": "https://github.com/kevintyll/resque_manager/blob/470e1a79232dcdd9820ee45e5371fe57309883b1/lib/resque_manager/overrides/resque/worker.rb#L187-L203",
+            "repository": "kevintyll/resque_manager"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_operational_insights/lib/2015-03-20/generated/azure_mgmt_operational_insights/workspaces.rb#L603-L606",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/drish/hyperb/blob/637de68dc304d8d07470a771f499e33f227955f4/lib/hyperb/network/fips.rb#L93-L100",
+            "repository": "drish/hyperb"
+          },
+          {
+            "id": "https://github.com/flyerhzm/rails_best_practices/blob/c1a4c1e111ec4c804ed3e7b194bf026d93523048/lib/rails_best_practices/analyzer.rb#L225-L250",
+            "repository": "flyerhzm/rails_best_practices"
+          },
+          {
+            "id": "https://github.com/meew0/discordrb/blob/764298a1ff0be69a1853b510d736f21c2b91a2fe/lib/discordrb/data/server.rb#L421-L443",
+            "repository": "meew0/discordrb"
+          },
+          {
+            "id": "https://github.com/ruby2d/ruby2d/blob/43ce9805a7ae8b82b7ab8c50bf6d4c845d395dc4/lib/ruby2d/window.rb#L230-L241",
+            "repository": "ruby2d/ruby2d"
+          },
+          {
+            "id": "https://github.com/eprothro/cassie/blob/63e71d12d3549882147e715e427a16fd8e0aa210/lib/cassie/schema/versioning.rb#L18-L22",
+            "repository": "eprothro/cassie"
+          },
+          {
+            "id": "https://github.com/zertico/softlayer/blob/77c2e73f22cebd73359ff108342ed1927a063428/lib/softlayer/config.rb#L24-L27",
+            "repository": "zertico/softlayer"
+          },
+          {
+            "id": "https://github.com/atomicobject/hardmock/blob/a2c01c2cbd28f56a71cc824f04b40ea1d14be367/lib/hardmock/mock.rb#L108-L114",
+            "repository": "atomicobject/hardmock"
+          },
+          {
+            "id": "https://github.com/feduxorg/gpx_track_generator/blob/abb85d8e5f9ac430c4e896b36f229bb856e3910a/lib/gpx_track_generator/gpx_file.rb#L16-L24",
+            "repository": "feduxorg/gpx_track_generator"
+          },
+          {
+            "id": "https://github.com/gosu/ashton/blob/313673d8b1b3e1082c9d24e4a166396d1f471634/lib/ashton/texture.rb#L93-L111",
+            "repository": "gosu/ashton"
+          },
+          {
+            "id": "https://github.com/samvera-deprecated/solrizer-fedora/blob/277fab50a93a761fbccd07e2cfa01b22736d5cff/lib/solrizer/fedora/indexer.rb#L100-L136",
+            "repository": "samvera-deprecated/solrizer-fedora"
+          },
+          {
+            "id": "https://github.com/piotrmurach/github/blob/8702452c66bea33c9388550aed9e9974f76aaef1/lib/github_api/client/markdown.rb#L52-L59",
+            "repository": "piotrmurach/github"
+          },
+          {
+            "id": "https://github.com/jeffa/html-autotag-ruby/blob/994103cb2c73e0477077fc041e12c81b7ed6326c/lib/HTML/AutoAttr.rb#L21-L39",
+            "repository": "jeffa/html-autotag-ruby"
+          },
+          {
+            "id": "https://github.com/orslumen/record-cache/blob/9bf4285c0a086f831b4b6e1d3fc292fbe44a14d6/lib/record_cache/dispatcher.rb#L78-L87",
+            "repository": "orslumen/record-cache"
+          },
+          {
+            "id": "https://github.com/rmagick/rmagick/blob/ef6688ed9d76bf123c2ea1a483eff8635051adb7/lib/rvg/rvg.rb#L260-L268",
+            "repository": "rmagick/rmagick"
+          },
+          {
+            "id": "https://github.com/infinitered/ProMotion/blob/837d4b1dbdf7fac4ce6dee840223db5a917f0116/lib/ProMotion/collection/collection.rb#L81-L86",
+            "repository": "infinitered/ProMotion"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_cognitiveservices_luisauthoring/lib/2.0/generated/azure_cognitiveservices_luisauthoring/model.rb#L4890-L4893",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/rahmal/rconfig/blob/528c2fca29fcba4eb495ae443fa04269278d226b/lib/rconfig/utils.rb#L105-L109",
+            "repository": "rahmal/rconfig"
+          },
+          {
+            "id": "https://github.com/toptal/chewy/blob/cb1bb3efb1bd8a31e7e31add6072189cb1f4f01b/lib/chewy/query.rb#L727-L730",
+            "repository": "toptal/chewy"
+          },
+          {
+            "id": "https://github.com/rightscale/right_link/blob/b33a209c20a8a0942dd9f1fe49a08030d4ca209f/lib/instance/cook/cook.rb#L141-L145",
+            "repository": "rightscale/right_link"
+          },
+          {
+            "id": "https://github.com/dpla/KriKri/blob/0ac26e60ce1bba60caa40263a562796267cf833f/lib/krikri/ldp/rdf_source.rb#L102-L106",
+            "repository": "dpla/KriKri"
+          },
+          {
+            "id": "https://github.com/mattmueller/foursquare2/blob/0affc7d4bd5a3aea51e16782def38f589d16e60a/lib/foursquare2/venues.rb#L40-L46",
+            "repository": "mattmueller/foursquare2"
+          },
+          {
+            "id": "https://github.com/AlmazKo/BashVisual/blob/ca5d8902281a0996524e218cf72983d4c1dc59a5/lib/bash-visual/console.rb#L37-L39",
+            "repository": "AlmazKo/BashVisual"
+          },
+          {
+            "id": "https://github.com/mikel/mail/blob/fb53fb369eb2bf0494ac70675970c90cdcc3f495/lib/mail/fields/parameter_hash.rb#L16-L43",
+            "repository": "mikel/mail"
+          },
+          {
+            "id": "https://github.com/fuminori-ido/edgarj/blob/1648ab180f1f4adaeea03d54b645f58f3702a2bf/app/controllers/edgarj/controller_mixin_common.rb#L46-L56",
+            "repository": "fuminori-ido/edgarj"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_hdinsight/lib/2015-03-01-preview/generated/azure_mgmt_hdinsight/locations.rb#L121-L124",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/PixarAnimationStudios/ruby-jss/blob/4ab645bfaec8b2edb1ea146bfc2b10f0d62edee9/lib/jss/api_connection.rb#L1098-L1109",
+            "repository": "PixarAnimationStudios/ruby-jss"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_recovery_services_site_recovery/lib/2018-01-10/generated/azure_mgmt_recovery_services_site_recovery/replication_protected_items.rb#L1705-L1708",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/conversation/raca/blob/fa69dfde22359cc0e06f655055be4eadcc7019c0/lib/raca/account.rb#L114-L139",
+            "repository": "conversation/raca"
+          },
+          {
+            "id": "https://github.com/watir/watir/blob/2d8db09811c6221ae401b85b2f61f5fa66e463a3/lib/watir/elements/iframe.rb#L47-L54",
+            "repository": "watir/watir"
+          },
+          {
+            "id": "https://github.com/glebm/i18n-tasks/blob/56b45e459d7d07bb19d613a17ffc1ce6f6f43cf5/lib/i18n/tasks/data.rb#L70-L79",
+            "repository": "glebm/i18n-tasks"
+          },
+          {
+            "id": "https://github.com/geekyfox/tdp/blob/13718e35a4539945c0b62313194cbf458a4e9ed5/lib/tdp.rb#L269-L272",
+            "repository": "geekyfox/tdp"
+          },
+          {
+            "id": "https://github.com/seblindberg/ruby-rooted_tree/blob/59013fc0fd59f137b5e40d86c49afe08ea678941/lib/rooted_tree/node.rb#L190-L194",
+            "repository": "seblindberg/ruby-rooted_tree"
+          },
+          {
+            "id": "https://github.com/tribune/is_it_working/blob/44645f8f676dd9fd25cff2d93cfdff0876cef36d/lib/is_it_working/handler.rb#L125-L149",
+            "repository": "tribune/is_it_working"
+          },
+          {
+            "id": "https://github.com/flavorjones/loofah-activerecord/blob/06610c26202d36f4fba6bdbde40488aacf678582/lib/loofah/activerecord/active_record.rb#L32-L37",
+            "repository": "flavorjones/loofah-activerecord"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_cognitiveservices_contentmoderator/lib/1.0/generated/azure_cognitiveservices_contentmoderator/text_moderation.rb#L53-L56",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/mongodb/mongo-ruby-driver/blob/dca26d0870cb3386fad9ccc1d17228097c1fe1c8/lib/mongo/cluster.rb#L458-L469",
+            "repository": "mongodb/mongo-ruby-driver"
+          },
+          {
+            "id": "https://github.com/snowplow/iglu-ruby-client/blob/6d41668dc3e5615e3358a952e193812b5c4b3d6b/lib/iglu-client/resolver.rb#L119-L124",
+            "repository": "snowplow/iglu-ruby-client"
+          },
+          {
+            "id": "https://github.com/mare-imbrium/canis/blob/8bce60ff9dad321e299a6124620deb4771740b0b/lib/canis/core/widgets/rmessagebox.rb#L424-L433",
+            "repository": "mare-imbrium/canis"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_network/lib/2018-07-01/generated/azure_mgmt_network/local_network_gateways.rb#L177-L180",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/slideshow-s9/slideshow/blob/b7a397f9136f623589816bef498914943980a313/slideshow-models/lib/slideshow/models/slide.rb#L101-L109",
+            "repository": "slideshow-s9/slideshow"
+          },
+          {
+            "id": "https://github.com/scrapper/perobs/blob/1c9327656912cf96683849f92d260546af856adf/lib/perobs/ObjectBase.rb#L250-L269",
+            "repository": "scrapper/perobs"
+          },
+          {
+            "id": "https://github.com/jellymann/mittsu/blob/955bde855c727d775b80f2c88457cb4b58c8c8f8/lib/mittsu/core/buffer_geometry.rb#L575-L605",
+            "repository": "jellymann/mittsu"
+          },
+          {
+            "id": "https://github.com/gurix/helena_administration/blob/d7c5019b3c741a882a3d2192950cdfd92ab72faa/app/controllers/helena_administration/import_surveys_controller.rb#L11-L27",
+            "repository": "gurix/helena_administration"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_key_vault/lib/2016-10-01/generated/azure_key_vault/key_vault_client.rb#L7901-L7903",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/nrser/nrser.rb/blob/7db9a729ec65894dfac13fd50851beae8b809738/lib/nrser/errors/multiple_errors.rb#L77-L84",
+            "repository": "nrser/nrser.rb"
+          },
+          {
+            "id": "https://github.com/jedld/tensor_stream/blob/1be668620d86a12d4a2223502722d99968bdf854/lib/tensor_stream/utils.rb#L143-L148",
+            "repository": "jedld/tensor_stream"
+          },
+          {
+            "id": "https://github.com/jmcaffee/qbt_client/blob/1e34d86c9ffc2e06fb7f0723fea13ba4596a1054/lib/qbt_client/web_ui.rb#L677-L685",
+            "repository": "jmcaffee/qbt_client"
+          },
+          {
+            "id": "https://github.com/drewtempelmeyer/tax_cloud/blob/ace4fae5586bc993e10a39989efbd048849ecad0/lib/tax_cloud/tax_code_group.rb#L12-L18",
+            "repository": "drewtempelmeyer/tax_cloud"
+          },
+          {
+            "id": "https://github.com/paulsamuels/xcunique/blob/0a95740109dc504734acf01dfbb979d09fb5d9fd/lib/xcunique/sorter.rb#L45-L48",
+            "repository": "paulsamuels/xcunique"
+          },
+          {
+            "id": "https://github.com/Falkor/falkorlib/blob/1a6d732e8fd5550efb7c98a87ee97fcd2e051858/lib/falkorlib/git/base.rb#L424-L446",
+            "repository": "Falkor/falkorlib"
+          },
+          {
+            "id": "https://github.com/daddyz/phonelib/blob/aa0023eab7c896b71275bf342bc7f49735cbdbbf/lib/phonelib/phone_analyzer_helper.rb#L48-L52",
+            "repository": "daddyz/phonelib"
+          },
+          {
+            "id": "https://github.com/knowledge-ruby/knowledge/blob/64dcc9f138af9af513c341d933353ff31a52e104/lib/knowledge/learner.rb#L167-L170",
+            "repository": "knowledge-ruby/knowledge"
+          },
+          {
+            "id": "https://github.com/tas50/stove/blob/cb66538c5d7f4885de829ef664361d7a33cc8370/lib/stove/supermarket.rb#L70-L77",
+            "repository": "tas50/stove"
+          },
+          {
+            "id": "https://github.com/rightscale/right_link/blob/b33a209c20a8a0942dd9f1fe49a08030d4ca209f/scripts/system_configurator.rb#L144-L152",
+            "repository": "rightscale/right_link"
+          },
+          {
+            "id": "https://github.com/rightscale/right_chimp/blob/290d3e01f7bf4b505722a080cb0abbb0314222f8/lib/right_chimp/chimp.rb#L485-L502",
+            "repository": "rightscale/right_chimp"
+          },
+          {
+            "id": "https://github.com/botanicus/nake/blob/d0ca22c3ce686dc916bdbe5bbd5475a18371a41d/lib/nake/dsl.rb#L48-L56",
+            "repository": "botanicus/nake"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_web/lib/2018-02-01/generated/azure_mgmt_web/app_service_environments.rb#L7890-L7899",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/sendgrid/ruby-http-client/blob/37fb6943258dd8dec0cd7fc5e7d54704471b97cc/lib/ruby_http_client.rb#L128-L132",
+            "repository": "sendgrid/ruby-http-client"
+          },
+          {
+            "id": "https://github.com/Telestream/telestream-cloud-ruby-sdk/blob/c232427aa3e84688ba41ec28e5bef1cc72832bf4/flip/lib/telestream_cloud_flip/models/profile.rb#L1423-L1429",
+            "repository": "Telestream/telestream-cloud-ruby-sdk"
+          },
+          {
+            "id": "https://github.com/kontena/kontena/blob/5cb5b4457895985231ac88e78c8cbc5a8ffb5ec7/cli/lib/kontena/client.rb#L457-L462",
+            "repository": "kontena/kontena"
+          },
+          {
+            "id": "https://github.com/jgoizueta/numerals/blob/a195e75f689af926537f791441bf8d11590c99c0/lib/numerals/numeral.rb#L467-L508",
+            "repository": "jgoizueta/numerals"
+          },
+          {
+            "id": "https://github.com/flyerhzm/rails_best_practices/blob/c1a4c1e111ec4c804ed3e7b194bf026d93523048/lib/rails_best_practices/analyzer.rb#L157-L163",
+            "repository": "flyerhzm/rails_best_practices"
+          },
+          {
+            "id": "https://github.com/zhimin/rwebspec/blob/aafccee2ba66d17d591d04210067035feaf2f892/lib/rwebspec-common/core.rb#L355-L359",
+            "repository": "zhimin/rwebspec"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/data/azure_service_fabric/lib/6.2.0.9/generated/azure_service_fabric/service_fabric_client_apis.rb#L7986-L7989",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/yamasolutions/integral/blob/d8077b6658c8b6713d97b44ff0e136f212354a25/app/helpers/integral/blog_helper.rb#L16-L31",
+            "repository": "yamasolutions/integral"
+          },
+          {
+            "id": "https://github.com/talis/blueprint_rb/blob/0ded0734161d288ba2d81485b3d3ec82a4063e1e/lib/blueprint_ruby_client/api/assets_api.rb#L32-L35",
+            "repository": "talis/blueprint_rb"
+          },
+          {
+            "id": "https://github.com/ktonon/cog/blob/156c81a0873135d7dc47c79c705c477893fff74a/lib/cog/generator.rb#L67-L76",
+            "repository": "ktonon/cog"
+          },
+          {
+            "id": "https://github.com/infinitered/rmq/blob/a8329e1574ce3275c9fe56b91127c8b5e4b7693e/motion/ruby_motion_query/rect.rb#L399-L415",
+            "repository": "infinitered/rmq"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_logic/lib/2016-06-01/generated/azure_mgmt_logic/workflow_triggers.rb#L611-L613",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/jekuno/milia/blob/4c36b46f3f422b22fa48a98abd646e562667ed83/lib/milia/invite_member.rb#L52-L65",
+            "repository": "jekuno/milia"
+          },
+          {
+            "id": "https://github.com/mlomnicki/automatic_foreign_key/blob/c87676f8ebca0a1326c5b5c48ae166fdefd3fd2a/lib/automatic_foreign_key/active_record/connection_adapters/table_definition.rb#L40-L44",
+            "repository": "mlomnicki/automatic_foreign_key"
+          },
+          {
+            "id": "https://github.com/celluloid/dcell/blob/a8fecfae220cb2c20d3761bc27880e4133aba498/lib/dcell.rb#L100-L109",
+            "repository": "celluloid/dcell"
+          },
+          {
+            "id": "https://github.com/andymeneely/squib/blob/1d307fe6e00306e7b21f35e6c51955724e4e0673/lib/squib/api/image.rb#L12-L26",
+            "repository": "andymeneely/squib"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_web/lib/2018-02-01/generated/azure_mgmt_web/diagnostics.rb#L367-L370",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/LoyaltyNZ/alchemy-flux/blob/3f4a433c7241a642d3eb8e7bb5fb74d3c6d33120/lib/alchemy-flux.rb#L292-L298",
+            "repository": "LoyaltyNZ/alchemy-flux"
+          },
+          {
+            "id": "https://github.com/guilhermesad/rspotify/blob/02db6f0f2730b69f6bfcc362435f553ebeaa2eab/lib/rspotify/user.rb#L410-L415",
+            "repository": "guilhermesad/rspotify"
+          },
+          {
+            "id": "https://github.com/kkaempf/ruby-wbem/blob/ce813d911b8b67ef23fb6171f6910ebbca602121/lib/wbem/cimxml.rb#L33-L50",
+            "repository": "kkaempf/ruby-wbem"
+          },
+          {
+            "id": "https://github.com/meineerde/rackstash/blob/b610a2157187dd05ef8d500320aa846234487b01/lib/rackstash/flow.rb#L174-L184",
+            "repository": "meineerde/rackstash"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_stor_simple8000_series/lib/2017-06-01/generated/azure_mgmt_stor_simple8000_series/storage_account_credentials.rb#L437-L440",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/roo-rb/roo/blob/4ec1104f0c3c2a29711c0c907371cd2be12bcc3c/lib/roo/open_office.rb#L108-L113",
+            "repository": "roo-rb/roo"
+          },
+          {
+            "id": "https://github.com/kostyantyn/school_friend/blob/4cfd829bc6ba4b6a9148e6565e5328d5f2ba91e9/lib/school_friend/session.rb#L203-L211",
+            "repository": "kostyantyn/school_friend"
+          },
+          {
+            "id": "https://github.com/xiuxian123/loyals/blob/41f586ca1551f64e5375ad32a406d5fca0afae43/projects/loyal_warden/lib/warden/proxy.rb#L164-L182",
+            "repository": "xiuxian123/loyals"
+          },
+          {
+            "id": "https://github.com/richard-viney/ig_markets/blob/c1989ec557b0ba643a76024c5bec624abd8c1c4c/lib/ig_markets/session.rb#L33-L45",
+            "repository": "richard-viney/ig_markets"
+          },
+          {
+            "id": "https://github.com/hipchat/hipchat-rb/blob/523578ecb7fe68cde347225c210dfd3bc1a64c48/lib/hipchat/room.rb#L64-L74",
+            "repository": "hipchat/hipchat-rb"
+          },
+          {
+            "id": "https://github.com/ramz15/voter_love/blob/99e97562e31c1bd0498c7f7a9b8a209af14a22f5/lib/voter_love/voter.rb#L89-L97",
+            "repository": "ramz15/voter_love"
+          },
+          {
+            "id": "https://github.com/redding/ns-options/blob/63618a18e7a1d270dffc5a3cfea70ef45569e061/lib/ns-options/namespace_data.rb#L48-L57",
+            "repository": "redding/ns-options"
+          },
+          {
+            "id": "https://github.com/celluloid/dcell/blob/a8fecfae220cb2c20d3761bc27880e4133aba498/lib/dcell/resource_manager.rb#L44-L50",
+            "repository": "celluloid/dcell"
+          },
+          {
+            "id": "https://github.com/dbalatero/typhoeus_spec_cache/blob/7141c311c76fe001428c143d90ad927bd8b178e9/lib/typhoeus/spec_cache.rb#L48-L54",
+            "repository": "dbalatero/typhoeus_spec_cache"
+          },
+          {
+            "id": "https://github.com/kete/kete_trackable_items/blob/5998ecd83967108c1ed1378161e43feb80d6b886/lib/kete_trackable_items/list_management_controllers.rb#L20-L28",
+            "repository": "kete/kete_trackable_items"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_compute/lib/2016-04-30-preview/generated/azure_mgmt_compute/virtual_machine_scale_sets.rb#L1895-L1898",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/jns/Aims/blob/2dcb6c02cd05b2d0c8ab72be4e85d60375df296c/lib/aims/geometry.rb#L278-L284",
+            "repository": "jns/Aims"
+          },
+          {
+            "id": "https://github.com/Katello/katello/blob/a1c9280067607999cae43bab89b53ba870856b76/app/services/katello/product_content_finder.rb#L17-L31",
+            "repository": "Katello/katello"
+          },
+          {
+            "id": "https://github.com/Homebrew/ruby-macho/blob/a1dedc25bc78a9bd6366988d12e122ee3d420e8c/lib/macho/macho_file.rb#L415-L424",
+            "repository": "Homebrew/ruby-macho"
+          },
+          {
+            "id": "https://github.com/kt3k/bmp/blob/24c16fa8bcea5da8a72370b537b6dd92002011ee/lib/bump/application.rb#L89-L98",
+            "repository": "kt3k/bmp"
+          },
+          {
+            "id": "https://github.com/toshia/pocket_miku/blob/b132bebefe03a0a5739c12cbb1f617801bbab29a/lib/pocket_miku/device.rb#L52-L65",
+            "repository": "toshia/pocket_miku"
+          },
+          {
+            "id": "https://github.com/zold-io/zold/blob/7e0f69307786846186bc3436dcc72d91d393ddd4/lib/zold/wallets.rb#L56-L65",
+            "repository": "zold-io/zold"
+          },
+          {
+            "id": "https://github.com/dior001/zenodo/blob/97535b6e9d2c1f4743737536d77fc06d069be13a/lib/zenodo/dsl/deposition_files.rb#L48-L52",
+            "repository": "dior001/zenodo"
+          },
+          {
+            "id": "https://github.com/komasaru/mk_coord/blob/927dae9862d2b8fad49acd4cbabd5af5756c4948/lib/mk_coord/trigonometric.rb#L15-L24",
+            "repository": "komasaru/mk_coord"
+          },
+          {
+            "id": "https://github.com/michaelmior/mipper/blob/4ab7f8b32c27f33fc5121756554a0a28d2077e06/lib/mipper/expression.rb#L25-L40",
+            "repository": "michaelmior/mipper"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_network/lib/2018-07-01/generated/azure_mgmt_network/routes.rb#L398-L401",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/rails/spring/blob/e7a36afa436fcc59b6945f68dbc08f1076e65585/lib/spring/json.rb#L197-L222",
+            "repository": "rails/spring"
+          },
+          {
+            "id": "https://github.com/ThoughtWorksStudios/oauth2_provider/blob/d54702f194edd05389968cf8947465860abccc5d/tools/jruby-1.5.1/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake.rb#L2443-L2454",
+            "repository": "ThoughtWorksStudios/oauth2_provider"
+          },
+          {
+            "id": "https://github.com/googleads/google-api-ads-ruby/blob/bf8ede5dda838bbd6161f4eb7d66b4654ae6e46b/ads_common/lib/ads_common/results_extractor.rb#L181-L190",
+            "repository": "googleads/google-api-ads-ruby"
+          },
+          {
+            "id": "https://github.com/mkroman/blur/blob/05408fbbaecb33a506c7e7c72da01d2e68848ea9/library/blur/client.rb#L162-L169",
+            "repository": "mkroman/blur"
+          },
+          {
+            "id": "https://github.com/coralnexus/nucleon/blob/3a3c489251139c184e0884feaa55269cf64cad44/lib/core/environment.rb#L378-L392",
+            "repository": "coralnexus/nucleon"
+          },
+          {
+            "id": "https://github.com/hashicorp/vault-ruby/blob/02f0532a802ba1a2a0d8703a4585dab76eb9d864/lib/vault/persistent.rb#L608-L649",
+            "repository": "hashicorp/vault-ruby"
+          },
+          {
+            "id": "https://github.com/samvera/hyrax/blob/e2b4f56e829a53b1f11296324736e9d5b8c9ee5f/lib/wings/active_fedora_converter.rb#L151-L157",
+            "repository": "samvera/hyrax"
+          },
+          {
+            "id": "https://github.com/sds/scss-lint/blob/e99afe4ede041a431a06e585c12ce82f6ad50116/lib/scss_lint/linter/single_line_per_selector.rb#L44-L49",
+            "repository": "sds/scss-lint"
+          },
+          {
+            "id": "https://github.com/SciRuby/daru/blob/d17887e279c27e2b2ec7a252627c04b4b03c0a7a/lib/daru/date_time/index.rb#L448-L453",
+            "repository": "SciRuby/daru"
+          },
+          {
+            "id": "https://github.com/jarhart/rattler/blob/8b4efde2a05e9e790955bb635d4a1a9615893719/lib/rattler/parsers/choice.rb#L31-L36",
+            "repository": "jarhart/rattler"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_compute/lib/2016-04-30-preview/generated/azure_mgmt_compute/virtual_machines.rb#L863-L866",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/mayoral/telegrammer/blob/be85007a647fcebec7e0b5ed1ff86f4dd924a62a/lib/telegrammer/bot.rb#L396-L403",
+            "repository": "mayoral/telegrammer"
+          },
+          {
+            "id": "https://github.com/blahah/assemblotron/blob/475d59c72ba36ebb2799076a0009758d12fa1508/lib/assemblotron/controller.rb#L95-L127",
+            "repository": "blahah/assemblotron"
+          },
+          {
+            "id": "https://github.com/kickstarter/amazon_flex_pay/blob/5a4cbc608b41858a2db2f6a44884aa4efee77c1e/lib/amazon_flex_pay/api.rb#L24-L26",
+            "repository": "kickstarter/amazon_flex_pay"
+          },
+          {
+            "id": "https://github.com/dpla/KriKri/blob/0ac26e60ce1bba60caa40263a562796267cf833f/app/models/krikri/qa_report.rb#L46-L52",
+            "repository": "dpla/KriKri"
+          },
+          {
+            "id": "https://github.com/mwlang/social_media/blob/44c431701fb6ff9c1618e3194a1a1d89c6494f92/lib/social_media/service/facebook.rb#L98-L103",
+            "repository": "mwlang/social_media"
+          },
+          {
+            "id": "https://github.com/hokstadconsulting/purecdb/blob/d19102e5dffbb2f0de4fab4f86c603880c3ffea8/lib/purecdb/reader.rb#L96-L104",
+            "repository": "hokstadconsulting/purecdb"
+          },
+          {
+            "id": "https://github.com/xinminlabs/synvert-core/blob/a490bfd30eaec81002d10f8fb61b49138708e46c/lib/synvert/core/rewriter/instance.rb#L288-L300",
+            "repository": "xinminlabs/synvert-core"
+          },
+          {
+            "id": "https://github.com/ruby-x/rx-file/blob/7c4a5546136d1bad065803da91778b209c18cb4d/lib/rx-file/writer.rb#L27-L32",
+            "repository": "ruby-x/rx-file"
+          },
+          {
+            "id": "https://github.com/paddor/cztop/blob/d20ee44775d05b60f40fffd1287a9b01270ab853/lib/cztop/socket.rb#L33-L40",
+            "repository": "paddor/cztop"
+          },
+          {
+            "id": "https://github.com/rmagick/rmagick/blob/ef6688ed9d76bf123c2ea1a483eff8635051adb7/lib/rmagick_internal.rb#L1248-L1266",
+            "repository": "rmagick/rmagick"
+          },
+          {
+            "id": "https://github.com/songgz/fast_ext/blob/05c6bee1c4f7f841ecf16359af2765751a818c2a/app/controllers/fast_ext/sessions_controller.rb#L36-L43",
+            "repository": "songgz/fast_ext"
+          },
+          {
+            "id": "https://github.com/sds/overcommit/blob/35d60adb41da942178b789560968e3ad030b0ac7/lib/overcommit/hook/pre_commit/yard_coverage.rb#L66-L88",
+            "repository": "sds/overcommit"
+          },
+          {
+            "id": "https://github.com/him0/kaesen/blob/7121a93fb04cccaa6aa7362bdbcfc03ecb66ecb8/lib/kaesen/btcbox.rb#L64-L71",
+            "repository": "him0/kaesen"
+          },
+          {
+            "id": "https://github.com/couchbase/couchbase-ruby-client/blob/ecce41a5996d9a97d6182e120bd9b5296707b353/lib/couchbase/bucket.rb#L194-L209",
+            "repository": "couchbase/couchbase-ruby-client"
+          },
+          {
+            "id": "https://github.com/mojombo/chronic/blob/2b1eae7ec440d767c09e0b1a7f0e9bcf30ce1d6c/lib/chronic/handlers.rb#L488-L504",
+            "repository": "mojombo/chronic"
+          },
+          {
+            "id": "https://github.com/bmedici/rest-ftp-daemon/blob/72754b9fb1ada2a4711a2f2351a3aa47adaa43da/lib/rest-ftp-daemon/job.rb#L117-L155",
+            "repository": "bmedici/rest-ftp-daemon"
+          },
+          {
+            "id": "https://github.com/work-design/rails_com/blob/02a618faadd190deb4bbee7e17244b6abcc5db78/lib/rails_com/action_view/template_renderer.rb#L7-L18",
+            "repository": "work-design/rails_com"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_web/lib/2018-02-01/generated/azure_mgmt_web/app_service_environments.rb#L7772-L7781",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_network/lib/2018-07-01/generated/azure_mgmt_network/network_security_groups.rb#L33-L36",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/Azure/azure-sdk-for-ruby/blob/78eedacf8f8cbd65c2d8a2af421405eaa4373d8e/management/azure_mgmt_web/lib/2018-02-01/generated/azure_mgmt_web/app_service_plans.rb#L3124-L3127",
+            "repository": "Azure/azure-sdk-for-ruby"
+          },
+          {
+            "id": "https://github.com/abrom/rocketchat-ruby/blob/4664693217c5e6142a873710a8867757ba84ca16/lib/rocket_chat/util.rb#L13-L24",
+            "repository": "abrom/rocketchat-ruby"
+          },
+          {
+            "id": "https://github.com/Telestream/telestream-cloud-ruby-sdk/blob/c232427aa3e84688ba41ec28e5bef1cc72832bf4/flip/lib/telestream_cloud_flip/models/profile_body.rb#L1349-L1355",
+            "repository": "Telestream/telestream-cloud-ruby-sdk"
+          },
+          {
+            "id": "https://github.com/elcuervo/airplay/blob/bdd6ad507a2337dd0c2bc729eb9d6cc37ec18411/lib/airplay/connection.rb#L118-L130",
+            "repository": "elcuervo/airplay"
+          },
+          {
+            "id": "https://github.com/contentful/contentful.rb/blob/bdf5ca61f99ee8b8bfa449ab5ba22b7698f607f7/lib/contentful/client.rb#L383-L391",
+            "repository": "contentful/contentful.rb"
+          },
+          {
+            "id": "https://github.com/kot-begemot/localization-middleware/blob/90df50b28f2b15bfda7d18faf9220d37814da86f/lib/localization-middleware.rb#L66-L73",
+            "repository": "kot-begemot/localization-middleware"
+          },
+          {
+            "id": "https://github.com/dvwright/svn_wc/blob/f9cda1140d5d101239b104558680c638361c68a4/lib/svn_wc.rb#L177-L190",
+            "repository": "dvwright/svn_wc"
+          },
+          {
+            "id": "https://github.com/dpla/KriKri/blob/0ac26e60ce1bba60caa40263a562796267cf833f/lib/krikri/enrichments/language_to_lexvo.rb#L93-L97",
+            "repository": "dpla/KriKri"
+          },
+          {
+            "id": "https://github.com/xero-gateway/xero_gateway/blob/6f0afbc3ebb756b66c7eff6c37f77f1e33bd07c5/lib/xero_gateway/invoice.rb#L69-L103",
+            "repository": "xero-gateway/xero_gateway"
+          }
+        ],
+        "filtered_shared_64_token_spans": 0,
+        "blocks": 512,
+        "tokens": 65536,
+        "tensor_sha256": "2ae910ff37125ba6458de2b1ba49c5a0aadccc962aaedd6acbb357798d458257"
+      },
+      "validation": {
+        "documents": [
+          {
+            "id": "https://github.com/logankoester/errship/blob/9e344c25a5c6b619af1b9b177ad4f40b415b2182/lib/errship.rb#L41-L47",
+            "repository": "logankoester/errship"
+          },
+          {
+            "id": "https://github.com/sporkmonger/addressable/blob/5894c95a7768435cb46d1355954611dbd194832e/lib/addressable/uri.rb#L1097-L1119",
+            "repository": "sporkmonger/addressable"
+          },
+          {
+            "id": "https://github.com/ONLYOFFICE/ooxml_parser/blob/08452315cde52fa94d8cb3e1eff1db4ea33abc88/lib/ooxml_parser/common_parser/common_data/table/row/cell/properties/borders.rb#L66-L88",
+            "repository": "ONLYOFFICE/ooxml_parser"
+          },
+          {
+            "id": "https://github.com/gosu/fidgit/blob/f60290252fe713622c2d128c366843a55d124b7b/lib/fidgit/elements/text_area.rb#L444-L450",
+            "repository": "gosu/fidgit"
+          },
+          {
+            "id": "https://github.com/documentcloud/jammit/blob/dc866f1ac3eb069d65215599c451db39d66119a7/lib/jammit/compressor.rb#L110-L123",
+            "repository": "documentcloud/jammit"
+          },
+          {
+            "id": "https://github.com/pellegrino/jackpot/blob/188b476cd26f319ee7f5cceceb1caa4205424ed8/app/controllers/jackpot/customers_controller.rb#L20-L27",
+            "repository": "pellegrino/jackpot"
+          },
+          {
+            "id": "https://github.com/shortdudey123/yamllint/blob/aa8e0538882eddcd2996f6f62fabaafda3fdb942/lib/yamllint/linter.rb#L56-L64",
+            "repository": "shortdudey123/yamllint"
+          },
+          {
+            "id": "https://github.com/dilcom/gnuplotrb/blob/0a3146386ae28fcbe2c09cb6e266fe40ebb659f4/lib/gnuplotrb/multiplot.rb#L255-L259",
+            "repository": "dilcom/gnuplotrb"
+          },
+          {
+            "id": "https://github.com/ONLYOFFICE/ooxml_parser/blob/08452315cde52fa94d8cb3e1eff1db4ea33abc88/lib/ooxml_parser/docx_parser/docx_data/document_structure/page_properties/page_margins.rb#L20-L40",
+            "repository": "ONLYOFFICE/ooxml_parser"
+          },
+          {
+            "id": "https://github.com/thinkwell/mongoid_nested_set/blob/d482b2642889d5853079cb13ced049513caa1af3/lib/mongoid_nested_set/rebuild.rb#L7-L37",
+            "repository": "thinkwell/mongoid_nested_set"
+          },
+          {
+            "id": "https://github.com/koraktor/metior/blob/02da0f330774c91e1a7325a5a7edbe696f389f95/lib/metior/adapter.rb#L56-L60",
+            "repository": "koraktor/metior"
+          },
+          {
+            "id": "https://github.com/bunto/bunto/blob/45d993fb22329b12c277e15195af3415c9922a28/lib/bunto/convertible.rb#L39-L61",
+            "repository": "bunto/bunto"
+          },
+          {
+            "id": "https://github.com/ericqweinstein/ruumba/blob/9093819d011a2d9f6824d8f4c3789e34f4ff9b98/lib/ruumba/rubocop_runner.rb#L17-L40",
+            "repository": "ericqweinstein/ruumba"
+          },
+          {
+            "id": "https://github.com/sosedoff/grooveshark/blob/e55686c620c13848fa6d918cc2980fd44cf40e35/lib/grooveshark/user.rb#L95-L102",
+            "repository": "sosedoff/grooveshark"
+          },
+          {
+            "id": "https://github.com/ffaker/ffaker/blob/9570ac54874fec66a99b9c86401fb878f1e3e951/lib/ffaker/identification_mx.rb#L32-L37",
+            "repository": "ffaker/ffaker"
+          },
+          {
+            "id": "https://github.com/hzamani/parsi-date/blob/63a9a89cd9c7dfc53b2d508993d5b1add2638589/lib/parsi-date.rb#L570-L579",
+            "repository": "hzamani/parsi-date"
+          },
+          {
+            "id": "https://github.com/maestrano/mno-enterprise/blob/bd957f523959531926e2bf844608d77addef2047/api/app/controllers/mno_enterprise/jpi/v1/admin/impac/dashboard_templates_controller.rb#L85-L90",
+            "repository": "maestrano/mno-enterprise"
+          },
+          {
+            "id": "https://github.com/algolia/algoliasearch-client-ruby/blob/5292cd9b1029f879e4e0257a3e89d0dc9ad0df3b/lib/algolia/index.rb#L547-L551",
+            "repository": "algolia/algoliasearch-client-ruby"
+          },
+          {
+            "id": "https://github.com/c80609a/c80_push/blob/4910c49626648978549873347702be2a10b36491/app/helpers/c80_push/admin_helper.rb#L5-L11",
+            "repository": "c80609a/c80_push"
+          },
+          {
+            "id": "https://github.com/cxn03651/write_xlsx/blob/6d658b29512e5ab63b947e2b03e67df70a83b55c/lib/write_xlsx/chart.rb#L839-L861",
+            "repository": "cxn03651/write_xlsx"
+          },
+          {
+            "id": "https://github.com/cxn03651/writeexcel/blob/d0345067c21b14a7141ba66b6752be8f4be379de/lib/writeexcel/chart.rb#L1346-L1361",
+            "repository": "cxn03651/writeexcel"
+          },
+          {
+            "id": "https://github.com/mguymon/naether/blob/218d8fd36c0b8b6e16d66e5715975570b4560ec4/src/main/ruby/naether/runtime.rb#L176-L220",
+            "repository": "mguymon/naether"
+          },
+          {
+            "id": "https://github.com/26fe/tree.rb/blob/5ecf0cfbbc439e27c72b9676d6a1ccee8e6bb02b/lib/tree_rb/input_plugins/html_page/dom_walker.rb#L18-L29",
+            "repository": "26fe/tree.rb"
+          },
+          {
+            "id": "https://github.com/LynxEyes/bootstrap_admin/blob/f0f1b265a4f05bc65724c540b90a1f0425a772d8/lib/bootstrap_admin/responder.rb#L75-L95",
+            "repository": "LynxEyes/bootstrap_admin"
+          },
+          {
+            "id": "https://github.com/thredded/thredded/blob/f1874fba333444255979c0789ba17f8dc24a4d6f/app/commands/thredded/autofollow_users.rb#L42-L61",
+            "repository": "thredded/thredded"
+          },
+          {
+            "id": "https://github.com/thekompanee/chamber/blob/7793a3c9a5901b785472b73c717b26cce6f51ac7/lib/chamber/settings.rb#L82-L95",
+            "repository": "thekompanee/chamber"
+          },
+          {
+            "id": "https://github.com/mguymon/naether/blob/218d8fd36c0b8b6e16d66e5715975570b4560ec4/src/main/ruby/naether/runtime.rb#L308-L325",
+            "repository": "mguymon/naether"
+          },
+          {
+            "id": "https://github.com/shoes/furoshiki/blob/ead3a1d38bcac23cc13f1bf3e31cc40fdd75b2eb/lib/furoshiki/util.rb#L23-L25",
+            "repository": "shoes/furoshiki"
+          },
+          {
+            "id": "https://github.com/ONLYOFFICE/ooxml_parser/blob/08452315cde52fa94d8cb3e1eff1db4ea33abc88/lib/ooxml_parser/common_parser/common_data/alternate_content/chart/chart_cells_range.rb#L15-L26",
+            "repository": "ONLYOFFICE/ooxml_parser"
+          },
+          {
+            "id": "https://github.com/ONLYOFFICE/ooxml_parser/blob/08452315cde52fa94d8cb3e1eff1db4ea33abc88/lib/ooxml_parser/common_parser/common_data/alternate_content/drawing/graphic/shape/docx_shape/non_visual_shape_properties.rb#L10-L20",
+            "repository": "ONLYOFFICE/ooxml_parser"
+          },
+          {
+            "id": "https://github.com/strzibny/invoice_printer/blob/e12c5babb8f7c078bff04c2ae721f0c73fae94b5/lib/invoice_printer/pdf_document.rb#L618-L644",
+            "repository": "strzibny/invoice_printer"
+          },
+          {
+            "id": "https://github.com/cryptape/ruby-ethereum/blob/763f8651085ba145355a290da716884c7625a941/lib/ethereum/trie.rb#L130-L137",
+            "repository": "cryptape/ruby-ethereum"
+          },
+          {
+            "id": "https://github.com/ondra-m/ruby-spark/blob/d1b9787642fe582dee906de3c6bb9407ded27145/lib/spark/command_builder.rb#L87-L100",
+            "repository": "ondra-m/ruby-spark"
+          },
+          {
+            "id": "https://github.com/arvicco/my_scripts/blob/e75ba2ec22adf15a8d6e224ca4bf2fdae044a754/lib/my_scripts/scripts/gitto.rb#L14-L47",
+            "repository": "arvicco/my_scripts"
+          },
+          {
+            "id": "https://github.com/snltd/wavefront-sdk/blob/93659d2dab64611fd56aee05cf1de1dd732b46f7/lib/wavefront-sdk/validators.rb#L134-L142",
+            "repository": "snltd/wavefront-sdk"
+          },
+          {
+            "id": "https://github.com/dilcom/gnuplotrb/blob/0a3146386ae28fcbe2c09cb6e266fe40ebb659f4/lib/gnuplotrb/staff/dataset.rb#L119-L130",
+            "repository": "dilcom/gnuplotrb"
+          },
+          {
+            "id": "https://github.com/mirego/emotions/blob/f0adc687dbdac906d9fcebfb0f3bf6afb6fa5d56/lib/emotions/emotion.rb#L33-L37",
+            "repository": "mirego/emotions"
+          },
+          {
+            "id": "https://github.com/coderhs/ruby_open_weather_map/blob/72b34cb4afeb6033b29d9635cecd6e8b19293fb8/lib/open_weather/api.rb#L17-L19",
+            "repository": "coderhs/ruby_open_weather_map"
+          },
+          {
+            "id": "https://github.com/redding/dk/blob/9b6122ce815467c698811014c01518cca539946e/lib/dk/tree_runner.rb#L41-L49",
+            "repository": "redding/dk"
+          },
+          {
+            "id": "https://github.com/conversation/chrome_debugger/blob/b1b0c6a7bff94e8f4967aefc39c7e043582f549e/lib/chrome_debugger/document.rb#L20-L28",
+            "repository": "conversation/chrome_debugger"
+          },
+          {
+            "id": "https://github.com/jinx/migrate/blob/309957a470d72da3bd074f8173dbbe2f12449883/lib/jinx/migration/migrator.rb#L866-L872",
+            "repository": "jinx/migrate"
+          },
+          {
+            "id": "https://github.com/stitchfix/merch_calendar/blob/b24f1f47685928eeec8e808838e2474ddf473afd/lib/merch_calendar/retail_calendar.rb#L45-L60",
+            "repository": "stitchfix/merch_calendar"
+          },
+          {
+            "id": "https://github.com/teodor-pripoae/scalaroid/blob/4e9e90e71ce3008da79a72eae40fe2f187580be2/lib/scalaroid/json_req_list.rb#L32-L38",
+            "repository": "teodor-pripoae/scalaroid"
+          },
+          {
+            "id": "https://github.com/laserlemon/vestal_versions/blob/beccc5744ec030664f003d61ffb617edefd7885b/lib/vestal_versions/versions.rb#L80-L87",
+            "repository": "laserlemon/vestal_versions"
+          },
+          {
+            "id": "https://github.com/xi-livecode/xi/blob/215dfb84899b3dd00f11089ae3eab0febf498e95/lib/xi/pattern.rb#L131-L134",
+            "repository": "xi-livecode/xi"
+          },
+          {
+            "id": "https://github.com/thooams/Ui-Bibz/blob/bc0a3238c1c8bfaa75fd56a4aa225f2cea6e319f/lib/ui_bibz/ui/ux/tables/extensions/searchable.rb#L11-L17",
+            "repository": "thooams/Ui-Bibz"
+          },
+          {
+            "id": "https://github.com/ccocchi/rabl-rails/blob/8d4c7eef42b9721e0aa68fece24457368614334f/lib/rabl-rails/compiler.rb#L95-L98",
+            "repository": "ccocchi/rabl-rails"
+          },
+          {
+            "id": "https://github.com/maxivak/optimacms/blob/1e71d98b67cfe06d977102823b296b3010b10a83/app/controllers/optimacms/admin/templates_controller.rb#L144-L150",
+            "repository": "maxivak/optimacms"
+          },
+          {
+            "id": "https://github.com/tamouse/elapsed_watch/blob/fec9b3a49c0a0af33e26553d661037bcaeb180a5/lib/elapsed_watch/event_collection.rb#L39-L42",
+            "repository": "tamouse/elapsed_watch"
+          },
+          {
+            "id": "https://github.com/algolia/algoliasearch-client-ruby/blob/5292cd9b1029f879e4e0257a3e89d0dc9ad0df3b/lib/algolia/index.rb#L425-L431",
+            "repository": "algolia/algoliasearch-client-ruby"
+          },
+          {
+            "id": "https://github.com/sosedoff/grooveshark/blob/e55686c620c13848fa6d918cc2980fd44cf40e35/lib/grooveshark/user.rb#L87-L90",
+            "repository": "sosedoff/grooveshark"
+          },
+          {
+            "id": "https://github.com/calabash/calabash/blob/fac1ce9fcff6e2460c6e72a9b89d93a91a1bc745/lib/calabash/gestures.rb#L132-L140",
+            "repository": "calabash/calabash"
+          },
+          {
+            "id": "https://github.com/jinx/migrate/blob/309957a470d72da3bd074f8173dbbe2f12449883/lib/jinx/migration/migrator.rb#L567-L602",
+            "repository": "jinx/migrate"
+          },
+          {
+            "id": "https://github.com/pitr-ch/htmless/blob/d7ff6c6cd8cad3ea53911a391b73b0cbd2d98ff4/lib/htmless/pool.rb#L63-L68",
+            "repository": "pitr-ch/htmless"
+          },
+          {
+            "id": "https://github.com/ffmike/shoehorn/blob/b3da6d2bc4bd49652ac76197d01077b14bafb70a/lib/shoehorn/business_cards.rb#L119-L136",
+            "repository": "ffmike/shoehorn"
+          },
+          {
+            "id": "https://github.com/Burgestrand/mellon/blob/4ded7e28fee192a777605e5f9dcd3b1bd05770ef/lib/mellon/keychain.rb#L95-L104",
+            "repository": "Burgestrand/mellon"
+          },
+          {
+            "id": "https://github.com/bugsnag/bugsnag-ruby/blob/eaef01ab04392f362e14848edb5f29d7a3df2ae0/lib/bugsnag/middleware/breadcrumbs.rb#L15-L19",
+            "repository": "bugsnag/bugsnag-ruby"
+          },
+          {
+            "id": "https://github.com/yipdw/analysand/blob/bc62e67031bf7e813e49538669f7434f2efd9ee9/lib/analysand/errors.rb#L8-L12",
+            "repository": "yipdw/analysand"
+          },
+          {
+            "id": "https://github.com/Raybeam/myreplicator/blob/470938e70f46886b525c65a4a464b4cf8383d00d/lib/exporter/export_metadata.rb#L60-L65",
+            "repository": "Raybeam/myreplicator"
+          },
+          {
+            "id": "https://github.com/iGEL/it/blob/40d89c52165569ab178e86c3563eca6d422073a5/lib/it/helper.rb#L41-L46",
+            "repository": "iGEL/it"
+          },
+          {
+            "id": "https://github.com/acesuares/validation_hints/blob/d6fde8190b06eb266d78019f48ce1e3fa1a99bfe/lib/active_model/hints.rb#L224-L231",
+            "repository": "acesuares/validation_hints"
+          },
+          {
+            "id": "https://github.com/ondra-m/ruby-spark/blob/d1b9787642fe582dee906de3c6bb9407ded27145/lib/spark/context.rb#L284-L309",
+            "repository": "ondra-m/ruby-spark"
+          },
+          {
+            "id": "https://github.com/documentcloud/jammit/blob/dc866f1ac3eb069d65215599c451db39d66119a7/lib/jammit/packager.rb#L117-L120",
+            "repository": "documentcloud/jammit"
+          },
+          {
+            "id": "https://github.com/nathanstitt/erb_latex/blob/ea74677264b48b72913d5eae9eaac60f4151de8c/lib/erb_latex/context.rb#L32-L35",
+            "repository": "nathanstitt/erb_latex"
+          },
+          {
+            "id": "https://github.com/technoweenie/running_man/blob/1e7a1b1d276dc7bbfb25f523de5c521e070854ab/lib/running_man/active_record_block.rb#L48-L52",
+            "repository": "technoweenie/running_man"
+          },
+          {
+            "id": "https://github.com/triglav-dataflow/triglav-agent-framework-ruby/blob/a2517253a2b151b8ece3c22f389e5a2c38d93a88/lib/triglav/agent/api_client.rb#L88-L110",
+            "repository": "triglav-dataflow/triglav-agent-framework-ruby"
+          },
+          {
+            "id": "https://github.com/lyfeyaj/rsqoot/blob/0b3157f55f3a1fa2b21ac5389fe1686a77e6a4fd/lib/rsqoot/click.rb#L10-L19",
+            "repository": "lyfeyaj/rsqoot"
+          },
+          {
+            "id": "https://github.com/sinatra/sinatra/blob/1aa64f9858edc3f93cc8d46e26f724c1ae103b1c/lib/sinatra/base.rb#L373-L395",
+            "repository": "sinatra/sinatra"
+          }
+        ],
+        "filtered_shared_64_token_spans": 0,
+        "blocks": 64,
+        "tokens": 8192,
+        "tensor_sha256": "7bfc9de25839b20f098e7bb17e3032e8e5608045828127d33bae5c19c4437a02"
+      },
+      "test": {
+        "documents": [
+          {
+            "id": "https://github.com/jeremytregunna/ruby-trello/blob/ad79c9d8152ad5395b3b61c43170908f1912bfb2/lib/trello/card.rb#L403-L409",
+            "repository": "jeremytregunna/ruby-trello"
+          },
+          {
+            "id": "https://github.com/lostisland/sawyer/blob/a541a68be349a7982e24b80d94fe380a37b4805c/lib/sawyer/resource.rb#L76-L97",
+            "repository": "lostisland/sawyer"
+          },
+          {
+            "id": "https://github.com/chef/knife-azure/blob/2cf998b286cd169478ba547057e6c5ca57217604/lib/azure/service_management/deploy.rb#L53-L60",
+            "repository": "chef/knife-azure"
+          },
+          {
+            "id": "https://github.com/sideshowcoder/activerecord_translatable/blob/42f9508530db39d0edaf2d7dc6c5d9ee1b0375fb/lib/activerecord_translatable/extension.rb#L91-L94",
+            "repository": "sideshowcoder/activerecord_translatable"
+          },
+          {
+            "id": "https://github.com/mvidner/ruby-dbus/blob/336f1871bf0f6a0669391fb2bcf7f3a003ec97c9/lib/dbus/bus.rb#L79-L90",
+            "repository": "mvidner/ruby-dbus"
+          },
+          {
+            "id": "https://github.com/yb66/rack-lodash/blob/3de1ac5000660518dbb7c4f36d6a9a694c73820f/lib/rack/lodash.rb#L90-L110",
+            "repository": "yb66/rack-lodash"
+          },
+          {
+            "id": "https://github.com/Programatica/cow_proxy/blob/05b8de4b31607c0c88193ef5db7228541a735672/lib/cow_proxy/indexable.rb#L11-L21",
+            "repository": "Programatica/cow_proxy"
+          },
+          {
+            "id": "https://github.com/jacquescrocker/viewfu/blob/a21946e74553a1e83790ba7ea2a2ef4daa729458/lib/view_fu/meta_helper.rb#L12-L29",
+            "repository": "jacquescrocker/viewfu"
+          },
+          {
+            "id": "https://github.com/gousiosg/github-mirror/blob/3566294a3e4a4c7574bc7376f7e6a9435529b5de/lib/ghtorrent/ghtorrent.rb#L1118-L1128",
+            "repository": "gousiosg/github-mirror"
+          },
+          {
+            "id": "https://github.com/palkan/influxer/blob/0c1ae167b625689f38ef28ae197d6ef5fc90ac1f/lib/influxer/metrics/relation/where_clause.rb#L73-L79",
+            "repository": "palkan/influxer"
+          },
+          {
+            "id": "https://github.com/richard-viney/lightstreamer/blob/7be6350bd861495a52ca35a8640a1e6df34cf9d1/lib/lightstreamer/session.rb#L337-L348",
+            "repository": "richard-viney/lightstreamer"
+          },
+          {
+            "id": "https://github.com/cloudfoundry/bosh/blob/2eaa7100879ddd20cd909cd698514746195e28b7/src/bosh-director/lib/bosh/director/errand/instance_group_manager.rb#L35-L45",
+            "repository": "cloudfoundry/bosh"
+          },
+          {
+            "id": "https://github.com/ideonetwork/lato-core/blob/c01fa585725c8e9992f25d8a7bd4ba2d0bfca08c/app/cells/lato_core/widgets/index/cell.rb#L152-L174",
+            "repository": "ideonetwork/lato-core"
+          },
+          {
+            "id": "https://github.com/infosimples/deathbycaptcha/blob/b6fc9503025b24adaffb8c28843995a7f1715cb7/lib/deathbycaptcha/client/http.rb#L133-L147",
+            "repository": "infosimples/deathbycaptcha"
+          },
+          {
+            "id": "https://github.com/lasseebert/incremental_backup/blob/afa50dd612e1a34d23fc346b705c77b2eecc0ddb/lib/incremental_backup/task.rb#L142-L162",
+            "repository": "lasseebert/incremental_backup"
+          },
+          {
+            "id": "https://github.com/seratch/rspec-kickstarter/blob/969d85fb9d702908ab0c6f2acc014b72a91c17e9/lib/rspec_kickstarter/generator.rb#L135-L168",
+            "repository": "seratch/rspec-kickstarter"
+          },
+          {
+            "id": "https://github.com/rossta/montrose/blob/91af7d2d5c337aa255510179d24eb023775674bb/lib/montrose/recurrence.rb#L338-L347",
+            "repository": "rossta/montrose"
+          },
+          {
+            "id": "https://github.com/alphagov/govuk_schemas/blob/f709a10cd2af63b29c22288fc7e0ad6af426926a/lib/govuk_schemas/random_example.rb#L78-L92",
+            "repository": "alphagov/govuk_schemas"
+          },
+          {
+            "id": "https://github.com/phcdevworks/multi-tenancy-devise/blob/e0a6e4582a8f415539ab598863c5e4cde2cde2cd/app/controllers/mtdevise/application_controller.rb#L37-L41",
+            "repository": "phcdevworks/multi-tenancy-devise"
+          },
+          {
+            "id": "https://github.com/cloudfoundry-attic/vcap-services-base/blob/bde81300391cb27e1c531148d15bde696ebf4da0/lib/base/job/package.rb#L42-L46",
+            "repository": "cloudfoundry-attic/vcap-services-base"
+          },
+          {
+            "id": "https://github.com/frozeek/xhive/blob/b8de0669e10e34acea83f571a63b9d2354909cce/lib/xhive/widgify.rb#L7-L12",
+            "repository": "frozeek/xhive"
+          },
+          {
+            "id": "https://github.com/ktonon/code_node/blob/48d5d1a7442d9cade602be4fb782a1b56c7677f5/spec/fixtures/activerecord/src/active_record/transactions.rb#L344-L362",
+            "repository": "ktonon/code_node"
+          },
+          {
+            "id": "https://github.com/olabini/codebot/blob/031ddf427fd4a245ee6ff6414c4e28dab31679c1/lib/codebot/irc_connection.rb#L87-L92",
+            "repository": "olabini/codebot"
+          },
+          {
+            "id": "https://github.com/jpsilvashy/epicmix/blob/c2d930c78e845f10115171ddd16b58f1db3af009/lib/epicmix.rb#L27-L34",
+            "repository": "jpsilvashy/epicmix"
+          },
+          {
+            "id": "https://github.com/crapooze/em-xmpp/blob/804e139944c88bc317b359754d5ad69b75f42319/lib/em-xmpp/handler.rb#L199-L207",
+            "repository": "crapooze/em-xmpp"
+          },
+          {
+            "id": "https://github.com/sealink/dependent_restrict/blob/443a0c30194eaa262ff07cb05cfd499d20a76fb9/lib/dependent_restrict/delete_restriction_error.rb#L12-L26",
+            "repository": "sealink/dependent_restrict"
+          },
+          {
+            "id": "https://github.com/puppetlabs/puppet-resource_api/blob/7180586da22baa4a78b73d30e7432724593a1754/lib/puppet/resource_api/type_definition.rb#L175-L193",
+            "repository": "puppetlabs/puppet-resource_api"
+          },
+          {
+            "id": "https://github.com/sgruhier/foundation_rails_helper/blob/8a4b53d9b348bbf49c3608aea811fe17b9282e4c/lib/foundation_rails_helper/form_builder.rb#L40-L49",
+            "repository": "sgruhier/foundation_rails_helper"
+          },
+          {
+            "id": "https://github.com/chaintope/bitcoinrb/blob/39396e4c9815214d6b0ab694fa8326978a7f5438/lib/bitcoin/tx.rb#L192-L205",
+            "repository": "chaintope/bitcoinrb"
+          },
+          {
+            "id": "https://github.com/novafabrica/make_exportable/blob/e9ed984a77346357be685a233b4b2d300856b1ed/lib/make_exportable/core.rb#L194-L205",
+            "repository": "novafabrica/make_exportable"
+          },
+          {
+            "id": "https://github.com/phrase/phraseapp-ruby/blob/3822bf8ec0b45959aa7b35ce990ab84f88879430/lib/phraseapp-ruby.rb#L4347-L4370",
+            "repository": "phrase/phraseapp-ruby"
+          },
+          {
+            "id": "https://github.com/zpatten/ztk/blob/9b0f35bef36f38428e1a57b36f25a806c240b3fb/lib/ztk/tcp_socket_check.rb#L113-L125",
+            "repository": "zpatten/ztk"
+          },
+          {
+            "id": "https://github.com/devise-security/devise-security/blob/d0b44a7bb249f6763641f45d34dd52e7fda3fca2/lib/devise-security/models/password_expirable.rb#L81-L87",
+            "repository": "devise-security/devise-security"
+          },
+          {
+            "id": "https://github.com/chaintope/bitcoinrb/blob/39396e4c9815214d6b0ab694fa8326978a7f5438/lib/bitcoin/script/script.rb#L267-L276",
+            "repository": "chaintope/bitcoinrb"
+          },
+          {
+            "id": "https://github.com/datamapper/dm-core/blob/226c5af8609a2e1da3bf3ee0b29a874401a49c0b/lib/dm-core/resource.rb#L880-L892",
+            "repository": "datamapper/dm-core"
+          },
+          {
+            "id": "https://github.com/barkerest/incline/blob/1ff08db7aa8ab7f86b223268b700bc67d15bb8aa/lib/incline/global_status.rb#L169-L184",
+            "repository": "barkerest/incline"
+          },
+          {
+            "id": "https://github.com/ncgr/quorum/blob/0309cbdf38aab64ff4c002dec34e01fd10e0c823/lib/quorum/helpers.rb#L7-L14",
+            "repository": "ncgr/quorum"
+          },
+          {
+            "id": "https://github.com/phrase/phraseapp-ruby/blob/3822bf8ec0b45959aa7b35ce990ab84f88879430/lib/phraseapp-ruby.rb#L7044-L7056",
+            "repository": "phrase/phraseapp-ruby"
+          },
+          {
+            "id": "https://github.com/chaintope/bitcoinrb/blob/39396e4c9815214d6b0ab694fa8326978a7f5438/lib/bitcoin/tx.rb#L239-L274",
+            "repository": "chaintope/bitcoinrb"
+          },
+          {
+            "id": "https://github.com/experteer/simple_po_parser/blob/b0ab9f76a12273b13869fd7f44231253d116ee8a/lib/simple_po_parser/parser.rb#L195-L215",
+            "repository": "experteer/simple_po_parser"
+          },
+          {
+            "id": "https://github.com/dyoung522/nosequel/blob/b8788846a36ce03d426bfe3e575a81a6fb3c5c76/lib/nosequel/configuration.rb#L30-L49",
+            "repository": "dyoung522/nosequel"
+          },
+          {
+            "id": "https://github.com/robfors/ruby-sumac/blob/524fa68b7d1bb10a74baa69cd594ab2b8cae20a3/lib/sumac/directive_queue.rb#L23-L39",
+            "repository": "robfors/ruby-sumac"
+          },
+          {
+            "id": "https://github.com/rocketjob/symmetric-encryption/blob/064ba8d57ffac44a3ed80f5e76fa1a54d660ff98/lib/symmetric_encryption/header.rb#L199-L231",
+            "repository": "rocketjob/symmetric-encryption"
+          },
+          {
+            "id": "https://github.com/github/github-ds/blob/312b43b3d96bb376b87bc5e05045c306f40f2623/lib/github/sql.rb#L341-L355",
+            "repository": "github/github-ds"
+          },
+          {
+            "id": "https://github.com/jakewendt/simply_authorized/blob/11a1c8bfdf1561bf14243a516cdbe901aac55e53/generators/simply_authorized/simply_authorized_generator.rb#L76-L82",
+            "repository": "jakewendt/simply_authorized"
+          },
+          {
+            "id": "https://github.com/jinx/core/blob/964a274cc9d7ab74613910e8375e12ed210a434d/lib/jinx/resource/merge_visitor.rb#L52-L64",
+            "repository": "jinx/core"
+          },
+          {
+            "id": "https://github.com/wvanbergen/request-log-analyzer/blob/b83865d440278583ac8e4901bb33878244fd7c75/lib/cli/progressbar.rb#L97-L105",
+            "repository": "wvanbergen/request-log-analyzer"
+          },
+          {
+            "id": "https://github.com/humpyard/humpyard/blob/f344ab851f1dfd824c1e4cb4b92f7c62ac0acefd/app/controllers/humpyard/pages_controller.rb#L146-L182",
+            "repository": "humpyard/humpyard"
+          },
+          {
+            "id": "https://github.com/sensu/sensu/blob/51319e4b58c8d9986f101ad71ff729aa3e51e951/lib/sensu/daemon.rb#L323-L343",
+            "repository": "sensu/sensu"
+          },
+          {
+            "id": "https://github.com/basecrm/basecrm-ruby/blob/c39ea72477d41c3122805d49587043399ee454ea/lib/basecrm/services/contacts_service.rb#L95-L104",
+            "repository": "basecrm/basecrm-ruby"
+          },
+          {
+            "id": "https://github.com/vmware/vcloud-rest/blob/45425d93acf988946cac375b803100ad01206459/lib/vcloud-rest/vcloud/vdc.rb#L69-L79",
+            "repository": "vmware/vcloud-rest"
+          },
+          {
+            "id": "https://github.com/shantytown/shanty/blob/85031277d3053e78fd5aa1acf2467961542cb16c/lib/shanty/file_tree.rb#L49-L53",
+            "repository": "shantytown/shanty"
+          },
+          {
+            "id": "https://github.com/notEthan/oauthenticator/blob/f462501e4d3e79086855ad5c6f95104de3c2ec07/lib/oauthenticator/rack_authenticator.rb#L65-L83",
+            "repository": "notEthan/oauthenticator"
+          },
+          {
+            "id": "https://github.com/assetricity/isbm_adaptor/blob/67847351bbff3a1538c3ba141fe260e4de59676a/lib/isbm_adaptor/consumer_request.rb#L24-L33",
+            "repository": "assetricity/isbm_adaptor"
+          },
+          {
+            "id": "https://github.com/chloerei/alipay/blob/a525989b659da970e08bc8fcd1b004453bfed89f/lib/alipay/client.rb#L133-L144",
+            "repository": "chloerei/alipay"
+          },
+          {
+            "id": "https://github.com/watsonbox/pocketsphinx-ruby/blob/12c71c35285c38b42bd7779c8246923bd5be150f/lib/pocketsphinx/speech_recognizer.rb#L123-L139",
+            "repository": "watsonbox/pocketsphinx-ruby"
+          },
+          {
+            "id": "https://github.com/assetricity/isbm_adaptor/blob/67847351bbff3a1538c3ba141fe260e4de59676a/lib/isbm_adaptor/consumer_request.rb#L44-L63",
+            "repository": "assetricity/isbm_adaptor"
+          },
+          {
+            "id": "https://github.com/mikisvaz/rbbt-rest/blob/2abcffa375581eec9c2f4bd07893096a5e22ace6/lib/rbbt/rest/entity/rest.rb#L125-L152",
+            "repository": "mikisvaz/rbbt-rest"
+          }
+        ],
+        "filtered_shared_64_token_spans": 0,
+        "blocks": 64,
+        "tokens": 8192,
+        "tensor_sha256": "2d4a3680a11c64d1c70dfab1b31edea4f1e11baa5e38bc1438af6fbab502bd73"
+      }
+    }
+  }
+}
