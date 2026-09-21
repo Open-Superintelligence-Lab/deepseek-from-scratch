@@ -1,0 +1,35 @@
+[
+  {
+    "name": "cache",
+    "existing_asset": "/Users/vukrosic/my-life/Animations/tutorials/ai-news-30s-2026-09-19/deepmind-institute/r01/pikachu.gif",
+    "source": "https://media1.tenor.com/m/UZJd1pjj4NMAAAAC/surprised-pikachu.gif"
+  },
+  {
+    "name": "collision",
+    "existing_asset": "/Users/vukrosic/my-life/Animations/tutorials/ai-news-30s-2026-09-19/deepmind-institute/r01/spider.gif",
+    "source": "https://media1.tenor.com/m/QXVs4QWLlzkAAAAC/spider-man.gif"
+  },
+  {
+    "name": "bug",
+    "existing_asset": "/Users/vukrosic/my-life/Animations/tutorials/ai-news-30s-2026-09-19/anthropic-accenture/r04/fine.gif",
+    "source": "https://tenor.com/view/everything-is-fine-this-is-fine-im-fine-burning-funny-gif-12189737"
+  },
+  {
+    "name": "missing-entry",
+    "existing_asset": "/Users/vukrosic/my-life/Animations/tutorials/ai-news-30s-2026-09-19/rejected-notes-clip/r01/confused.gif",
+    "source": null,
+    "note": "Reused existing local meme; JPEG is a still frame. Animation is opt-in."
+  },
+  {
+    "name": "expert-supervisor",
+    "existing_asset": "/Users/vukrosic/my-life/Animations/tutorials/ai-news-30s-2026-09-19/claude-successor/leads-r01/supervisor.gif",
+    "source": "https://media1.tenor.com/m/TfBqERjtIkYAAAAC/monsterinc-monsters.gif",
+    "note": "Reused existing local meme; JPEG is a still frame. Animation is opt-in."
+  },
+  {
+    "name": "credit",
+    "existing_asset": "/Users/vukrosic/my-life/Animations/tutorials/ai-news-30s-2026-09-19/claude-successor/feedback-r01/grade.gif",
+    "source": "https://media1.tenor.com/m/IL1Z-KmPBREAAAAC/obama-autoreconociendo.gif",
+    "note": "Reused existing local meme; JPEG is a still frame. Animation is opt-in."
+  }
+]

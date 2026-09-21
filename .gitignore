@@ -1,0 +1,13 @@
+.DS_Store
+__pycache__/
+qa/
+*.log
+
+article-revisions/
+content/text-edit-history.jsonl
+content/pre-modular-index.html
+.env*
+*.pem
+research/**/model/
+research/**/data/
+research/**/runs/

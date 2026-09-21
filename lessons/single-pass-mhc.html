@@ -1,0 +1,64 @@
+<section id="single-pass-mhc" class="mhc-lesson">
+  <p class="eyebrow">V4.1 PAPER · §2.4.1 · RESIDUAL-STREAM SCHEDULING</p>
+  <h2 data-edit-id="mhc-title">How Single-Pass mHC avoids rereading residual streams</h2>
+  <p class="mhc-lede" data-edit-id="mhc-intro">A Transformer normally carries one residual vector between blocks. The original DeepSeek-V4 mHC carries <em>n</em> residual streams per token. That gives the model a learned way to combine streams before a block and to distribute a block’s output afterward. DeepSeek-V4.1-Flash changes the timing of one set of coefficients so a deployment kernel can avoid rereading the same residual data.</p>
+
+  <div class="mhc-callout" id="mhc-prerequisite">
+    <strong>Prerequisite: residual streams</strong>
+    <p>Think of <code>X<sub>l</sub></code> as a small stack of vectors travelling from block <em>l</em> to block <em>l</em>+1. A residual connection preserves information by adding or transforming a carried state around a block. mHC keeps several such carried streams, then uses token-specific coefficients to make one block input and the next stack. This lesson explains the data dependency; it does not require the original mHC paper.</p>
+  </div>
+
+<!-- include: lessons/unit-mix.html -->
+  <div class="mhc-step" id="mhc-original">
+    <span>1 / THE ORIGINAL DEPENDENCY</span>
+    <h3 data-edit-id="mhc-original-title">The current input mix waits for a full reduction</h3>
+    <p data-edit-id="mhc-original-body">For block <em>l</em>, the coefficient predictor <code>H(X<sub>l</sub>)</code> produces three token-wise objects: <code>A<sub>l</sub></code> mixes the <em>n</em> streams into the input for the current block; <code>B<sub>l</sub></code> mixes streams into the next residual stack; and <code>C<sub>l</sub></code> distributes the block output into that stack. The predictor includes normalization and projection.</p>
+    <div class="mhc-equation" aria-label="Original mHC update"><code>X<sub>l+1</sub> = B<sub>l</sub>X<sub>l</sub> + C<sub>l</sub>F<sub>l</sub>(A<sub>l</sub>X<sub>l</sub>)</code></div>
+    <p data-edit-id="mhc-original-explain">The obstacle is subtle. Each tile of <code>X<sub>l</sub></code> can help predict <code>A<sub>l</sub></code>, but the finished <code>A<sub>l</sub></code> is unavailable until all hidden-dimension tiles have contributed to the reduction. Therefore a kernel cannot use the first tile to form <code>A<sub>l</sub>X<sub>l</sub></code> yet. It must come back and read <code>X<sub>l</sub></code> again for input mixing. This is a bandwidth and scheduling issue, not an algebra mistake.</p>
+  </div>
+
+  <div class="mhc-lab" id="mhc-timing-lab">
+    <div class="mhc-lab-head"><span class="reaction-label">DEPENDENCY WALKTHROUGH</span><span id="mhc-mode-label" aria-live="polite">ORDINARY mHC</span></div>
+    <h3 data-edit-id="mhc-lab-title">Follow two illustrative residual streams through the timing</h3>
+    <p class="mhc-scope" data-edit-id="mhc-lab-scope">Toy model: two streams and two hidden tiles. Real mHC has <em>n</em> streams and vectors of width <em>d</em>; the illustration exists only to make the ordering visible.</p>
+    <div class="mhc-toggle" role="group" aria-label="Choose mHC schedule"><button type="button" data-mhc-mode="ordinary" aria-pressed="true">Ordinary timing</button><button type="button" data-mhc-mode="shifted" aria-pressed="false">Single-Pass timing</button></div>
+    <div class="mhc-progress" aria-label="Walkthrough progress"><i></i><i></i><i></i><i></i></div>
+    <div class="mhc-stage" aria-live="polite">
+      <p class="mhc-stage-kicker" id="mhc-stage-kicker">STEP 1 OF 4</p>
+      <h4 id="mhc-stage-title">Read tile 1 of Xₗ</h4>
+      <p id="mhc-stage-copy"></p>
+      <div class="mhc-streams" id="mhc-streams" aria-label="Current and previous coefficient status"></div>
+      <p class="mhc-stage-result" id="mhc-stage-result"></p>
+    </div>
+    <div class="mhc-controls"><button type="button" id="mhc-prev">← Previous</button><button type="button" id="mhc-next">Next →</button></div>
+  </div>
+
+  <div class="mhc-step" id="mhc-shift">
+    <span>2 / MOVE ONLY THE INPUT-MIX COEFFICIENT</span>
+    <h3 data-edit-id="mhc-shift-title">Block <em>l</em> consumes A<sub>l−1</sub>, then predicts A<sub>l</sub></h3>
+    <p data-edit-id="mhc-shift-body">Single-Pass mHC shifts <strong>only</strong> the input-mixing coefficient by one block. The already available <code>A<sub>l−1</sub></code> mixes each tile of <code>X<sub>l</sub></code> for the current block input while that same tile contributes to predicting the new coefficients. <code>B<sub>l</sub></code> and <code>C<sub>l</sub></code> are still predicted from <code>X<sub>l</sub></code> and still belong to the same block’s update. They are not shifted.</p>
+    <div class="mhc-equation mhc-equation-shift" aria-label="Single-Pass mHC update"><code>X<sub>l+1</sub> = B<sub>l</sub>X<sub>l</sub> + C<sub>l</sub>F<sub>l</sub>(A<sub>l−1</sub>X<sub>l</sub>)</code></div>
+    <p data-edit-id="mhc-shift-explain">Now no tile waits for a reduction before it can be mixed into the input: its needed <code>A<sub>l−1</sub></code> arrived from the previous block. In the same traversal, the kernel accumulates what it needs to predict <code>(A<sub>l</sub>, B<sub>l</sub>, C<sub>l</sub>)</code> for the current block. The new <code>A<sub>l</sub></code> is saved for the next block’s input mix.</p>
+  </div>
+
+  <div class="mhc-step" id="mhc-traffic">
+    <span>3 / WHAT THE PAPER COUNTS</span>
+    <h3 data-edit-id="mhc-traffic-title">One architectural shift enables a one-pass deployment kernel</h3>
+    <p data-edit-id="mhc-traffic-body">The report first gives an ideal lower bound of <code>(2n + 2)d</code> activation-memory traffic: read the <em>n</em> input streams plus the preceding block output, then write the <em>n</em> next streams plus the current mixed input. Its original multi-pass implementation has three sequential mHC kernels; including input pre-norm, it totals <code>(4n + 4)d</code>. A partially fused two-pass version would total <code>(3n + 2)d</code>, because it still rereads <code>X<sub>l</sub></code> for the current <code>A<sub>l</sub></code> mix.</p>
+    <div class="mhc-counts" aria-label="Activation traffic counts from the report"><div><small>ORIGINAL IMPLEMENTATION</small><strong>(4n + 4)d</strong><span>includes pre-norm</span></div><div><small>TWO-PASS REFERENCE</small><strong>(3n + 2)d</strong><span>still needs one reread</span></div><div><small>SINGLE-PASS MEGA-mHC</small><strong>(2n + 2)d</strong><span>attains the lower bound</span></div></div>
+    <p class="mhc-boundary" data-edit-id="mhc-count-boundary">“Halves” here means the paper’s comparison from the original <code>(4n + 4)d</code> implementation to Single-Pass Mega-mHC’s <code>(2n + 2)d</code>. It is <em>not</em> a claim that the shift halves the two-pass count, halves model FLOPs, or guarantees a twofold end-to-end speedup.</p>
+  </div>
+
+  <div class="mhc-step" id="mhc-training">
+    <span>4 / MODEL CHANGE, NOT A FREE COMPILER TRICK</span>
+    <h3 data-edit-id="mhc-training-title">The shifted schedule changes which input mix each block applies</h3>
+    <p data-edit-id="mhc-training-body">The authors say the shift causes negligible performance degradation empirically. They keep the existing multi-kernel implementation for pre-training because the shift changes the model’s computation, then use the fused Mega-mHC kernel for deployment. In other words, exact fusion optimizes execution for a chosen formula; Single-Pass changes that formula and must be evaluated as an architectural choice. The report’s qualitative statement is not a general proof for another model, sequence length, or training recipe.</p>
+    <details><summary>Optional compact notation</summary><p data-edit-id="mhc-notation">At each token, <code>A<sub>l</sub> ∈ R<sup>1×n</sup></code>, <code>C<sub>l</sub> ∈ R<sup>n×1</sup></code>, and <code>B<sub>l</sub> ∈ R<sup>n×n</sup></code>. Thus <code>A</code> collapses a stack of <em>n</em> streams to one block input, while <code>C</code> lifts the block output back across <em>n</em> streams. The shapes explain why the toy has two streams; it does not claim the production model uses two.</p></details>
+  </div>
+
+  <div class="theory-challenge" id="mhc-check"><span class="reaction-label">CHECK YOUR UNDERSTANDING</span><h3 data-edit-id="mhc-check-title">Which coefficient must already exist when a tile of X<sub>l</sub> arrives?</h3><p data-edit-id="mhc-check-prompt">In the Single-Pass schedule, the tile is immediately mixed into block <em>l</em>’s input.</p><div class="mhc-answers" role="group" aria-label="Choose the needed coefficient"><button type="button" data-mhc-answer="a">A<sub>l</sub></button><button type="button" data-mhc-answer="prev">A<sub>l−1</sub></button><button type="button" data-mhc-answer="bc">B<sub>l</sub> and C<sub>l</sub></button></div><p class="theory-feedback" id="mhc-answer-feedback" role="status" aria-live="polite">Choose an answer.</p></div>
+
+  <p class="source">Primary source: <a href="https://arxiv.org/html/2609.19969v1#S2.SS4.SSS1" target="_blank" rel="noopener">DeepSeek-V4.1-Flash technical report, §2.4.1 Single-Pass mHC ↗</a> · <a href="content/single-pass-mhc-sources.md">source and scope notes</a>.</p>
+  <p class="lesson-transition" data-edit-id="mhc-next">The key lesson is a dependency schedule: preserve the current residual data, use the previous input-mixing decision, and make the current decision for the next block.</p>
+  <button class="task-complete" type="button" data-task-id="single-pass-mhc">Mark this lesson complete</button>
+</section>

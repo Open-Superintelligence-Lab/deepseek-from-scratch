@@ -1,0 +1,48 @@
+<section class="shared-query-lesson" id="shared-query-example" aria-labelledby="shared-query-title">
+  <p class="eyebrow">ONE SHARED MEMORY · TWO READS</p>
+  <h2 id="shared-query-title" data-edit-id="shared-query-title">The same KV memory can give two different outputs</h2>
+  <p data-edit-id="shared-query-problem">Sharing keys and values saves storage, but it raises a useful question: if two layers read the same two memory entries, must they get the same answer? No. Each read can use a different query, which changes the attention weights before the values are combined.</p>
+
+  <div class="shared-query-lab" data-shared-query-lab>
+    <div class="interactive-top"><span>NUMERICAL MINI LESSON</span><span class="live">INTERACTIVE</span></div>
+    <h3 data-edit-id="shared-query-example-heading">Keep K and V fixed. Change only Q.</h3>
+    <p class="micro" data-edit-id="shared-query-example-intro">This is a two-dimensional toy calculation. The numbers illustrate the mechanism; they are not trained weights or word meanings.</p>
+
+    <div class="shared-query-memory" aria-label="Fixed shared keys and values">
+      <div><small>SHARED KEYS K</small><code>K₁ = [1, 0] &nbsp; K₂ = [0, 1]</code></div>
+      <div><small>SHARED VALUES V</small><code>V₁ = [2, 0] &nbsp; V₂ = [0, 2]</code></div>
+    </div>
+
+    <div class="shared-query-prediction" aria-labelledby="shared-query-prediction-title">
+      <p id="shared-query-prediction-title" data-edit-id="shared-query-prediction">Before revealing the calculation: with Query A = [√2, 0], which output coordinate do you predict will be larger?</p>
+      <div class="shared-query-buttons" role="group" aria-label="Prediction choices">
+        <button type="button" data-shared-query-predict="first">The first coordinate</button>
+        <button type="button" data-shared-query-predict="second">The second coordinate</button>
+      </div>
+      <button class="shared-query-reveal" type="button" data-shared-query-reveal disabled>Reveal the calculation</button>
+      <p class="shared-query-feedback" data-shared-query-feedback role="status" aria-live="polite">Choose a prediction first.</p>
+    </div>
+
+    <div class="shared-query-controls" data-shared-query-controls aria-label="Choose a query" hidden>
+      <span>TRY A QUERY</span>
+      <div class="shared-query-buttons" role="group">
+        <button type="button" data-shared-query-choice="a" aria-pressed="true">Query A · [√2, 0]</button>
+        <button type="button" data-shared-query-choice="b" aria-pressed="false">Query B · [0, √2]</button>
+      </div>
+    </div>
+
+    <div class="shared-query-work" data-shared-query-work hidden>
+      <div class="shared-query-current"><small>CURRENT QUERY</small><strong data-shared-query-current>Query A = [√2, 0]</strong></div>
+      <ol>
+        <li><span>1</span><div><small>DOT PRODUCTS</small><code data-shared-query-dots>[√2, 0] · Kᵀ = [√2, 0]</code></div></li>
+        <li><span>2</span><div><small>SCALE BY √d<sub>k</sub> = √2</small><code data-shared-query-scaled>[√2, 0] / √2 = [1, 0]</code></div></li>
+        <li><span>3</span><div><small>SOFTMAX</small><code data-shared-query-softmax>softmax([1, 0]) = [0.731, 0.269]</code></div></li>
+        <li><span>4</span><div><small>WEIGHTED SUM OF THE SAME VALUES</small><code data-shared-query-output>0.731[2, 0] + 0.269[0, 2] = [1.462, 0.538]</code></div></li>
+      </ol>
+      <div class="shared-query-result"><span>ATTENTION OUTPUT</span><strong data-shared-query-result>[1.462, 0.538]</strong></div>
+    </div>
+
+    <p class="shared-query-takeaway" data-shared-query-takeaway hidden>Query A puts more weight on the first fixed value. Switch to Query B: the keys and values stay exactly the same, but the weights and output reverse. Different queries can produce different outputs; they are not guaranteed to do so for every possible pair of queries and memory entries.</p>
+  </div>
+  <p class="disclaimer" data-edit-id="shared-query-disclaimer">Illustrative 2D attention only. Real attention uses learned, higher-dimensional vectors and can include many entries.</p>
+</section>

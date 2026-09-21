@@ -1,0 +1,8 @@
+{
+  "smoke": false,
+  "epochs": 4,
+  "per_class": 0,
+  "batch": 32,
+  "seed": 42,
+  "output": "banking-full-r01"
+}

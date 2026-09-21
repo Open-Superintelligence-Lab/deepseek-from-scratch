@@ -1,0 +1,16 @@
+<div class="unit-example" id="unit-mix" data-unit="mix">
+<p class="eyebrow">ONE OPERATION · WORKED EXAMPLE + UNIT TEST</p>
+<h3 id="unit-mix-title" data-edit-id="unit-mix-title">Combine two residual streams into one block input</h3>
+<p data-edit-id="unit-mix-intro">Before studying when mHC predicts its mixing coefficients, first calculate what mixing does. Each residual stream is a vector. The input mix weights corresponding coordinates, then adds them.</p>
+<div class="unit-steps"><div class="unit-step"><span>STEP 1</span><h4 data-edit-id="unit-mix-step-1">Start with two streams</h4><pre>Stream A = [2, 0]
+Stream B = [0, 4]</pre><p data-edit-id="unit-mix-explain-1">Both vectors have two coordinates, so their corresponding coordinates can be combined.</p></div><div class="unit-step"><span>STEP 2</span><h4 data-edit-id="unit-mix-step-2">Weight each stream</h4><pre>0.25 × A = [0.5, 0]
+0.75 × B = [0,   3]</pre><p data-edit-id="unit-mix-explain-2">These illustrative coefficients tell us how much each stream contributes to this input mix.</p></div><div class="unit-step"><span>STEP 3</span><h4 data-edit-id="unit-mix-step-3">Add coordinate by coordinate</h4><pre>Mixed input = [0.5, 3]</pre><p data-edit-id="unit-mix-explain-3">We get one two-coordinate vector. We do not concatenate the streams into a four-coordinate vector.</p></div></div>
+<div class="unit-flow">Two streams → weighted sum → one block input</div>
+<div class="unit-challenge"><h4 data-edit-id="unit-mix-task-title">Change one thing and predict the result</h4><p data-edit-id="unit-mix-task">Keep the same two streams, but set both mixing coefficients to 0.5. What are the two coordinates of the mixed input?</p><div class="unit-fields"><label for="unit-mix-answer-0">First coordinate<input id="unit-mix-answer-0" type="number" step="any" inputmode="decimal" autocomplete="off"></label><label for="unit-mix-answer-1">Second coordinate<input id="unit-mix-answer-1" type="number" step="any" inputmode="decimal" autocomplete="off"></label></div><div class="unit-actions"><button type="button" data-unit-check>Check my answer</button><button type="button" data-unit-reveal>Show the calculation</button></div><p class="unit-feedback" data-unit-feedback role="status">Enter both numbers, then check.</p></div>
+<details><summary>See the Python unit test</summary><p data-edit-id="unit-mix-test-purpose">These assertions check the worked input and the changed input. If an assertion fails, the function did not produce the expected result.</p><pre><code>def mix_streams(a, b, wa, wb):
+    return [wa*x + wb*y for x, y in zip(a, b)]
+
+assert mix_streams([2,0], [0,4], .25, .75) == [.5,3]
+assert mix_streams([2,0], [0,4], .5, .5) == [1,2]</code></pre><button type="button" data-unit-run>Run equivalent browser checks</button><p data-unit-test-result role="status">The browser runs JavaScript calculations. The Python version is downloadable below.</p><a href="downloads/architecture_units.py" download>Download all three Python examples and tests</a></details>
+<p class="unit-scope" data-edit-id="unit-mix-scope">This is only the input-mixing operation, with invented coefficients and two streams. It is not all of mHC, does not derive its coefficients, and does not specify every normalization constraint. The lesson below explains how the actual architecture schedules this operation.</p>
+</div>

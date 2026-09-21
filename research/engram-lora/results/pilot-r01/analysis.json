@@ -1,0 +1,83 @@
+{
+  "overlap_definition": "Fraction of token 2/3-grams observed at least twice in training; bins <1/3, [1/3,2/3), >=2/3",
+  "exact_train_test_overlap": 1,
+  "methods": {
+    "frozen": {
+      "overlap_buckets": [
+        {
+          "bucket": 0,
+          "n": 555,
+          "accuracy": 0.436036036036036
+        },
+        {
+          "bucket": 1,
+          "n": 1795,
+          "accuracy": 0.5387186629526463
+        },
+        {
+          "bucket": 2,
+          "n": 730,
+          "accuracy": 0.5739726027397261
+        }
+      ],
+      "accuracy_excluding_exact_training_duplicates": 0.528418317635596
+    },
+    "lora": {
+      "overlap_buckets": [
+        {
+          "bucket": 0,
+          "n": 555,
+          "accuracy": 0.7531531531531531
+        },
+        {
+          "bucket": 1,
+          "n": 1795,
+          "accuracy": 0.8033426183844011
+        },
+        {
+          "bucket": 2,
+          "n": 730,
+          "accuracy": 0.8534246575342466
+        }
+      ],
+      "accuracy_excluding_exact_training_duplicates": 0.8061058785319909
+    },
+    "engram": {
+      "overlap_buckets": [
+        {
+          "bucket": 0,
+          "n": 555,
+          "accuracy": 0.5009009009009009
+        },
+        {
+          "bucket": 1,
+          "n": 1795,
+          "accuracy": 0.6401114206128133
+        },
+        {
+          "bucket": 2,
+          "n": 730,
+          "accuracy": 0.7342465753424657
+        }
+      ],
+      "accuracy_excluding_exact_training_duplicates": 0.6372198765833063
+    }
+  },
+  "engram_ablations": {
+    "disabled_with_same_trained_classifier": {
+      "accuracy": 0.48603896103896105,
+      "loss": 2.307724409598809,
+      "n": 3080
+    },
+    "shuffled_rows_same_reader": {
+      "accuracy": 0.5253246753246753,
+      "loss": 1.9431156437118333,
+      "n": 3080
+    },
+    "restored": {
+      "accuracy": 0.6373376623376623,
+      "loss": 1.3813656808493973,
+      "n": 3080
+    }
+  }
+}

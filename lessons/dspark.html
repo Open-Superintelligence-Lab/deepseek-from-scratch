@@ -1,0 +1,65 @@
+<section id="dspark" class="dspark-lesson">
+  <p class="eyebrow">V4.1 PAPER · §2.4.3 · SPECULATIVE DECODING</p>
+  <h2 data-edit-id="dspark-title">How DSpark drafts and verifies several tokens</h2>
+  <p class="dspark-lede" data-edit-id="dspark-intro">Ordinary generation chooses one token before it can calculate the next token’s distribution. DSpark uses a small drafter to propose several next tokens, then asks the main model to check a selected number of them together. The draft can be wrong, so checking it is essential before accepting its tokens.</p>
+
+  <div class="dspark-step">
+    <span>1 / START WITH THE BOTTLENECK</span>
+    <h3 data-edit-id="dspark-bottleneck-title">See why target decoding waits on each token</h3>
+    <p data-edit-id="dspark-bottleneck-body">For an autoregressive target model, the next distribution is conditioned on the already committed prefix. After sampling one token, its KV state and the prefix change, then the model can score the next position. Hardware can parallelize the matrix work within one forward pass, but it cannot know the sampled next token before that pass finishes. Long answers therefore repeat a latency-sensitive decode loop.</p>
+    <div class="dspark-serial" aria-label="Standard decoding sequence"><div><small>COMMITTED PREFIX</small><b>… “The result”</b></div><i>→</i><div><small>TARGET PASS</small><b>is</b></div><i>→</i><div><small>TARGET PASS</small><b>ready</b></div><i>→</i><div><small>TARGET PASS</small><b>now</b></div></div>
+    <p class="micro" data-edit-id="dspark-bottleneck-boundary">This is a dependency bottleneck, not evidence that one target pass equals one fixed amount of wall-clock time. Batch size, context length, kernels, cache state, and serving load all matter.</p>
+  </div>
+
+  <div class="dspark-step">
+    <span>2 / PROPOSE FIVE POSITIONS</span>
+    <h3 data-edit-id="dspark-drafter-title">See how DSpark drafts five positions together</h3>
+    <p data-edit-id="dspark-drafter-body">The V4.1 report describes a drafter with three Transformer blocks and a sliding attention window of 128 tokens. One pass produces base logits for five draft positions in parallel. “Parallel” here means the five position representations are computed together; it does not mean the proposed words are assumed independent.</p>
+    <div class="dspark-diagram" role="img" aria-label="Backbone features enter three DSpark blocks. Five draft positions receive base logits, then a Markov head connects proposed positions and a confidence head estimates each conditional acceptance probability.">
+      <div class="dspark-node"><small>BACKBONE FEATURES</small><b>committed context</b></div><span>→</span><div class="dspark-node dspark-block"><small>DSpark drafter</small><b>3 blocks · window 128</b></div><span>→</span><div class="dspark-node"><small>BASE LOGITS</small><b>five positions together</b></div>
+      <div class="dspark-branch"><div><small>MARKOV HEAD</small><b>proposal 1 → 2 → 3 → 4 → 5</b></div><div><small>CONFIDENCE HEAD</small><b>a₁, a₂, a₃, a₄, a₅</b></div></div>
+    </div>
+    <p data-edit-id="dspark-markov-body">The lightweight Markov head models dependencies among the draft tokens. In the released reference, each sampled proposed token contributes a Markov embedding that adjusts the next position’s logits. That gives later proposals information about earlier proposals without rerunning all three draft blocks for every position. The confidence head has a different job: it predicts a conditional acceptance probability for each position.</p>
+  </div>
+
+  <div class="dspark-step">
+    <span>3 / SCHEDULE A PREFIX, THEN VERIFY IT</span>
+    <h3 data-edit-id="dspark-scheduler-title">How confidence estimates guide draft length</h3>
+    <p data-edit-id="dspark-scheduler-body">Let <em>aⱼ</em> mean the confidence estimate for position <em>j</em>, conditional on the earlier proposed positions being accepted. The scheduler can turn these into an estimated probability that the whole prefix through <em>j</em> survives: <span class="dspark-equation">Sⱼ ≈ a₁ × a₂ × … × aⱼ</span>. A low value late in a draft can make extra verification work unattractive. The report says DSpark combines these estimates with profiled engine-throughput curves to choose a verification length dynamically for each request under the current system load.</p>
+
+    <div class="dspark-interactive" id="dspark-scheduler">
+      <span class="reaction-label">TRY THE SCHEDULER</span>
+      <h4 data-edit-id="dspark-demo-title">Change the estimates; inspect expected accepted draft tokens</h4>
+      <p class="micro" data-edit-id="dspark-demo-scope">Illustrative arithmetic only. The sliders are invented confidence estimates. For each candidate length <em>L</em>, the widget shows <span class="dspark-equation">E[A<sub>L</sub>] = Σ<sub>j=1</sub><sup>L</sup> S<sub>j</sub></span>: the expected number of accepted <em>draft</em> tokens before any correction. It divides this by the explicitly invented cost <span class="dspark-equation">C<sub>L</sub> = 1 + 0.45L</span> arbitrary units (one fixed unit plus 0.45 per verified position). Neither formula is DSpark’s production scheduler.</p>
+      <div class="dspark-sliders">
+        <label for="dspark-a1">Position 1 <output id="dspark-a1-value">0.92</output><input id="dspark-a1" type="range" min="0.10" max="0.99" value="0.92" step="0.01"></label>
+        <label for="dspark-a2">Position 2 <output id="dspark-a2-value">0.86</output><input id="dspark-a2" type="range" min="0.10" max="0.99" value="0.86" step="0.01"></label>
+        <label for="dspark-a3">Position 3 <output id="dspark-a3-value">0.76</output><input id="dspark-a3" type="range" min="0.10" max="0.99" value="0.76" step="0.01"></label>
+        <label for="dspark-a4">Position 4 <output id="dspark-a4-value">0.55</output><input id="dspark-a4" type="range" min="0.10" max="0.99" value="0.55" step="0.01"></label>
+        <label for="dspark-a5">Position 5 <output id="dspark-a5-value">0.42</output><input id="dspark-a5" type="range" min="0.10" max="0.99" value="0.42" step="0.01"></label>
+      </div>
+      <div class="dspark-results" aria-live="polite"><div><small>ILLUSTRATIVE CHOICE</small><strong id="dspark-choice">3 positions</strong></div><div><small>EXPECTED ACCEPTED DRAFT TOKENS</small><strong id="dspark-expected">2.31</strong></div><div><small>E[A] / INVENTED COST</small><strong id="dspark-score">0.98</strong></div></div>
+      <table class="dspark-table"><thead><tr><th>Prefix</th><th>Conditional estimate</th><th>Survival S<sub>j</sub></th><th>Expected E[A<sub>L</sub>]</th><th>Cost C<sub>L</sub></th><th>E[A] / C</th></tr></thead><tbody id="dspark-table-body"></tbody></table>
+      <p class="theory-feedback" id="dspark-explanation" aria-live="polite"></p>
+    </div>
+    <p data-edit-id="dspark-scheduler-boundary">Confidence is a learned forecast of acceptance, not a certificate that a token is correct. The product is an estimate based on conditional forecasts, not an observed verification result. The displayed E[A] excludes correction tokens and any bonus token a particular sampling procedure may generate after rejection. A real serving policy also accounts for target-model work, queueing, request shape, the sampling rule, and measured engine profiles. So DSpark does not imply a free five-times speedup.</p>
+  </div>
+
+  <div class="dspark-step">
+    <span>4 / KEEP THE TARGET MODEL IN CHARGE</span>
+    <h3 data-edit-id="dspark-verify-title">How proposed tokens are checked before acceptance</h3>
+    <p data-edit-id="dspark-verify-body">The drafter produces tokens from a draft distribution; the target model evaluates the proposal. A correct speculative decoder must use an acceptance-and-correction procedure consistent with the target sampling method, commit only the verified prefix, and resume from the corrected state after a rejection. A high confidence estimate cannot replace that procedure.</p>
+    <div class="dspark-transaction" role="img" aria-label="A draft of five proposed tokens is evaluated by target verification. The accepted prefix is committed and the first rejected position causes correction and a new round."><div><small>DRAFT</small><b id="dspark-draft-line">is · ready · now · for · review</b></div><span>→</span><div><small>TARGET VERIFICATION</small><b id="dspark-verify-line">match · match · match · reject · —</b></div><span>→</span><div><small>COMMIT</small><b id="dspark-accepted-line">is · ready · now</b></div></div>
+    <details><summary>Run a deterministic match-prefix illustration</summary><p data-edit-id="dspark-deterministic-note">This button compares two fixed word lists and commits their shared prefix. It makes the control flow visible, but it is deliberately not a sampling-distribution-preserving speculative-decoding algorithm: it has no probability ratios, rejection correction, target sampling, or model state.</p><button class="dspark-button" id="dspark-run-toy" type="button">Compare the fixed lists</button><p class="theory-feedback" id="dspark-toy-result" aria-live="polite"></p></details>
+  </div>
+
+  <div class="dspark-step">
+    <span>5 / TRAINING BOUNDARY</span>
+    <h3 data-edit-id="dspark-training-title">When DSpark is trained and which weights change</h3>
+    <p data-edit-id="dspark-training-body">Unlike the jointly pretrained MTP module discussed for DeepSeek-V3, the report says V4.1 introduces DSpark in a dedicated stage after backbone pre-training. That stage trains only DSpark while the backbone is frozen. During post-training, DSpark continues alongside the backbone, but gradients from the DSpark objective do not propagate into the backbone. The stated purpose is to keep the drafter aligned with the evolving policy while avoiding DSpark-objective updates to backbone parameters.</p>
+    <p class="micro" data-edit-id="dspark-reference-boundary">The official minimal inference repository exposes a DSpark forward path, including a block-size configuration and Markov/confidence heads, but its README says generation itself is plain autoregressive sampling. It is useful for studying tensor structure; it is not the production verification scheduler.</p>
+  </div>
+
+  <p class="source">Sources: <a href="https://arxiv.org/html/2609.19969v1#S2.SS4.SSS3" target="_blank" rel="noopener">DeepSeek-V4.1-Flash report, §2.4.3 DSpark</a> · <a href="content/dspark-sources.md">source and teaching-scope ledger</a>.</p>
+  <button class="task-complete" type="button" data-task-id="dspark">Mark this lesson complete</button>
+</section>

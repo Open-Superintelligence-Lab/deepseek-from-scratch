@@ -1,0 +1,82 @@
+{
+  "experiment": "tiny trained causal language-model baseline",
+  "honesty": "Educational synthetic grammar experiment only; it is not DeepSeek and does not establish natural-language generalization.",
+  "device": "cpu",
+  "torch_version": "2.8.0",
+  "config": {
+    "dataset_seed": 20260920,
+    "split_seed": 314159,
+    "training_seed": 20260920,
+    "train_fraction": 0.8,
+    "layers": 2,
+    "dim": 48,
+    "heads": 4,
+    "mlp_dim": 96,
+    "context": 24,
+    "batch_size": 32,
+    "steps": 600,
+    "learning_rate": 0.003,
+    "weight_decay": 0.0,
+    "eval_every": 100,
+    "torch_threads": 2
+  },
+  "parameters": 41088,
+  "vocab_size": 20,
+  "train_sentence_count": 345,
+  "validation_sentence_count": 87,
+  "validation_target_tokens": 957,
+  "metrics": {
+    "uniform_validation_ce": 2.995732273553991,
+    "smoothed_train_unigram_validation_ce": 2.763847827911377,
+    "untrained_validation_ce": 3.370097990444586,
+    "trained_validation_ce": 0.5721415935265233,
+    "curve": [
+      {
+        "step": 0,
+        "train_ce": 3.379961281677166,
+        "validation_ce": 3.370097990444586
+      },
+      {
+        "step": 100,
+        "train_ce": 0.5631159605244874,
+        "validation_ce": 0.5700990045083105
+      },
+      {
+        "step": 200,
+        "train_ce": 0.5610740691776803,
+        "validation_ce": 0.5727658645486383
+      },
+      {
+        "step": 300,
+        "train_ce": 0.5597752627647913,
+        "validation_ce": 0.5789237824602436
+      },
+      {
+        "step": 400,
+        "train_ce": 0.557131049315763,
+        "validation_ce": 0.5773473119785544
+      },
+      {
+        "step": 500,
+        "train_ce": 0.5541823476356637,
+        "validation_ce": 0.5650235996226407
+      },
+      {
+        "step": 600,
+        "train_ce": 0.5546246957087863,
+        "validation_ce": 0.5721415935265233
+      }
+    ]
+  },
+  "causal_mask_invariance": {
+    "max_abs_difference_at_earlier_positions": 0.0,
+    "passed": true
+  },
+  "fixed_prompt_samples": {
+    "prompt": "<bos> move the red circle",
+    "before": "<bos> move the red circle the the <bos> green it twice the <bos>",
+    "after": "<bos> move the red circle down once then paint it green <eos>"
+  },
+  "runtime_seconds": 1.7079257500590757,
+  "checkpoint": "trained.pt"
+}

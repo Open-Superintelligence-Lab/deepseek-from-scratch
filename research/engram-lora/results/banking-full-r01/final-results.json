@@ -1,0 +1,41 @@
+[
+  {
+    "method": "frozen",
+    "chosen_lr": 0.001,
+    "test": {
+      "accuracy": 0.7714285714285715,
+      "loss": 0.9969382798516905,
+      "n": 3080
+    },
+    "trainable_parameters": 44429,
+    "peak_allocated_mb": 627.6650390625,
+    "artifact_bytes": 179429,
+    "training_wall_seconds": 79.73423747499692
+  },
+  {
+    "method": "lora",
+    "chosen_lr": 0.001,
+    "test": {
+      "accuracy": 0.8993506493506493,
+      "loss": 0.3525999534391351,
+      "n": 3080
+    },
+    "trainable_parameters": 505229,
+    "peak_allocated_mb": 2666.11376953125,
+    "artifact_bytes": 2063435,
+    "training_wall_seconds": 126.57528265400106
+  },
+  {
+    "method": "engram",
+    "chosen_lr": 0.001,
+    "test": {
+      "accuracy": 0.8542207792207792,
+      "loss": 0.5348057021181305,
+      "n": 3080
+    },
+    "trainable_parameters": 504781,
+    "peak_allocated_mb": 2086.34326171875,
+    "artifact_bytes": 2023103,
+    "training_wall_seconds": 105.28356429600171
+  }
+]

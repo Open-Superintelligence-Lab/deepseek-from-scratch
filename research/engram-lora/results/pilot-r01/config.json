@@ -1,0 +1,8 @@
+{
+  "smoke": false,
+  "epochs": 4,
+  "per_class": 20,
+  "batch": 16,
+  "seed": 42,
+  "output": "pilot-r01"
+}

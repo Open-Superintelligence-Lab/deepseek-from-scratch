@@ -1,0 +1,160 @@
+{
+  "status": "measured",
+  "model": "deterministic untrained single-layer causal attention toy",
+  "quality_evaluated": false,
+  "device": "CPU",
+  "precision": "float32",
+  "measurement": "time.perf_counter_ns median; Python tracemalloc peak reported separately",
+  "python": "3.13.7",
+  "numpy": "2.4.2",
+  "config": {
+    "seed": 7,
+    "vocab_size": 256,
+    "d_model": 32,
+    "context_lengths": [
+      16,
+      32,
+      64,
+      128
+    ],
+    "continuation_tokens": 16,
+    "warmups": 2,
+    "repetitions": 7,
+    "dtype": "float32",
+    "device": "CPU"
+  },
+  "results": [
+    {
+      "context_tokens": 16,
+      "kv_cache_bytes": 4096,
+      "bytes_per_token": 256,
+      "logits_max_abs_error": 4.6566128730773926e-09,
+      "logits_match_atol_1e-5": true,
+      "uncached_forced_generation": {
+        "median_ms": 1.4759,
+        "samples_ms": [
+          1.4504,
+          1.4759,
+          1.6815,
+          1.6295,
+          2.0615,
+          1.4262,
+          1.3538
+        ],
+        "python_tracemalloc_peak_bytes": 72246
+      },
+      "cached_forced_generation": {
+        "median_ms": 1.0336,
+        "samples_ms": [
+          0.7458,
+          0.7675,
+          1.2412,
+          1.4124,
+          1.2175,
+          0.8442,
+          1.0336
+        ],
+        "python_tracemalloc_peak_bytes": 21048
+      }
+    },
+    {
+      "context_tokens": 32,
+      "kv_cache_bytes": 8192,
+      "bytes_per_token": 256,
+      "logits_max_abs_error": 2.7939677238464355e-09,
+      "logits_match_atol_1e-5": true,
+      "uncached_forced_generation": {
+        "median_ms": 1.8673,
+        "samples_ms": [
+          2.0095,
+          1.8479,
+          1.817,
+          1.8673,
+          1.7994,
+          1.9187,
+          2.0922
+        ],
+        "python_tracemalloc_peak_bytes": 107990
+      },
+      "cached_forced_generation": {
+        "median_ms": 1.2455,
+        "samples_ms": [
+          1.2376,
+          1.2045,
+          1.2455,
+          1.7533,
+          1.3028,
+          1.3104,
+          1.2353
+        ],
+        "python_tracemalloc_peak_bytes": 29468
+      }
+    },
+    {
+      "context_tokens": 64,
+      "kv_cache_bytes": 16384,
+      "bytes_per_token": 256,
+      "logits_max_abs_error": 1.3969838619232178e-09,
+      "logits_match_atol_1e-5": true,
+      "uncached_forced_generation": {
+        "median_ms": 2.6396,
+        "samples_ms": [
+          2.6194,
+          3.467,
+          2.6396,
+          2.752,
+          3.4043,
+          2.4392,
+          2.4891
+        ],
+        "python_tracemalloc_peak_bytes": 185814
+      },
+      "cached_forced_generation": {
+        "median_ms": 2.0042,
+        "samples_ms": [
+          2.0124,
+          2.0355,
+          1.9515,
+          2.7077,
+          1.899,
+          1.9394,
+          2.0042
+        ],
+        "python_tracemalloc_peak_bytes": 46364
+      }
+    },
+    {
+      "context_tokens": 128,
+      "kv_cache_bytes": 32768,
+      "bytes_per_token": 256,
+      "logits_max_abs_error": 9.313225746154785e-10,
+      "logits_match_atol_1e-5": true,
+      "uncached_forced_generation": {
+        "median_ms": 7.0332,
+        "samples_ms": [
+          6.6144,
+          7.7663,
+          5.662,
+          7.0332,
+          7.082,
+          7.602,
+          5.749
+        ],
+        "python_tracemalloc_peak_bytes": 443976
+      },
+      "cached_forced_generation": {
+        "median_ms": 3.6931,
+        "samples_ms": [
+          3.6117,
+          3.6931,
+          3.3798,
+          3.9293,
+          3.8428,
+          4.2761,
+          3.6883
+        ],
+        "python_tracemalloc_peak_bytes": 80156
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<section id="engram-research">
+<p class="eyebrow">OUR RESEARCH · LIVE EXPERIMENT NOTEBOOK</p>
+<h2 data-edit-id="research-adaptation-title">Can n-gram memory adapt a frozen language model?</h2>
+<p data-edit-id="research-adaptation-intro">Take a pretrained language model. Keep its original weights fixed. Can we teach it a task by training a small memory module, and how does that compare with LoRA?</p>
+<p class="disclaimer">Work in progress · Results below are our measurements on SmolLM2-135M, not DeepSeek benchmarks. Our adapter is Engram-inspired; it is not an exact reproduction of the paper.</p>
+<div class="lookup-reading-step"><span>1 / WHAT CHANGES?</span>
+<h3 data-edit-id="research-methods-title">Same pretrained model, two ways to adapt it</h3>
+<pre class="source-code"><code>Frozen SmolLM2-135M
+  ├─ LoRA: train small updates in attention layers
+  └─ N-gram memory: train tables + the network that reads them
+
+Original model weights stay fixed in both cases.</code></pre>
+<p data-edit-id="research-methods-detail">LoRA has 460,800 trainable adapter parameters. Our memory module has 460,352. It reads 2-token and 3-token groups through two hash heads each, then injects a gated memory contribution before the eighth Transformer block. This compares two complete adaptation designs; their placement differs as well as their mechanism.</p></div>
+<div class="lookup-reading-step"><span>2 / COMPLETED: CLASSIFICATION</span>
+<h3 data-edit-id="research-banking-title">Read a banking message and choose its category</h3>
+<pre class="source-code"><code>“I am still waiting on my card?” → Card arrival
+77 possible categories · real BANKING77 customer questions</code></pre>
+<p data-edit-id="research-banking-setup">All three methods train the same kind of classification head, with identical initialization. The baseline trains only that head. LoRA and memory also train their adapters. We compare 1,540 training examples with 9,229; each uses a separate 770-example validation set and the official 3,080-example test set.</p>
+<div style="overflow-x:auto"><table><caption>Held-out test accuracy · seed 42 · higher is better</caption><thead><tr><th>Method</th><th>1,540 training examples</th><th>9,229 training examples</th></tr></thead><tbody><tr><td>Frozen model + classifier</td><td>52.86%</td><td>77.14%</td></tr><tr><td>LoRA + classifier</td><td><strong>80.62%</strong></td><td><strong>89.94%</strong></td></tr><tr><td>N-gram memory + classifier</td><td>63.73%</td><td>85.42%</td></tr></tbody></table></div>
+<p data-edit-id="research-banking-result">LoRA wins both comparisons. Memory improves over training only a classifier, but that does not establish an advantage over LoRA. Each method received four epochs and the same two learning-rate choices; validation selected the checkpoint before test scoring.</p>
+<details><summary>Does the trained memory actually contribute?</summary><p>In the larger run, Engram scores 85.42%. Disabling its adapter drops accuracy to 55.49%; shuffling its memory rows drops it to 71.04%. Both keep the classifier trained with the adapter, so neither is a replacement for the separately trained baseline.</p><p>Six test messages exactly match normalized training text in the larger split. Excluding them gives 77.10% baseline, 89.92% LoRA, and 85.39% Engram. The ranking stays the same.</p></details>
+<p class="source"><a href="research/engram-lora/report.html">Explore the measured results and checks ↗</a> · <a href="https://github.com/PolyAI-LDN/task-specific-datasets/tree/master/banking_data">BANKING77 source ↗</a></p></div>
+<div class="lookup-reading-step"><span>3 / TEXT GENERATION</span>
+<h3 data-edit-id="research-text-title">Keep the language model’s normal next-token output</h3>
+<p data-edit-id="research-text-setup">SmolLM2 is an autoregressive language model. For this experiment, we keep its original output vocabulary and train on real WikiText-2 passages. There is no 77-category classification head. The original model, LoRA model, and memory model predict unseen text and continue the same prompts.</p>
+<pre class="source-code"><code>Prompt: “The history of artificial intelligence”
+Original model → saved continuation
+LoRA          → saved continuation
+N-gram memory → saved continuation</code></pre>
+<p data-edit-id="research-text-protocol">The first pilot uses 512 blocks of 256 tokens for training, 64 validation blocks, and 128 test blocks from the official separate splits. Both adapters get two epochs and two learning rates. We select by validation loss, then report test perplexity: lower means better average probability assigned to the real next tokens. This is a bounded pilot, not a full WikiText benchmark.</p>
+<p data-edit-id="research-text-status">Text-generation measurements will appear in the linked results report when the run completes. We save every continuation from the fixed prompt list, including weak or repetitive outputs.</p>
+<p class="source"><a href="https://huggingface.co/datasets/Salesforce/wikitext">WikiText dataset ↗</a> · <a href="https://huggingface.co/HuggingFaceTB/SmolLM2-135M">Base model ↗</a></p></div>
+<div class="lookup-reading-step"><span>4 / NEXT RESEARCH QUESTIONS</span>
+<h3 data-edit-id="research-next-title">Test usefulness, cost and what breaks</h3>
+<ul><li><strong>Repeatability:</strong> repeat promising comparisons with three seeds and report variation.</li><li><strong>Verifiable generated answers:</strong> add held-out questions with automatically checkable answers.</li><li><strong>Retention:</strong> compare unrelated held-out text before and after task adaptation.</li><li><strong>Cost:</strong> report trainable parameters, adapter bytes, memory, training time and generation speed.</li><li><strong>Swapping:</strong> train adapters for different tasks and check that loading the matching adapter restores its results.</li></ul>
+<p data-edit-id="research-next-limits">These are planned tests, not completed results. The GPU is shared, so timing measurements are affected by contention. Current generation recomputes the full prefix for every method; it does not measure optimized KV-cache decoding. Transfer between different model backbones is a separate, untested question.</p></div>
+<div class="lookup-reading-step"><span>5 / REPRODUCE AND SHARE</span>
+<h3 data-edit-id="research-publish-title">Keep the article, code and evidence together</h3>
+<p data-edit-id="research-publish-text">This course is the main research write-up: question, mechanism, setup, results, failures, and runnable code. Once the experiments are stable, we can produce a PDF report and a short post linking back here. We are testing a task-adaptation approach, not claiming to have invented n-gram memory.</p>
+<p><a href="https://github.com/vukrosic/deepseek-from-scratch/tree/main/research/engram-lora">Experiment code and recorded results on GitHub ↗</a></p>
+</div></section>

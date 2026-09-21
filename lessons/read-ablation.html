@@ -1,0 +1,70 @@
+<section class="ablation-reading" id="read-ablation">
+  <p class="eyebrow">10 · READ A REAL PAPER RESULT</p>
+  <h2 data-edit-id="evidence-title">What V4.1’s benchmark comparison tells us</h2>
+  <p class="ablation-reading__lede" data-edit-id="evidence-lede">Table 1 asks a concrete question: does the finished V4.1-Flash base model retain strong capability while using its new long-context efficiency design? It compares three finished base models in DeepSeek’s shared internal evaluation setting. Read the scores as evidence about the final package, then keep separate the question of which design choice caused them.</p>
+
+  <div class="ablation-reading__scope">
+    <strong>Evidence boundary</strong>
+    <p data-edit-id="evidence-boundary">The V4.1-Flash report does not publish a numerical, one-change-at-a-time architecture ablation for CSA2, FP4 KV caching, or SWA Bounded Replay. Section 4.3 instead gives Table 1: a comparison of DeepSeek-V4-Flash-Base, DeepSeek-V4-Pro-Base, and DeepSeek-V4.1-Flash-Base. We will read that actual core-paper result as a bundled architecture-and-training comparison, not call it an ablation.</p>
+  </div>
+
+  <h3 data-edit-id="evidence-question-title">Do fewer active parameters always mean lower scores?</h3>
+  <p data-edit-id="evidence-question">Can V4.1-Flash reduce its long-context serving footprint while retaining or improving base-model capability? The architecture is designed around CED, CSA2 cross-layer cache reuse, FP4 main KV caching, and other changes. Table 1 asks whether the final package performs competitively against earlier DeepSeek base models; it does not tell us which component caused each score.</p>
+
+  <div class="ablation-reading__prediction" aria-labelledby="ablation-prediction-title">
+    <p class="ablation-reading__label">PREDICT BEFORE READING</p>
+    <h3 id="ablation-prediction-title" data-edit-id="evidence-prediction-title">Predict whether every benchmark score must fall</h3>
+    <p data-edit-id="evidence-prediction">Predict one metric where V4.1-Flash improves over V4-Flash and one where it may not. Then separate the observed rows from any explanation for them.</p>
+    <details>
+      <summary>Reveal the reported pattern</summary>
+      <p data-edit-id="evidence-reveal">V4.1-Flash is higher on MMLU-Pro, BigCodeBench, HumanEval, MATH, and LongBench-V2 in the selected rows below; it is lower on MGSM. The reveal is deliberately mixed: “the new model wins” is too coarse. The paper also says a score gap of at most 0.3 counts as the same level, so its LongBench-V2 difference of 0.5 is narrow even by its own convention.</p>
+    </details>
+  </div>
+
+  <h3 data-edit-id="evidence-design-title">Which model and training choices changed?</h3>
+  <div class="ablation-reading__design">
+    <div><span>REPORTED AS SHARED</span><strong data-edit-id="evidence-held-backbone">Internal evaluation framework and the same evaluation setting</strong></div>
+    <div><span>THE COMPARISON</span><strong data-edit-id="evidence-held-budget">DeepSeek-V4-Flash-Base versus DeepSeek-V4.1-Flash-Base</strong></div>
+    <div><span>WHAT CHANGED TOGETHER</span><strong data-edit-id="evidence-change">Architecture, backbone size, activated parameters, data curation, and native multimodal training</strong></div>
+    <div><span>OUTCOMES</span><strong data-edit-id="evidence-metric">Benchmark scores; higher is better for every selected metric</strong></div>
+  </div>
+  <p class="ablation-reading__caption" data-edit-id="evidence-design-note">Table 1 explicitly supports comparability of the evaluation procedure. It does not make the training histories identical. The report itself attributes results in part to substantial pre-training data-curation improvements and notes that V4.1 introduces native multimodal training.</p>
+
+  <h3 data-edit-id="evidence-table-title">Read selected results from Report Table 1</h3>
+  <div class="ablation-reading__table-wrap">
+    <table>
+      <caption data-edit-id="evidence-caption">Vendor-reported values from DeepSeek-V4.1-Flash Report Table 1, PDF p. 24. This selected subset is not our result.</caption>
+      <thead><tr><th>Reported Table 1 row</th><th>V4-Flash-Base</th><th>V4.1-Flash-Base</th></tr></thead>
+      <tbody>
+        <tr><td>Activated parameters</td><td>13B</td><td>8B / 16B</td></tr>
+        <tr><td>MMLU-Pro (EM), 5-shot ↑</td><td>68.3</td><td>74.1</td></tr>
+        <tr><td>BigCodeBench (Pass@1), 3-shot ↑</td><td>56.8</td><td>60.6</td></tr>
+        <tr><td>HumanEval (Pass@1), 0-shot ↑</td><td>69.5</td><td>79.4</td></tr>
+        <tr><td>MATH (EM), 4-shot ↑</td><td>57.4</td><td>61.1</td></tr>
+        <tr><td>MGSM (EM), 8-shot ↑</td><td>85.7</td><td>80.2</td></tr>
+        <tr><td>LongBench-V2 (EM), 1-shot ↑</td><td>44.7</td><td>45.2</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="ablation-reading__caption" data-edit-id="evidence-row-warning">The activated-parameter row is not a score and the 8B / 16B notation has a context: the report describes 8B activation during prefill and 16B during decode. Do not average it, and do not infer end-to-end cost from it alone.</p>
+
+<figure class="course-meme theory-reaction" id="meme-credit"><figcaption><span class="reaction-label">RESEARCHER MOMENT</span><p data-edit-id="reaction-credit-setup">Changed the architecture AND the training data.</p><p data-edit-id="reaction-credit-punch">Me giving all the credit to my favorite layer.</p></figcaption><div class="course-meme-visual"><img src="assets/course-memes/credit.jpg" data-meme-gif="assets/course-memes/credit.gif" data-meme-still="assets/course-memes/credit.jpg" alt="Obama placing a medal on another Obama in a self-congratulation meme" loading="lazy"><button type="button" class="meme-toggle" aria-pressed="false">Play meme</button></div></figure><div class="theory-challenge" id="challenge-evidence" data-theory-quiz="evidence"><span class="reaction-label">YOUR TURN · ONE DECISION</span><h3 data-edit-id="challenge-evidence-title">Which claim can Table 1 support?</h3><p data-edit-id="challenge-evidence-prompt">V4.1-Flash-Base scores 74.1 on MMLU-Pro; V4-Flash-Base scores 68.3. Several architecture and training choices changed.</p><div class="theory-choices" role="group" aria-label="Which claim can Table 1 support?"><button type="button" data-quiz-choice="0" aria-pressed="false">CSA2 caused the entire gain.</button><button type="button" data-quiz-choice="1" aria-pressed="false">The final V4.1 model scored higher in this evaluation.</button><button type="button" data-quiz-choice="2" aria-pressed="false">Every benchmark improved.</button></div><p class="theory-feedback" data-quiz-feedback role="status" aria-live="polite">Choose an answer to see the explanation.</p></div>
+  <div class="ablation-reading__interpretation">
+    <p class="ablation-reading__label">WHAT THE EVIDENCE SUPPORTS</p>
+    <p data-edit-id="evidence-supports">Within DeepSeek’s reported common evaluation setting, V4.1-Flash-Base exceeded V4-Flash-Base on several selected knowledge, code, math, and long-context rows while using 8B activated parameters in prefill and 16B in decode versus 13B for V4-Flash-Base. It also scored lower on MGSM. This supports the narrow descriptive claim that the final V4.1 package had a strong, but non-uniform, reported capability profile alongside its stated efficiency design.</p>
+    <p class="ablation-reading__label">WHAT IT CANNOT ESTABLISH</p>
+    <p data-edit-id="evidence-limitations">It cannot assign the MMLU-Pro gain, the MGSM drop, or any other row to CED, CSA2, FP4 KV, Engram, parameter count, or data curation individually. It does not report seeds, confidence intervals, or run-to-run variance for these table rows. It is also an internal evaluation framework, so the table alone cannot establish external generalization. Architecture explanations are hypotheses until a matched intervention tests them.</p>
+  </div>
+
+  <h3 data-edit-id="evidence-followup-title">Define an FP4-versus-FP8 follow-up experiment</h3>
+  <div class="ablation-reading__followup">
+    <div><span>QUESTION</span><p data-edit-id="evidence-followup-question">For one fixed checkpoint, does serving the main KV cache in FP4 instead of FP8 measurably change long-context quality?</p></div>
+    <div><span>PLAN</span><p data-edit-id="evidence-followup-plan">Run the identical checkpoint, prompts, decoding settings, sequence lengths, and hardware with both cache precisions. Keep the backend configuration as comparable as possible and document precision-specific kernels. Repeat on representative long-context tasks and on the same sampled prompts.</p></div>
+    <div><span>MEASURE</span><p data-edit-id="evidence-followup-measure">Pre-register task accuracy and loss as quality metrics; log KV bytes per token, latency, and failures separately. Measure short and long contexts because a cache trade-off may appear only at length.</p></div>
+    <div><span>DECISION RULE</span><p data-edit-id="evidence-followup-rule">Report paired differences and their spread. Call any conclusion limited to this fixed checkpoint: it tests inference-time cache precision, not whether quantization-aware training would change the outcome.</p></div>
+  </div>
+  <p class="ablation-reading__disclaimer" data-edit-id="evidence-proposal-status">This is a proposed experiment, not a run performed in this course.</p>
+
+  <p class="source" data-edit-id="evidence-source">Primary source: <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf" target="_blank" rel="noopener">DeepSeek-AI, “DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression” ↗</a>, §4.3.2 and Table 1, PDF pp. 23–24. Architecture context: §2.1–2.4, PDF pp. 7–14. Vendor-reported; no experiment in this lesson was run.</p>
+<button class="task-complete" type="button" data-task-id="read-ablation">Mark this lesson complete</button>
+</section>

@@ -1,0 +1,21 @@
+<section id="course-next" class="course-next" aria-labelledby="next-title">
+  <p class="eyebrow">COURSE CHECKPOINT</p>
+  <h2 id="next-title" data-edit-id="next-title">Review the architecture and choose your next experiment</h2>
+  <p class="course-next__lede" data-edit-id="next-lede">You have worked through how V4.1 stores information, processes tokens, and checks proposed outputs. Use this checkpoint to review those ideas, then choose one small experiment.</p>
+
+  <div class="course-next__cards" aria-label="What this course has covered">
+    <a href="#attention-designs" class="course-next__card"><span>MEMORY DESIGNS</span><strong data-edit-id="next-memory-title">Explain what each cache design changes</strong><p data-edit-id="next-memory-body">KV caches hold per-input attention state. Compression, sharing, selection, and FP4 change storage or retrieval constraints; they do not share layer outputs.</p></a>
+    <a href="#single-pass-mhc" class="course-next__card"><span>LEARNED COMPUTATION</span><strong data-edit-id="next-computation-title">Explain how residual streams combine</strong><p data-edit-id="next-computation-body">mHC mixes residual streams with learned coefficients. Single-Pass shifts input-mix timing; exact kernel fusion is a separate execution optimization.</p></a>
+    <a href="#read-ablation" class="course-next__card"><span>VERIFICATION</span><strong data-edit-id="next-verification-title">Explain what the benchmark comparison supports</strong><p data-edit-id="next-verification-body">A finished-model comparison can describe the package’s reported scores. It cannot isolate one architecture component when data, training, and model choices changed together.</p></a>
+  </div>
+
+  <div class="course-next__build">
+    <p class="eyebrow">TRY AN EXISTING LAB</p>
+    <h3 data-edit-id="next-build-title">Pick one small mechanism to inspect</h3>
+    <p data-edit-id="next-build-body"><a href="#experiment">Calculate cache-sharing arithmetic</a>, <a href="#engram-lab">run the tiny Engram data-flow lab</a>, or <a href="#trained-baseline">inspect the recorded trained baseline</a>. Each has a declared scope; none builds the full V4.1 model.</p>
+  </div>
+
+  <details class="course-next__check"><summary data-edit-id="next-check-title">Self-check: are cache, model weights, and attention the same thing?</summary><p data-edit-id="next-check-answer"><strong>No.</strong> Model weights are learned parameters reused across inputs. A KV cache is temporary state computed for the current sequence. Attention uses a query to score cached keys, turns those scores into weights, and combines cached values. The cache is what attention can read; it is not the weights or the attention output.</p></details>
+
+  <p class="course-next__upcoming" data-edit-id="next-upcoming"><strong>Upcoming lessons:</strong> attention-sharing training, pretraining data, and reasoning-effort control from the V4.1 report. Our small baseline already demonstrates a training loop; reproducing full DeepSeek training remains beyond the work shown here.</p>
+</section>

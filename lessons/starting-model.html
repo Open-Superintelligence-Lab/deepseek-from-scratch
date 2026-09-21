@@ -1,0 +1,19 @@
+<section id="starting-model">
+<p class="eyebrow">02 / OUR STARTING IMPLEMENTATION</p>
+<h2 data-edit-id="starting-model-title">Follow one forward pass through our small attention model</h2>
+<p data-edit-id="starting-model-why">The architecture above is our destination. To understand its memory choices, first inspect a model small enough to follow in a few lines. This is the actual NumPy implementation used by the upcoming cache experiment.</p>
+<div class="callout"><p data-edit-id="starting-model-scope"><strong>What exists today:</strong> one causal attention layer with random, fixed weights. It accepts token IDs and returns next-token scores. It has no feed-forward block, normalization, or training loop, so it is an attention test model, not a complete DeepSeek reproduction or a trained chatbot.</p></div>
+<div class="model-flow" aria-label="Token IDs plus positions become vectors, then causal attention, then scores for the next token">
+<div><small>INPUT</small><strong>[12, 37, 9]</strong><span>Three example token IDs</span></div><b aria-hidden="true">→</b><div><small>EMBED</small><strong>3 × 32 numbers</strong><span>Token + position vectors</span></div><b aria-hidden="true">→</b><div><small>ATTEND</small><strong>Q, K, V</strong><span>Only read current and earlier positions</span></div><b aria-hidden="true">→</b><div><small>OUTPUT</small><strong>256 scores</strong><span>At the last position, score the next token</span></div>
+</div>
+<div class="lookup-reading-step"><span>1 / REPRESENT THE INPUT</span><h3 data-edit-id="starting-model-input">Each position starts with a 32-number vector</h3><p data-edit-id="starting-model-embedding">The toy vocabulary has 256 IDs. For [12, 37, 9], the code selects three token embeddings and adds the embeddings for positions 0, 1, and 2. The token IDs in this experiment are synthetic; we are not using a text tokenizer here.</p><pre class="source-code"><code>x = E[tokens] + P[:len(tokens)]</code></pre></div>
+<div class="lookup-reading-step"><span>2 / READ THE PREFIX</span><h3 data-edit-id="starting-model-attention">Attention combines information from visible positions</h3><p data-edit-id="starting-model-qkv">The code transforms those vectors into queries, keys, and values. A query scores the keys; softmax turns those scores into weights for mixing the values. The causal mask blocks future positions.</p><pre class="source-code"><code>q, k, v = x @ WQ, x @ WK, x @ WV
+scores = q @ k.T * scale
+scores[np.triu_indices(len(tokens), 1)] = -np.inf
+hidden = softmax(scores) @ v</code></pre></div>
+<div class="lookup-reading-step"><span>3 / SCORE THE NEXT TOKEN</span><h3 data-edit-id="starting-model-output">Read the scores at the final position</h3><p data-edit-id="starting-model-logits">The output projection produces 256 scores per position. For this three-token prefix, the last row scores what could come after token 9. With untrained weights, those scores are not useful language predictions. They are still useful for checking that two implementations perform the same calculation.</p><pre class="source-code"><code>logits = hidden @ WO @ E.T
+# logits[-1] contains the next-token scores.</code></pre></div>
+<p class="source">Excerpts from our runnable teaching implementation: <a href="exercises/kv_cache_experiment.py" download>Download Python code</a> · <a href="exercises/kv_cache_config.json" download>Experiment configuration</a>.</p>
+<p class="lesson-transition" data-edit-id="starting-model-next">This fixed-weight model isolates the attention calculation. Next, we add the missing transformer components in a separate PyTorch baseline and train it. Afterward, we return to the simpler NumPy model to isolate cache behavior.</p>
+<a class="challenge-link" href="#trained-baseline">Train the small baseline →</a>
+</section>

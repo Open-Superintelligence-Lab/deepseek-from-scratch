@@ -1,0 +1,40 @@
+<section class="course-roadmap" id="roadmap">
+  <p class="eyebrow">COURSE ROADMAP · THEORY FIRST</p>
+  <h2 data-edit-id="text-0386">Understand the architecture, then test its design choices</h2>
+  <p data-edit-id="text-0387">Our backbone is the DeepSeek-V4.1-Flash technical report. Start with what each component does and what information it passes onward. Work through memory, attention, expert routing, and Engram with concrete examples. Then read a result from the paper and try the optional code and experiments. You can follow the theory without running a training job.</p>
+  <div class="roadmap-now">
+    <strong>READ AND EXPLORE</strong>
+    <a href="#architecture"><b>1 · See the whole architecture</b><span>Follow the encoder, decoder, attention, experts, and learned memory on the paper’s diagram.</span></a>
+    <a href="#model-information"><b>2 · Distinguish weights, states, and caches</b><span>Follow one input and identify which information is learned, computed, or saved for later.</span></a>
+    <a href="#kv-cache-explanation"><b>3 · Understand what caching reuses</b><span>See why old keys and values remain valid when the sequence grows.</span></a>
+    <a href="#attention-designs"><b>4 · Compare three attention design choices</b><span>Compression, sharing, and sparse reading solve different parts of the cost problem.</span></a>
+    <a href="#fp4-cache"><b>4b · Store the main cache in FP4</b><span>Try rounding and shared scales; separate the main cache from the local FP8 cache.</span></a>
+    <a href="#memory"><b>5 · Follow sharing and sparse selection</b><span>Calculate two reads from the same memory, then follow the indexer and hierarchical selection.</span></a>
+    <a href="#swa-replay"><b>5b · Rebuild missing local cache</b><span>Follow a saved conversation through global-cache reuse and approximate local replay.</span></a>
+    <a href="#expert-routing"><b>6 · Route a token through experts</b><span>See what the router chooses, how outputs combine, and what happens when workloads are uneven.</span></a>
+    <a href="#single-pass-mhc"><b>6b · Mix residual streams in one pass</b><span>Move an input-mixing decision earlier and see which repeated memory read disappears.</span></a>
+    <a href="#engram"><b>7 · Understand Engram lookup memory</b><span>Follow n-grams, tables, collisions, and contextual gates through the existing separate clips and explanations.</span></a>
+    <a href="#dspark"><b>7b · Draft and verify several tokens</b><span>Separate proposing tokens, checking them, and choosing how many to verify.</span></a>
+    <a href="#task-construction"><b>7c · Construct useful training tasks</b><span>Try three candidate fixes against weak and stronger tests to see what a reward can miss.</span></a>
+    <a href="#read-ablation"><b>8 · Read the evidence in the paper</b><span>Inspect a real comparison, understand what it supports, and identify what remains untested.</span></a>
+  </div>
+  <details>
+    <summary>Optional practice: code and experiments already available</summary>
+    <ol>
+      <li><a href="#starting-model">Trace the NumPy attention implementation.</a> Fixed random weights isolate the calculation.</li>
+      <li><a href="#trained-baseline">Inspect a real small training run.</a> Code, synthetic dataset, settings, weights, loss curve, and samples are saved.</li>
+      <li><a href="#kv-cache-experiment">Check caching correctness and measure storage.</a> Runtime measurements are specific to this small CPU setup.</li>
+      <li><a href="#engram-code">Read the official packed-table code and fix an offset.</a></li>
+      <li><a href="#engram-lab">Try the illustrative Engram lab.</a> Its table examples are not trained model results.</li>
+    </ol>
+  </details>
+  <details>
+    <summary>Later chapters: planned, not implemented yet</summary>
+    <ol>
+      
+      <li><strong>Training this architecture (§3.1.2, §4):</strong> attention-sharing training, data construction, and the training setup described in this report.</li>
+      <li><strong>Post-training and reasoning effort (§5):</strong> expand from the task-construction lesson into reward design and how the paper controls reasoning effort.</li>
+    </ol>
+    <p>Our trained baseline uses a small synthetic command grammar. It does not reproduce DeepSeek’s training or establish natural-language performance. Paper results, illustrative examples, and our own measurements are labeled separately throughout the course.</p>
+  </details>
+</section>

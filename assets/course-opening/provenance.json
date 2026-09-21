@@ -1,0 +1,30 @@
+{
+  "created": "2026-09-20",
+  "paper_covers": [
+    {
+      "file": "deepseek-v41-first-page.png",
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf",
+      "operation": "First page rendered from original PDF; not redrawn"
+    },
+    {
+      "file": "paper-first-page.png",
+      "source": "https://arxiv.org/abs/2601.07372",
+      "operation": "First page rendered from original PDF; not redrawn"
+    },
+    {
+      "file": "deepseek-moe-first-page.png",
+      "source": "https://arxiv.org/abs/2401.06066",
+      "operation": "First page rendered from original PDF; not redrawn"
+    }
+  ],
+  "meme": {
+    "file": "research-board.gif",
+    "source": {
+      "page": "https://tenor.com/search/charlie-conspiracy-gifs",
+      "media": "https://media1.tenor.com/m/4LvAD8hD5tcAAAAC/charlie-day.gif"
+    },
+    "reused_from": "tutorials/ai-news-30s-2026-09-19/deepmind-institute/r01/charlie.gif",
+    "modified": false
+  },
+  "copy": "Independent course introduction and meme caption by course editor"
+}

@@ -1,0 +1,112 @@
+<section id="model-information" class="model-information" aria-labelledby="model-information-title">
+  <p class="eyebrow">01A / MODEL INFORMATION FLOW</p>
+  <h2 id="model-information-title" data-edit-id="info-title">What information moves through DeepSeek—and where does it live?</h2>
+  <p class="info-lede" data-edit-id="info-lede">A model answers one token at a time, but it does not keep every kind of information in the same place. Some numbers are learned once during training. Some are calculated for this request. Some are cached because the next token will need them. This distinction explains both DeepSeek’s CED architecture and why “memory” can mean several different things.</p>
+
+  <div class="info-prediction" aria-labelledby="info-prediction-title">
+    <p>MAKE A PREDICTION</p>
+    <h3 id="info-prediction-title" data-edit-id="info-prediction-title">Predict which state changes when one prompt token changes</h3>
+    <div class="info-options" role="group" aria-label="Prediction choices">
+      <button type="button" data-info-answer="weights">Only learned parameters</button>
+      <button type="button" data-info-answer="request">The request-specific states and cache</button>
+      <button type="button" data-info-answer="nothing">Nothing: the model was already trained</button>
+    </div>
+    <p class="info-feedback" id="info-prediction-feedback" aria-live="polite">Choose an answer, then reveal the reasoning.</p>
+  </div>
+
+  <div class="info-reveal" id="info-prediction-reveal" hidden>
+    <strong>Reveal: the request-specific states and cache change.</strong>
+    <p data-edit-id="info-prediction-reveal">The model’s learned parameters stay fixed while it serves a request. Different input tokens produce different temporary vectors, so the KV cache for this sequence changes too. A trained Engram table stays fixed as well, although a different token sequence can address different rows and its current context can gate their contribution differently.</p>
+  </div>
+
+  <h3 data-edit-id="info-four-stores-title">Identify four places where model information lives</h3>
+  <p data-edit-id="info-four-stores-intro">The labels below describe different jobs. A vector is an array of numbers. It can participate in language behavior after training, but it is not a little sentence with a literal meaning stored inside it.</p>
+  <div class="info-store-grid">
+    <article class="info-store info-store--learned">
+      <p>1 / TRAINED ONCE</p>
+      <h4 data-edit-id="info-parameters-heading">Model parameters</h4>
+      <p data-edit-id="info-parameters-body">Embeddings, attention projections, expert weights, and other learned weights are updated during training. At ordinary inference they are fixed. They specify how the model transforms an input; they are not a cache for this one conversation.</p>
+      <span>Persists across requests</span>
+    </article>
+    <article class="info-store info-store--temporary">
+      <p>2 / COMPUTED NOW</p>
+      <h4 data-edit-id="info-states-heading">Hidden states</h4>
+      <p data-edit-id="info-states-body">Every layer computes a contextual vector for each token position. These temporary activations depend on this input and this position. A hidden state is a working representation used for the next calculation, not a word definition.</p>
+      <span>Exists for this forward pass</span>
+    </article>
+    <article class="info-store info-store--cache">
+      <p>3 / KEPT FOR THE NEXT TOKEN</p>
+      <h4 data-edit-id="info-global-heading">Input-dependent global KV</h4>
+      <p data-edit-id="info-global-body">Keys and values derived from this sequence let later queries read earlier context without rebuilding those entries. In DeepSeek V4.1-Flash CED, decoder global KV is projected from the final encoder hidden states.</p>
+      <span>Grows with this sequence</span>
+    </article>
+    <article class="info-store info-store--engram">
+      <p>4 / LEARNED, THEN LOOKED UP</p>
+      <h4 data-edit-id="info-engram-heading">Engram table</h4>
+      <p data-edit-id="info-engram-body">Engram is a learned conditional-memory module. Token n-grams choose addresses in learned embedding tables; the current hidden state controls how much the retrieved value contributes. It is neither the prompt’s KV cache nor a database of literal facts.</p>
+      <span>Parameters, addressed by input</span>
+    </article>
+  </div>
+
+  <div class="info-rule" data-edit-id="info-rule"><strong>Useful test:</strong> if it would be different for a different prompt, it is request-specific. If training changes it and ordinary inference does not, it is a parameter.</div>
+
+  <h3 data-edit-id="info-ced-title">Separate prompt computation from decoder memory with CED</h3>
+  <p data-edit-id="info-ced-intro">A conventional decoder-only transformer produces each layer’s KV from that layer’s own hidden states. The V4.1-Flash report describes a 20-layer causal encoder followed by a 20-layer decoder. For the decoder’s <em>global</em> attention, the KV entries are instead projected from the final encoder state using decoder-layer-dependent learned projections.</p>
+  <div class="info-ced-map" aria-label="Conceptual CED information flow">
+    <div class="info-map-node info-map-input"><small>INPUT TOKENS</small><strong>The · tide · rose</strong><span>Illustrative tokens</span></div>
+    <div class="info-map-arrow" aria-hidden="true">→</div>
+    <div class="info-map-node info-map-encoder"><small>CAUSAL ENCODER</small><strong>Final hidden states</strong><span>Computed from this prompt</span></div>
+    <div class="info-map-arrow" aria-hidden="true">→</div>
+    <div class="info-map-node info-map-global"><small>DECODER GLOBAL KV</small><strong>Layer-specific projections</strong><span>Built from final encoder states</span></div>
+    <div class="info-map-arrow" aria-hidden="true">→</div>
+    <div class="info-map-node info-map-decoder"><small>DECODER QUERY</small><strong>Read context, score next token</strong><span>Own query per decoder layer</span></div>
+  </div>
+  <p class="info-caption" data-edit-id="info-ced-caption">This is a conceptual data-flow diagram, not a claim that one vector has one human-readable meaning. The arrows show where tensors are computed and reused.</p>
+
+  <div class="info-two-caches">
+    <div>
+      <p>GLOBAL ATTENTION</p>
+      <h4 data-edit-id="info-global-cache-title">The decoder can share global context</h4>
+      <p data-edit-id="info-global-cache-body">CED lets the decoder obtain global KV from encoder outputs during prefill. CSA2 can then share global KV and indexer keys across selected layers. Later layers still have their own queries, so sharing memory does not make their attention outputs identical.</p>
+    </div>
+    <div>
+      <p>LOCAL ATTENTION</p>
+      <h4 data-edit-id="info-local-cache-title">Each layer still has separate local KV</h4>
+      <p data-edit-id="info-local-cache-body">Sliding-window attention needs keys and values derived from each layer’s current hidden state. The report calls this layer-wise local KV. Decoder SWA KV is separate from the global cache and is generated for decoding through bounded replay; it is not the same object merely stored in a different box.</p>
+    </div>
+  </div>
+
+<!-- include: lessons/unit-projection.html -->
+  <h3 data-edit-id="info-walkthrough-title">Follow an input from token IDs to decoder memory</h3>
+  <p data-edit-id="info-walkthrough-intro">Use the sequence <code>[The, tide, rose]</code>. These are teaching tokens, not actual tokenization and not a model prediction. The cards are a dependency walkthrough, not an exact execution schedule.</p>
+  <div class="info-walkthrough" data-info-walkthrough>
+    <div class="info-walkthrough-tabs" role="tablist" aria-label="Sequence walkthrough">
+      <button type="button" role="tab" aria-selected="true" aria-controls="info-step-panel" id="info-step-tab-0" data-info-step="0">1 · Embed</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="info-step-panel" id="info-step-tab-1" data-info-step="1">2 · Encoder + Engram</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="info-step-panel" id="info-step-tab-2" data-info-step="2">3 · Final encoder state</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="info-step-panel" id="info-step-tab-3" data-info-step="3">4 · Project global KV</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="info-step-panel" id="info-step-tab-4" data-info-step="4">5 · Local KV</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="info-step-panel" id="info-step-tab-5" data-info-step="5">6 · Next token</button>
+    </div>
+    <article class="info-step-card" id="info-step-panel" role="tabpanel" aria-live="polite" aria-labelledby="info-step-tab-0">
+      <p id="info-step-kicker">STEP 1 / INPUT BECOMES VECTORS</p>
+      <h4 id="info-step-title">Look up learned token embeddings</h4>
+      <div class="info-sequence" id="info-step-sequence" aria-label="Illustrative sequence tokens"><span>The</span><span>tide</span><span>rose</span></div>
+      <p id="info-step-body">The token IDs select learned embedding rows. The selected parameter rows persist across requests; the resulting vectors are new temporary states for this sequence. In the released implementation, rotary position information is applied later to attention components rather than simply added as a position-embedding vector here.</p>
+      <div class="info-step-ledger"><div><small>CHANGES WITH PROMPT</small><strong id="info-step-request">Input activation vectors</strong></div><div><small>LEARNED / FIXED AT INFERENCE</small><strong id="info-step-learned">Embedding table</strong></div></div>
+    </article>
+    <div class="info-walkthrough-controls"><button type="button" data-info-prev disabled>← Previous</button><span id="info-step-count">1 / 6</span><button type="button" data-info-next>Next →</button></div>
+  </div>
+
+  <h3 data-edit-id="info-tensor-title">Identify what each tensor represents</h3>
+  <p data-edit-id="info-tensor-body">“Tensor” is the general name for a shaped collection of numbers; a vector is one simple case. A hidden-state tensor can have a position axis and a feature axis. A KV cache adds storage for positions, layers, and heads. These shapes tell the program how to multiply, score, retrieve, and combine numbers. They do not give an individual coordinate a reliable literal label such as “the ocean feature.”</p>
+  <details class="info-details"><summary>Why not say a hidden state “contains the meaning” of a token?</summary><p data-edit-id="info-tensor-details">It is reasonable shorthand to say a state carries context relevant to later computation. But the model’s behavior comes from many numbers interacting through learned projections and nonlinear operations. Treating one state or one coordinate as a clean symbolic sentence overstates what the tensor representation guarantees.</p></details>
+
+  <div class="info-scope">
+    <h3 data-edit-id="info-scope-title">Separate report facts from the teaching model</h3>
+    <p data-edit-id="info-scope-body"><strong>Report-specific:</strong> V4.1-Flash uses CED, has 20 encoder and 20 decoder layers, projects decoder global KV from the final encoder states, retains layer-wise local SWA KV, and integrates two Engram modules. <strong>Illustrative:</strong> our three-word sequence, visual cards, and compact labels are a simplified way to follow the flow. They do not expose a released activation trace or execute the production model.</p>
+  </div>
+  <p class="source">Official report: <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf#page=9" target="_blank" rel="noopener">§2.2 CED, p. 9 ↗</a> · <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf#page=10" target="_blank" rel="noopener">§2.3.1 CSA2 and Figure 4, p. 10 ↗</a> · <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf#page=13" target="_blank" rel="noopener">§2.4.2 Engram, p. 13 ↗</a> · <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf#page=20" target="_blank" rel="noopener">§3.2.2 bounded replay, p. 20 ↗</a>.</p>
+  <a class="challenge-link" href="#kv-cache-explanation">Next: see cached generation step by step →</a>
+<button class="task-complete" type="button" data-task-id="model-information">Mark this lesson complete</button>
+</section>

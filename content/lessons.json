@@ -1,0 +1,54 @@
+{
+  "lessons": [
+    {
+      "id": "selection-attention",
+      "section": "selection",
+      "revision": "r01",
+      "asset": "selection-attention",
+      "narration": [
+        "Sharing memory saves storage. But the model still needs to decide which parts to read.",
+        "That’s where the indexer comes in: it selects a smaller set of entries for attention to use.",
+        "Selecting the entries and computing attention over them are two separate steps.",
+        "Now the difference between Reindex and Reuse becomes clearer.",
+        "Reindex makes a fresh selection from the shared memory.",
+        "Reuse keeps the previous selection, but the layer still performs its own attention computation.",
+        "Reusing the selection does not mean copying the previous layer’s answer."
+      ]
+    },
+    {
+      "id": "hierarchical-indexer",
+      "section": "hierarchy",
+      "revision": "r01",
+      "asset": "hierarchical-indexer",
+      "narration": [
+        "Selecting a few entries does not make the search cheap. The indexer could still score the whole context.",
+        "In DeepSeek’s decoder, the first Full layer scans every visible global position.",
+        "It groups positions into blocks, scores each block by its highest score, and builds a candidate pool from the winning blocks.",
+        "Later Reindex layers search only this pool, each choosing its own top five hundred and twelve entries.",
+        "The pool is bigger than the final selection, so different layers can choose different entries.",
+        "The later searches are bounded by the pool size. But the first full scan still happens.",
+        "This restriction is used during training too, so the later indexers learn under the same constraint."
+      ]
+    },
+    {
+      "id": "engram",
+      "section": "engram",
+      "revision": "r03",
+      "asset": "engram",
+      "narration": [
+        "Engram gives the model a learned memory for short token patterns. An n-gram is the token group used to choose a memory address. The memory stores learned vectors, not paragraphs or a database of facts.",
+        "Take I love New York City. For this example, pretend each word is one token. While processing York, the two-token group is New York. The three-token group is love New York. Every group ends with York, the token being processed. City is still excluded.",
+        "Move to City, and all the windows move with it. The two-token group becomes York City. Near the start, there are not enough earlier tokens, so the longer groups use padding.",
+        "How does a group find its memory? Give New York the example IDs seventy-two and eighteen. Our toy hash multiplies the first ID by thirty-one, adds the second, and takes the remainder after division by one hundred and one. That selects row twenty-eight.",
+        "Now reverse the IDs. The same calculation selects row twenty-four. Token order matters. The hash calculates where to look; training learns the numbers stored at that address.",
+        "But a different pair, one and ninety-eight, also selects row twenty-eight. Watch the arithmetic: both totals leave the same remainder. These are still different n-grams. They simply share a memory address, so this one head returns the same vector. That is a hash collision.",
+        "Why can that happen? Our toy table has only one hundred and one rows, but many more possible token pairs. Some must share a row. Like two people assigned the same locker: same locker number does not mean the same person, or the same meaning.",
+        "Engram uses several hash heads. Two groups can collide in one head but reach different rows in another. Combining the retrieved vectors helps distinguish them. It does not guarantee that every possible group gets a unique representation.",
+        "DeepSeek uses eight heads for each group length: two, three, and four tokens. That is twenty-four row lookups at each position in one Engram module. These are hash heads, not attention heads. Our tiny hash was just a teaching example.",
+        "The retrieved vectors are combined, then projected into a key and a value. The key is compared with the model's current hidden state to calculate a gate. That controls how much of the value is added.",
+        "Here is a toy value. A gate of point two adds a small contribution; point eight adds a larger one. The same token group retrieves the same memory within a module, but context changes how much it contributes. Four-token lookups do not limit the whole model to four tokens of context.",
+        "And the addresses depend on token IDs, so they can be calculated early. Engram can fetch its vectors while other model computation runs. That is the whole path: form the group, calculate addresses, retrieve vectors, and let context control their contribution."
+      ]
+    }
+  ]
+}

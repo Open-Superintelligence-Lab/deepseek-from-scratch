@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Create DeepSeek from scratch — Vuk Rosić</title><link href="style.css" rel="stylesheet"/><link href="shared-query-example.css" rel="stylesheet"/><link href="trained-baseline.css" rel="stylesheet"/><link rel="stylesheet" href="lessons/model-information.css"/><link rel="stylesheet" href="attention-designs.css"/><link rel="stylesheet" href="expert-routing.css"/><link rel="stylesheet" href="read-ablation.css"/><link rel="stylesheet" href="theory-engagement.css"/><link rel="stylesheet" href="fp4-cache.css"/><link rel="stylesheet" href="task-construction.css"/><link rel="stylesheet" href="swa-replay.css"/><link rel="stylesheet" href="single-pass-mhc.css"/><link rel="stylesheet" href="dspark.css"/><link rel="stylesheet" href="course-contents.css"/><link rel="stylesheet" href="course-next.css"/><link rel="stylesheet" href="architecture-units.css"/><link rel="stylesheet" href="research-palette.css"/><link rel="stylesheet" href="research-theme.css"/></head>
+<body>
+<aside><a class="brand" href="#start"><span class="mark">↗</span> CREATE DEEPSEEK</a><button id="toc-mobile-toggle" type="button" aria-expanded="false" aria-controls="toc-panel">Contents ☰</button><div id="toc-panel"><div class="nav-label">TABLE OF CONTENTS</div><label class="lesson-finder" for="lesson-search">Find a lesson<input id="lesson-search" type="search" placeholder="Cache, experts, training…" autocomplete="off"></label><p id="lesson-search-status" role="status" class="lesson-search-status" hidden></p><div class="toc-reading">YOU ARE READING<span id="toc-current">Course introduction</span></div><div class="toc-tools"><button type="button" id="toc-expand">Expand all</button><button type="button" id="toc-collapse">Collapse all</button></div><nav id="course-contents" aria-label="Course table of contents"><a href="#start">00 <span>Start here</span></a><a href="#roadmap">↳ <span>Choose your lesson</span></a><a href="#architecture">01 <span>Architecture overview</span></a><a href="#model-information">02 <span>States, weights and caches</span></a><a href="#kv-cache-explanation">03 <span>How the KV cache works</span></a><a href="#attention-designs">04 <span>Three attention design choices</span></a><a href="#fp4-cache">↳ <span>FP4 cache precision</span></a><a href="#memory">05 <span>Shared attention cache</span></a><a href="#shared-query-example">↳ <span>Calculate two different reads</span></a><a href="#selection">06 <span>Indexer and attention</span></a><a href="#hierarchy">07 <span>Hierarchical selection</span></a><a href="#swa-replay">↳ <span>Rebuild missing local cache</span></a><a href="#expert-routing">08 <span>How expert routing works</span></a><a href="#single-pass-mhc">↳ <span>Mix residual streams</span></a><a href="#engram">09 <span>Engram memory</span></a><a href="#dspark">↳ <span>Draft and verify tokens</span></a><a href="#task-construction">↳ <span>Construct training tasks</span></a><a href="#read-ablation">10 <span>Read the paper’s evidence</span></a><a href="#starting-model">LAB <span>Inspect the attention code</span></a><a href="#trained-baseline">LAB <span>Train our baseline</span></a><a href="#kv-cache-experiment">LAB <span>Measure the cache</span></a><a href="#engram-code">LAB <span>Packed-table exercise</span></a><a href="#engram-lab">LAB <span>Runnable Engram lab</span></a><a href="#experiment">+ <span>Memory calculator</span></a></nav><div class="later">UPCOMING CHAPTERS<br/><span>Attention-sharing training<br/>Pretraining data<br/>Reasoning effort</span></div><div class="aside-bottom">A guide by <strong>Vuk Rosić</strong><br/>Explain. Build. Test.</div></div></aside>
+<main><header><span>CREATE DEEPSEEK · FROM SCRATCH</span><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf" rel="noopener" target="_blank">Read the paper ↗</a></header>
+<article>
+<!-- include: lessons/start.html -->
+<!-- include: lessons/roadmap.html -->
+<!-- include: lessons/architecture.html -->
+<!-- include: lessons/model-information.html -->
+<!-- include: lessons/kv-cache-explanation.html -->
+<!-- include: lessons/attention-designs.html -->
+<!-- include: lessons/fp4-cache.html -->
+<!-- include: lessons/memory.html -->
+<!-- include: lessons/shared-query-example.html -->
+<!-- include: lessons/selection.html -->
+<!-- include: lessons/hierarchy.html -->
+<!-- include: lessons/swa-replay.html -->
+<!-- include: lessons/expert-routing.html -->
+<!-- include: lessons/single-pass-mhc.html -->
+<!-- include: lessons/engram.html -->
+<!-- include: lessons/dspark.html -->
+<!-- include: lessons/task-construction.html -->
+<!-- include: lessons/read-ablation.html -->
+<!-- include: lessons/starting-model.html -->
+<!-- include: lessons/trained-baseline.html -->
+<!-- include: lessons/kv-cache-experiment.html -->
+<!-- include: lessons/engram-lab.html -->
+<!-- include: lessons/engram-research.html -->
+<!-- include: lessons/experiment.html -->
+<!-- include: lessons/course-next.html -->
+<footer><strong>Sources and course roadmap</strong><p data-edit-id="text-0179">Pick one mechanism above, predict what a change will do, and check it in the runnable exercises. The roadmap separates what you can use today from the builds still to come.</p><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash" rel="noopener" target="_blank">Model and reference implementation ↗</a><small>Independent educational guide. Research and original figure: DeepSeek-AI.</small></footer>
+</article></main><script src="app.js"></script><script src="shared-query-example.js"></script><script src="trained-baseline.js"></script><script src="engram-lab-core.js"></script><script src="engram-lab-ui.js"></script><script src="offset-exercise.js"></script><script src="lessons/model-information.js"></script><script src="attention-designs.js"></script><script src="expert-routing.js"></script><script src="fp4-cache.js"></script><script src="task-construction.js"></script><script src="swa-replay.js"></script><script src="single-pass-mhc.js"></script><script src="dspark.js"></script><script src="architecture-units.js"></script><script src="editor.js"></script><script src="course-contents.js"></script><script src="theory-engagement.js"></script><script src="course-memes.js"></script></body></html>

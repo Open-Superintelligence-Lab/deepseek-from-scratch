@@ -1,0 +1,54 @@
+{
+  "parameters": 41088,
+  "vocabulary_size": 20,
+  "train_sentences": 345,
+  "validation_sentences": 87,
+  "uniform_loss": 2.995732273553991,
+  "unigram_loss": 2.763847827911377,
+  "history": [
+    {
+      "step": 0,
+      "train_loss": 3.379961281677166,
+      "validation_loss": 3.370097990444586
+    },
+    {
+      "step": 100,
+      "train_loss": 0.5631159605244874,
+      "validation_loss": 0.5700990045083105
+    },
+    {
+      "step": 200,
+      "train_loss": 0.5610740691776803,
+      "validation_loss": 0.5727658645486383
+    },
+    {
+      "step": 300,
+      "train_loss": 0.5597752627647913,
+      "validation_loss": 0.5789237824602436
+    },
+    {
+      "step": 400,
+      "train_loss": 0.557131049315763,
+      "validation_loss": 0.5773473119785544
+    },
+    {
+      "step": 500,
+      "train_loss": 0.5541823476356637,
+      "validation_loss": 0.5650235996226407
+    },
+    {
+      "step": 600,
+      "train_loss": 0.5546246957087863,
+      "validation_loss": 0.5721415935265233
+    }
+  ],
+  "samples": [
+    {
+      "prompt": "<bos> move the red circle",
+      "before": "<bos> move the red circle the the <bos> green it twice the <bos>",
+      "after": "<bos> move the red circle down once then paint it green <eos>"
+    }
+  ],
+  "command": "# From the extracted trained-baseline folder:\nuv run --with torch==2.8.0 python r01/train.py --out r02\n# For another run, change only \"training_seed\" in config.json, then use --out r03.",
+  "source": "exercises/baseline-results.json"
+}

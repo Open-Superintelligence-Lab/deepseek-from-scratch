@@ -1,0 +1,20 @@
+{
+  "revision": "intro-r05",
+  "source": "../engram/intro-r05",
+  "paragraphs": [
+    "Sometimes, two or more tokens appear together frequently. For example, “New York.” In our example, these are two separate tokens. We see them together in “flights to New York,” “weather in New York,” and “hotels in New York.” Can we use this information somehow?",
+    "Here’s one idea: have a separate memory table for groups of tokens that appear together frequently. These groups are called n-grams. Just as an individual token can be represented by an embedding vector, we can also associate a whole group of tokens, like “New York,” with an embedding vector."
+  ],
+  "duration_seconds": 27.9,
+  "article_anchor": "engram-script",
+  "tradeoff_anchor": "engram-token-tradeoff",
+  "approval": {
+    "status": "fully_approved",
+    "scope": [
+      "two opening paragraphs",
+      "intro-r05 video"
+    ],
+    "user_confirmed_on": "2026-09-20",
+    "instruction": "Preserve this approved opening. Place later clips separately below it; other sections remain in development."
+  }
+}

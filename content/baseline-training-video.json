@@ -1,0 +1,21 @@
+{
+  "revision": "baseline-training/r01",
+  "duration_seconds": 46.7666666667,
+  "video": "assets/baseline-training-r01.mp4",
+  "script": [
+    "We have traced the architecture. Now we need a model we can actually train, before testing whether a new mechanism helps.",
+    "Our starting point is a small causal transformer. Two attention blocks, feed-forward layers, and next-token prediction. No Engram or experts yet.",
+    "We train it on a tiny language of commands about shapes and colors. Training and validation use different sentences, but share the same grammar.",
+    "Here is the recorded run. Training loss measures prediction on the training sentences. Validation loss measures separate sentences without updating the weights.",
+    "Compare against simple guessing too. A word-frequency baseline predicts common words without reading the context. Beating it is more informative than beating uniform guessing alone.",
+    "Now repeat the run with another training seed. Keep the data split and training budget fixed. This gives us a baseline to compare future architecture changes against."
+  ],
+  "editable_ids": [
+    "baseline-video-script-1",
+    "baseline-video-script-2",
+    "baseline-video-script-3",
+    "baseline-video-script-4",
+    "baseline-video-script-5",
+    "baseline-video-script-6"
+  ]
+}

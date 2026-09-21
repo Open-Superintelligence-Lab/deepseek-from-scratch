@@ -1,0 +1,27 @@
+{
+  "revision": "architecture-tour/r02",
+  "duration_seconds": 49.8,
+  "video": "assets/architecture-tour-r02.mp4",
+  "source": "architecture-tour/r02/build.py",
+  "script": [
+    "Here is the architecture we'll unpack. It looks like a lot of boxes, so let's follow one job at a time.",
+    "Text enters through embeddings. Images take a separate vision path before joining the language model.",
+    "The encoder computes a vector for each position. We turn these vectors into the decoder's global keys and values: its K V cache.",
+    "Attention reads earlier context. DeepSeek combines local attention with compressed global memory, and shares that global memory across selected layers.",
+    "The mixture of experts routes each token to selected networks. We will examine how that routing works.",
+    "Engram adds learned memory for short token groups. Context controls how much that memory contributes.",
+    "At the output, D Spark drafts several future tokens. The main model verifies the draft before accepting it.",
+    "We won't build everything at once. First, follow our tiny attention model, understand its cache, and measure it. Then explore DeepSeek's changes."
+  ],
+  "editable_ids": [
+    "architecture-tour-script-1",
+    "architecture-tour-script-2",
+    "architecture-tour-script-3",
+    "architecture-tour-script-4",
+    "architecture-tour-script-5",
+    "architecture-tour-script-6",
+    "architecture-tour-script-7",
+    "architecture-tour-script-8"
+  ],
+  "note": "Separate overview clip. Source audio, timing, renderer and source references retained. Article edits do not rerender video."
+}

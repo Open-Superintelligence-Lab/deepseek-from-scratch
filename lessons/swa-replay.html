@@ -1,0 +1,72 @@
+<section id="swa-replay" class="swa-lesson">
+  <p class="eyebrow">V4.1 PAPER · §2.2 · §3.2.1–3.2.2 · DEPLOYMENT TRADE-OFF</p>
+  <h2 data-edit-id="swa-title">Why DeepSeek rebuilds part of a cache instead of saving everything</h2>
+  <p class="swa-lede" data-edit-id="swa-intro">A cache miss does not have to mean “start the whole conversation again.” DeepSeek-V4.1-Flash keeps the long-lived part that is useful across turns, then rebuilds a small local state when it is missing. The report attributes a persistent-cache footprint around one eighth of V4’s to removing persistent SWA KV and further compressing global KV. The rebuild is a deliberate approximation—not ordinary exact KV caching.</p>
+
+  <div class="swa-problem">
+    <div><span>LONG-LIVED</span><strong>Global KV</strong><p data-edit-id="swa-global-purpose">Global context can be useful when a later turn refers back to an old tool result or document. V4.1 keeps this cache persistently so a matching prefix can be reused.</p></div>
+    <div><span>SHORT-LIVED</span><strong>Local SWA KV</strong><p data-edit-id="swa-local-purpose">Sliding-window attention needs nearby layer-wise keys and values. They are valuable while a session is active, then quickly lose their reuse value after a turn or session ends. Section 3.2.1 places them in a separate distributed host-DRAM pool with a minutes-scale TTL: absent from persistent storage, not absent everywhere.</p></div>
+  </div>
+
+  <div class="swa-step">
+    <span>1 / FIRST SEPARATE TWO MEANINGS OF “REUSE”</span>
+    <h3 data-edit-id="swa-exact-title">Appending a token can preserve ordinary causal cache entries exactly</h3>
+    <p data-edit-id="swa-exact-body">In a standard causal transformer, an old position cannot attend to a newly appended future token. With fixed weights, token IDs, and positions, its allowed inputs do not change. Its old key and value therefore remain valid. Reusing those entries is an exact-in-principle equivalence to recomputing the full prefix, subject to normal numerical tolerance.</p>
+    <p data-edit-id="swa-exact-boundary">This fact does not say that every way of restoring a <em>multi-layer local</em> cache is exact. A local key/value at an upper layer depends on hidden states beneath it. Those lower-layer states can themselves depend on an earlier local window. Dependencies accumulate through the stack.</p>
+  </div>
+
+  <div class="swa-step">
+    <span>2 / THE EXPENSIVE VERSION OF A RESTART</span>
+    <h3 data-edit-id="swa-stack-title">A local window has a deeper theoretical reach through layers</h3>
+    <p data-edit-id="swa-stack-body">Let <i>L</i> be the number of layers and <i>n</i><sub>win</sub> the SWA window. The report says exact reconstruction of the SWA KV for all layers requires replaying the most recent <i>L × n</i><sub>win</sub> tokens. Each layer can pass information one local window farther back, so keeping only one window of input does not, by itself, recreate the same stacked states.</p>
+    <div class="swa-equation" aria-label="Exact and bounded replay comparison"><div><small>EXACT RECONSTRUCTION</small><strong>L × n<sub>win</sub> replayed tokens</strong><span>preserves the full stacked local dependency</span></div><div><small>BOUNDED REPLAY</small><strong>n<sub>win</sub> replayed tokens</strong><span>truncates local attention at the replay boundary</span></div></div>
+    <p class="swa-callout" data-edit-id="swa-effective-boundary"><strong>Why accept the shorter path?</strong> The paper cites prior work indicating SWA’s effective receptive field can be much smaller than the theoretical <i>n</i><sub>win</sub> × <i>L</i>/2 decoder reach. That is motivation and an empirical hypothesis, not a proof that one local window exactly reconstructs every model state.</p>
+  </div>
+
+  <div class="swa-lab" id="swa-replay-demo">
+    <div class="swa-lab-heading"><span class="reaction-label">INTERACTIVE TOY CACHE</span><span class="swa-toy">ILLUSTRATIVE · NO TIMINGS</span></div>
+    <h3 data-edit-id="swa-demo-title">Follow one prefix through save, reuse, replay, and continuation</h3>
+    <p class="micro" data-edit-id="swa-demo-scope">This toy uses an eight-position prefix, four local layers, and a selectable replay segment. Its numbers are not DeepSeek settings or a measurement. An exact recovery would replay the smaller of the available prefix and the theoretical stacked span. The widget only exposes what persists, what is recomputed, and what the bounded pass intentionally leaves out.</p>
+    <label for="swa-window">Toy replay segment <output id="swa-window-value">3 positions</output></label>
+    <input id="swa-window" type="range" min="1" max="4" step="1" value="3" aria-describedby="swa-window-help">
+    <p class="micro" id="swa-window-help">The toy local window equals the selected segment, so shorter choices make the replay boundary more visible.</p>
+    <div class="swa-controls" role="group" aria-label="Replay walkthrough stages">
+      <button type="button" data-swa-stage="save" aria-pressed="true">1 · Save prefix</button>
+      <button type="button" data-swa-stage="load" aria-pressed="false">2 · Load global KV</button>
+      <button type="button" data-swa-stage="replay" aria-pressed="false">3 · Replay local suffix</button>
+      <button type="button" data-swa-stage="continue" aria-pressed="false">4 · Continue</button>
+    </div>
+    <div class="swa-stage" aria-live="polite">
+      <div><p class="swa-stage-label" id="swa-stage-label">1 / SAVE THE FIRST TURN</p><h4 id="swa-stage-title">The prefix creates global and local state.</h4><p id="swa-stage-body">A completed prefix produces global KV plus local SWA KV. The local part can serve the active conversation, but is not chosen for long-lived persistent storage.</p></div>
+      <div class="swa-status"><div><small>PERSISTENT STORE</small><strong id="swa-store-status">Global KV: positions 0–7</strong></div><div><small>ACTIVE RUNTIME POOL</small><strong id="swa-runtime-status">SWA KV: positions 5–7</strong></div></div>
+    </div>
+    <div class="swa-token-wrap"><div class="swa-token-head"><span>OLDER PREFIX</span><span>RECENT EDGE</span></div><div class="swa-token-row" id="swa-token-row" aria-label="Illustrative prefix positions"></div><div class="swa-legend"><span><i class="swa-persist"></i>stored global KV</span><span><i class="swa-recompute"></i>local state recomputed now</span><span><i class="swa-exclude"></i>outside the bounded local replay</span></div></div>
+    <div class="swa-counts"><div><small>TOY PERSISTENT LOCAL KV</small><strong id="swa-persistent-local">0 positions</strong></div><div><small>TOY BOUNDED REPLAY</small><strong id="swa-bounded-count">3 positions</strong></div><div><small>TOY EXACT REPLAY USED</small><strong id="swa-exact-count">min(8, 4 × 3) = 8 positions</strong></div><div><small>THEORETICAL STACKED SPAN</small><strong id="swa-theoretical-span">4 × 3 = 12 positions</strong></div></div>
+    <p class="theory-feedback" id="swa-demo-feedback" aria-live="polite"></p>
+  </div>
+
+  <div class="swa-step">
+    <span>3 / ENCODER: A PREFIX-CACHE RECOVERY PATH</span>
+    <h3 data-edit-id="swa-encoder-title">Reuse global KV; regenerate only the local state that is missing</h3>
+    <p data-edit-id="swa-encoder-body">For an encoder cache hit with missing encoder SWA KV, the system replays the last <i>n</i><sub>win</sub> tokens of the cached prefix together with the uncached suffix. The replayed prefix regenerates only SWA KV. Its cached global KV is reused without recomputing or overwriting it; the new suffix produces both global and local KV.</p>
+    <p data-edit-id="swa-encoder-quality">The consequence is precise: replayed prefix state is approximate, and global and SWA KV for the new suffix can depend on where the cache hit occurred. The report says its experiments found negligible response-quality degradation, while also stating that these states are not mathematically identical across cache-hit positions.</p>
+  </div>
+
+  <div class="swa-step">
+    <span>4 / DECODER: A DIFFERENT LOCAL-STATE JOB</span>
+    <h3 data-edit-id="swa-decoder-title">Build decoder SWA KV for decoding, not for prefix persistence</h3>
+    <p data-edit-id="swa-decoder-body">CED lets decoder global KV be projected from final encoder hidden states. Decoder SWA KV is different: each decoder layer derives it from that layer’s own hidden states, and the first decode steps need it. V4.1 does not cache decoder SWA KV. At every prefill, it feeds the last <i>n</i><sub>win</sub> prompt tokens’ encoder outputs through the decoder under the same local truncation and keeps the resulting decoder SWA KV only for decoding.</p>
+    <p data-edit-id="swa-decoder-quality">That decoder reconstruction is also explicitly non-equivalent to a full decoder forward pass. The authors report negligible response-quality impact and say they simulated the replay during post-training so the model could adapt to it.</p>
+  </div>
+
+  <div class="theory-challenge" id="swa-check">
+    <span class="reaction-label">CHECK THE CLAIM</span>
+    <h3 data-edit-id="swa-check-title">Does a sliding window make bounded replay exact?</h3>
+    <p data-edit-id="swa-check-prompt">A later layer’s local key/value can depend on a lower layer that reached beyond the replay boundary.</p>
+    <details><summary>Reveal the answer</summary><p data-edit-id="swa-check-answer">No. Ordinary causal caching can exactly reuse already computed entries. Bounded replay deliberately cuts off local attention before the replay start, so it approximates a stacked SWA state. Its case is empirical: the report finds negligible degradation in its tested settings, but warns approximate state reconstruction can still cause degradation in untested boundary cases.</p></details>
+  </div>
+
+  <p class="source">Sources: <a href="https://arxiv.org/html/2609.19969v1#S2.SS2" target="_blank" rel="noopener">DeepSeek-V4.1-Flash §2.2: Causal Encoder-Decoder</a>; <a href="https://arxiv.org/html/2609.19969v1#S3.SS2" target="_blank" rel="noopener">§3.2.1–3.2.2: persistent KV management and SWA Bounded Replay</a>. <a href="content/swa-replay-sources.md">Source and scope notes</a>.</p>
+  <p class="lesson-transition" data-edit-id="swa-next">Global cache sharing, FP4 storage, and bounded local replay address different costs. Together they reduce stored state, but each has its own correctness and quality boundary.</p>
+  <button class="task-complete" type="button" data-task-id="swa-replay">Mark this lesson complete</button>
+</section>

@@ -1,0 +1,11 @@
+{
+  "seed": 7,
+  "vocab_size": 256,
+  "d_model": 32,
+  "context_lengths": [16, 32, 64, 128],
+  "continuation_tokens": 16,
+  "warmups": 2,
+  "repetitions": 7,
+  "dtype": "float32",
+  "device": "CPU"
+}

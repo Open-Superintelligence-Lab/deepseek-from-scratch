@@ -1,0 +1,56 @@
+{
+  "repository": "https://github.com/deepseek-ai/Engram",
+  "retrieved": "2026-09-20",
+  "assets": [
+    {
+      "file": "README.md",
+      "source": "https://raw.githubusercontent.com/deepseek-ai/Engram/main/README.md",
+      "modified": false
+    },
+    {
+      "file": "LICENSE",
+      "source": "https://raw.githubusercontent.com/deepseek-ai/Engram/main/LICENSE",
+      "modified": false
+    },
+    {
+      "file": "arch.png",
+      "source": "https://raw.githubusercontent.com/deepseek-ai/Engram/main/figures/arch.png",
+      "modified": false
+    },
+    {
+      "file": "scaling_law.png",
+      "source": "https://raw.githubusercontent.com/deepseek-ai/Engram/main/figures/scaling_law.png",
+      "modified": false
+    },
+    {
+      "file": "27b_exp_results.png",
+      "source": "https://raw.githubusercontent.com/deepseek-ai/Engram/main/figures/27b_exp_results.png",
+      "modified": false
+    },
+    {
+      "file": "long_context_results.png",
+      "source": "https://raw.githubusercontent.com/deepseek-ai/Engram/main/figures/long_context_results.png",
+      "modified": false
+    },
+    {
+      "file": "case.png",
+      "source": "https://raw.githubusercontent.com/deepseek-ai/Engram/main/figures/case.png",
+      "modified": false
+    },
+    {
+      "file": "engram_demo_v1.py",
+      "source": "https://raw.githubusercontent.com/deepseek-ai/Engram/main/engram_demo_v1.py",
+      "modified": false
+    },
+    {
+      "file": "Engram_paper.pdf",
+      "source": "https://raw.githubusercontent.com/deepseek-ai/Engram/main/Engram_paper.pdf",
+      "modified": false
+    },
+    {
+      "file": "paper-first-page.png",
+      "source": "Engram_paper.pdf, page 1",
+      "modified": "Rendered using pdftoppm, scale-to 1500; uncropped"
+    }
+  ]
+}

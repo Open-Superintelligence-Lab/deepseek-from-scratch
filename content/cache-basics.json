@@ -1,0 +1,28 @@
+{
+  "revision": "cache-basics/r02",
+  "duration_seconds": 55.5333333333,
+  "video": "assets/cache-basics-r02.mp4",
+  "script": [
+    "Suppose our prompt is, the cat sat. We'll treat each word as one token and follow one attention layer.",
+    "The layer calculates a key and a value for each position. Attention uses keys to calculate weights, then combines the values.",
+    "Now we append, down. Do we need to calculate the first three keys and values again?",
+    "Look at cat, in position two. Causal attention lets this position read The and cat. It cannot read sat, which comes later.",
+    "After we append down, cat can still read only The and cat. Its token, its position, and the earlier tokens are all unchanged.",
+    "No earlier position gains a new allowed input. Its representation stays the same through the causal layers. With fixed weights, its keys and values stay the same too.",
+    "So we keep those three pairs in the K V cache, and calculate a new query, key, and value only for down.",
+    "The new query reads all four keys. Its attention weights combine all four values to produce the new attention output.",
+    "We reuse the old keys and values, but still read them. That is the work the cache saves."
+  ],
+  "editable_ids": [
+    "cache-basics-script-1",
+    "cache-basics-script-2",
+    "cache-basics-script-3",
+    "cache-basics-script-4",
+    "cache-basics-causal-after",
+    "cache-basics-causal-result",
+    "cache-basics-script-5",
+    "cache-basics-script-6",
+    "cache-basics-script-7"
+  ],
+  "scope": "One causal attention layer, fixed weights and positions, toy word-level tokenization. Separately editable clip; no concatenation."
+}

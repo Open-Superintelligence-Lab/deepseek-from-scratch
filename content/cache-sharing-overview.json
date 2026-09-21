@@ -1,0 +1,28 @@
+{
+  "revision": "cache-sharing/r03",
+  "duration_seconds": 59.9666666667,
+  "video": "assets/cache-sharing-r03.mp4",
+  "script": [
+    "We just reused a cache across generation steps. Now let's reuse a global cache across layers.",
+    "Normally, each attention layer stores its own keys and values. Three layers means three separate caches, with potentially different contents.",
+    "As the sequence grows, every separate cache takes more memory. So can selected layers read from one shared global cache?",
+    "But those layer caches are not identical. Deleting two caches from an existing model can change its answers. Instead, we design the layers to share memory, and train the model with that design.",
+    "DeepSeek's C S A two is designed for this. Within a sharing group, one layer builds the global cache. Later layers reuse it.",
+    "They don't copy its output. Each layer computes its own query, which can assign different attention weights to the shared entries.",
+    "And each layer still keeps its own local cache. Only the global cache is shared in this example.",
+    "Here is the paper's diagram. Main K V is the global cache. Main Q and S W A K V are calculated separately in each layer.",
+    "So sharing reduces global cache storage. It does not remove the later layers' attention computation."
+  ],
+  "editable_ids": [
+    "cache-sharing-r02-script-1",
+    "cache-sharing-r02-script-2",
+    "cache-sharing-r02-script-3",
+    "cache-sharing-design-script",
+    "cache-sharing-r02-script-4",
+    "cache-sharing-r02-script-5",
+    "cache-sharing-r02-script-6",
+    "cache-sharing-r02-script-7",
+    "cache-sharing-r02-script-8"
+  ],
+  "scope": "Schematic three-layer sharing group. Separately editable clip. Full and Reindex paper panels shown; detailed selection deferred."
+}

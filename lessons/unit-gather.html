@@ -1,0 +1,18 @@
+<div class="unit-example" id="unit-gather" data-unit="gather">
+<p class="eyebrow">ONE OPERATION · WORKED EXAMPLE + UNIT TEST</p>
+<h3 id="unit-gather-title" data-edit-id="unit-gather-title">Use indexer scores to retrieve the right rows</h3>
+<p data-edit-id="unit-gather-intro">The indexer scores cache positions, but attention needs the values at those positions. A small implementation mistake is to pass the scores onward instead of retrieving the rows.</p>
+<div class="unit-steps"><div class="unit-step"><span>STEP 1</span><h4 data-edit-id="unit-gather-step-1">Score four cache positions</h4><pre>Position:  0    1    2    3
+Score:    0.2  0.9  0.1  0.8</pre><p data-edit-id="unit-gather-explain-1">Keep the two positions with the highest scores. We use zero-based positions, as in Python.</p></div><div class="unit-step"><span>STEP 2</span><h4 data-edit-id="unit-gather-step-2">Keep the positions, not the score values</h4><pre>Selected positions = [1, 3]</pre><p data-edit-id="unit-gather-explain-2">The selected scores are 0.9 and 0.8. Those are not row addresses.</p></div><div class="unit-step"><span>STEP 3</span><h4 data-edit-id="unit-gather-step-3">Retrieve values at those positions</h4><pre>Values: [10, 20, 30, 40]
+Read:   [20, 40]</pre><p data-edit-id="unit-gather-explain-3">Attention can now combine these selected values using its own attention weights.</p></div></div>
+<div class="unit-flow">Scores → selected positions → retrieved values → attention</div>
+<div class="unit-challenge"><h4 data-edit-id="unit-gather-task-title">Change one thing and predict the result</h4><p data-edit-id="unit-gather-task">Raise the score at position 0 to 0.95. Keep all other scores and values unchanged. Which two values are now retrieved, in descending score order?</p><div class="unit-fields"><label for="unit-gather-answer-0">First retrieved value<input id="unit-gather-answer-0" type="number" step="any" inputmode="decimal" autocomplete="off"></label><label for="unit-gather-answer-1">Second retrieved value<input id="unit-gather-answer-1" type="number" step="any" inputmode="decimal" autocomplete="off"></label></div><div class="unit-actions"><button type="button" data-unit-check>Check my answer</button><button type="button" data-unit-reveal>Show the calculation</button></div><p class="unit-feedback" data-unit-feedback role="status">Enter both numbers, then check.</p></div>
+<details><summary>See the Python unit test</summary><p data-edit-id="unit-gather-test-purpose">These assertions check the worked input and the changed input. If an assertion fails, the function did not produce the expected result.</p><pre><code>def select_values(scores, values, k=2):
+    ids = sorted(range(len(scores)),
+                 key=lambda i: (-scores[i], i))[:k]
+    return [values[i] for i in ids]
+
+assert select_values([.2,.9,.1,.8], [10,20,30,40]) == [20,40]
+assert select_values([.95,.9,.1,.8], [10,20,30,40]) == [10,20]</code></pre><button type="button" data-unit-run>Run equivalent browser checks</button><p data-unit-test-result role="status">The browser runs JavaScript calculations. The Python version is downloadable below.</p><a href="downloads/architecture_units.py" download>Download all three Python examples and tests</a></details>
+<p class="unit-scope" data-edit-id="unit-gather-scope">This example isolates selecting and gathering global-cache rows. Values are scalars only to make the indexing visible. It does not implement DeepSeek’s learned indexer or the subsequent attention calculation. Ties use lower position first.</p>
+</div>

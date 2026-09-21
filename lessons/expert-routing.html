@@ -1,0 +1,80 @@
+<section id="expert-routing" class="expert-routing-lesson" aria-labelledby="expert-routing-title">
+  <p class="eyebrow" data-edit-id="expert-routing-eyebrow">08 / EXPERT ROUTING</p>
+  <h2 id="expert-routing-title" data-edit-id="expert-routing-title">How V4.1 routes tokens through experts</h2>
+  <p class="expert-routing-lede" data-edit-id="expert-routing-lede">V4.1-Flash uses Mixture-of-Experts (MoE) layers to increase available feed-forward capacity without asking every token to run every feed-forward network. The saving is selective computation, not a promise that every selected expert has a human-readable subject.</p>
+
+  <div class="expert-routing-roadmap" aria-label="Lesson roadmap">
+    <a href="#expert-capacity">1 · Capacity</a><a href="#expert-path">2 · Route</a><a href="#expert-toy">3 · Calculate</a><a href="#expert-v41">4 · V4.1</a><a href="#expert-failure">5 · Limits</a>
+  </div>
+
+  <div id="expert-capacity" class="expert-panel">
+    <p class="expert-kicker" data-edit-id="expert-capacity-kicker">01 / WHY SPARSITY EXISTS</p>
+    <h3 data-edit-id="expert-capacity-title">See how sparse routing limits per-token work</h3>
+    <p data-edit-id="expert-capacity-prose">A dense Transformer layer sends every token through one large feed-forward network (FFN). An MoE layer stores many smaller FFNs, called <strong>experts</strong>, and a router selects a small subset for each token. An expert is a learned FFN with weights and nonlinearities. It is not a person, and selection does not guarantee a stable label such as “the math expert.”</p>
+    <div class="expert-compare" role="group" aria-label="Dense and sparse computation comparison">
+      <div><span class="expert-chip dense">Dense FFN</span><strong>one FFN runs</strong><p>Every token uses the same feed-forward weights.</p></div>
+      <div><span class="expert-chip sparse">MoE FFNs</span><strong>many exist; a few run</strong><p>The router can choose different routed experts for different tokens.</p></div>
+    </div>
+    <p class="expert-boundary" data-edit-id="expert-capacity-boundary"><strong>Parameter counts answer “how much is stored.”</strong> Activated parameters and FLOPs answer part of “how much arithmetic this token asks for.” Neither alone measures end-to-end latency.</p>
+  </div>
+
+  <div id="expert-path" class="expert-panel">
+    <p class="expert-kicker">02 / FOLLOW ONE TOKEN</p>
+    <h3 data-edit-id="expert-path-title">Trace one token through routing and combination</h3>
+    <p data-edit-id="expert-path-prose">At an MoE layer, a token already has a hidden-state vector <em>h</em>. The router scores the routed experts from <em>h</em>, keeps the top <em>k</em>, runs those FFNs, and adds their weighted outputs. This happens token by token; neighbouring tokens can take different routes.</p>
+    <ol class="expert-flow" aria-label="Routing data flow">
+      <li><span>1</span><strong>Hidden state</strong><small>one vector for this token</small></li>
+      <li><span>2</span><strong>Router scores</strong><small>one score per routed expert</small></li>
+      <li><span>3</span><strong>Top-k selection</strong><small>only selected routed FFNs run</small></li>
+      <li><span>4</span><strong>Weighted sum</strong><small>combine their outputs</small></li>
+    </ol>
+    <details class="expert-details"><summary>What does “weighted” mean?</summary><p data-edit-id="expert-weights-explanation">If experts A and C are selected with weights 0.7 and 0.3, their outputs contribute as 0.7 × A(h) + 0.3 × C(h). The exact scoring function and whether top-k weights are normalized are model details. Do not silently assume a softmax or normalized weights.</p></details>
+  </div>
+
+  <div id="expert-toy" class="expert-panel expert-toy">
+    <p class="expert-kicker" data-edit-id="expert-toy-kicker">03 / INTERACTIVE TOY ROUTER</p>
+    <h3 data-edit-id="expert-toy-title">Choose a toy token and follow each calculation</h3>
+    <p data-edit-id="expert-toy-prose">This is a fixed, two-dimensional teaching example: four routed experts, top-2 selection, and explicitly normalized toy weights. It is <strong>not</strong> learned, measured, or extracted from DeepSeek-V4.1-Flash. The toy FFN outputs stay fixed across the choices so you can isolate the routing arithmetic; real FFN outputs also depend on their input state.</p>
+    <label for="expert-token-choice">Illustrative state from</label>
+    <select id="expert-token-choice">
+      <option value="question">“Why does ice float?”</option>
+      <option value="code">“for i in range(n)”</option>
+      <option value="image">an image-patch token</option>
+    </select>
+    <div class="expert-toy-grid">
+      <div class="expert-router-readout"><p>Router raw scores</p><div id="expert-score-list" aria-live="polite"></div><p class="expert-mini">Top-2 selected by score. In this toy, their selected scores are divided by their sum.</p></div>
+      <div class="expert-selected"><p>Selected paths</p><div id="expert-selected-list"></div><p id="expert-weight-equation" class="expert-equation"></p></div>
+      <div class="expert-output"><p>Weighted output</p><output id="expert-output-vector" aria-live="polite"></output><p id="expert-output-equation" class="expert-equation"></p></div>
+    </div>
+    <details class="expert-details"><summary>Predict before changing the token</summary><p data-edit-id="expert-toy-prediction">Will the same experts always win? No. The router receives the token’s current hidden state, which has been shaped by its surrounding context and prior layers. The labels here are just names for four toy FFNs, not evidence of real expert identities.</p></details>
+  </div>
+
+  <div id="expert-v41" class="expert-panel">
+    <p class="expert-kicker" data-edit-id="expert-v41-kicker">04 / WHAT V4.1-FLASH SPECIFIES</p>
+    <h3 data-edit-id="expert-v41-title">Identify the shared and selected routed FFNs</h3>
+    <p data-edit-id="expert-v41-configuration">The <a href="https://arxiv.org/html/2609.19969v1#S4.SS2.SSS1" target="_blank" rel="noopener">V4.1-Flash report’s §4.2.1 architecture configuration</a> says each MoE layer has <strong>1 shared expert</strong> and <strong>384 routed experts</strong>; <strong>6 routed experts activate for each token</strong>. The accompanying official reference implementation makes the intended composition concrete: it sums the weighted outputs of selected routed FFNs, then adds the shared FFN output for every token.</p>
+    <div class="expert-v41-layout" aria-label="V4.1 expert layout">
+      <div class="expert-shared"><strong>Shared expert</strong><span>runs for every token</span></div>
+      <div class="expert-routed"><strong>384 routed experts</strong><span>router selects 6 for this token</span><div aria-hidden="true" class="expert-dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+      <div class="expert-sum"><strong>add outputs</strong><span>back into the layer path</span></div>
+    </div>
+    <p data-edit-id="expert-v41-router">The official reference implementation uses correction biases to help choose experts, while retaining the original scores as output weights. It also has separate correction biases for image-span tokens. The <a href="https://arxiv.org/html/2609.19969v1#S2.SS1.SSS1" target="_blank" rel="noopener">report’s §2.1.1 multimodal routing section</a> describes modality-specific bias updates to balance image and text loads separately during training.</p>
+    <p class="expert-boundary" data-edit-id="expert-v41-activation">V4.1’s Causal Encoder–Decoder makes prefill and decode different execution modes. The report gives 552B backbone parameters, 8B activated parameters per prefill token, and 16B per decode token for the full architecture. Those figures are not only this MoE layer and should not be reverse-engineered from “6 of 384.”</p>
+  </div>
+
+  <div id="expert-failure" class="expert-panel">
+    <p class="expert-kicker" data-edit-id="expert-failure-kicker">05 / THE FAILURE MODES</p>
+    <h3 data-edit-id="expert-failure-title">Check whether compute savings fix the bottleneck</h3>
+    <div class="expert-failure-grid">
+      <article><h4>Routing imbalance</h4><p>If too many tokens choose the same few experts, those experts become overloaded while others idle. A batch may wait for the crowded path. Load balancing tries to spread use; it does not make every token equally expensive.</p></article>
+      <article><h4>Communication and dispatch</h4><p>When experts are distributed across devices, tokens may need to be grouped, sent to the right device, computed, and returned. Those transfers and synchronization can matter to wall time.</p></article>
+      <article><h4>Capacity is not a semantic guarantee</h4><p>Even if routes correlate with patterns in analysis, the experts are trained jointly and can change roles. A route is a numerical decision, not a certified domain assignment.</p></article>
+    </div>
+<div class="theory-challenge expert-load-demo" id="expert-load-demo"><span class="reaction-label">SEE THE BOTTLENECK</span><h3 data-edit-id="load-title">Twelve tokens. Four experts. One very busy expert.</h3><p data-edit-id="load-intro">This toy routes each token to one expert so the workload is easy to count. V4.1 selects six routed experts per token; this is only an illustration of uneven load.</p><div class="theory-choices" role="group" aria-label="Compare toy expert workloads"><button type="button" data-load-mode="crowded" aria-pressed="true">Crowded routing</button><button type="button" data-load-mode="spread" aria-pressed="false">Even routing</button></div><div class="expert-load-bars" aria-label="Number of tokens sent to each toy expert" data-load-bars></div><p class="theory-feedback" data-load-explanation aria-live="polite"></p><p class="micro" data-edit-id="load-boundary">Both examples assign 12 tokens. Changing the distribution is not a measured speedup or an implementation of DeepSeek’s balancing algorithm. In the paper, text and image tokens have separate correction biases for selection; original routing scores still weight the outputs.</p></div><figure class="course-meme theory-reaction" id="meme-expert-supervisor"><figcaption><span class="reaction-label">RESEARCHER MOMENT</span><p data-edit-id="reaction-expert-supervisor-setup">384 experts available.</p><p data-edit-id="reaction-expert-supervisor-punch">The router watching every token choose the same six.</p></figcaption><div class="course-meme-visual"><img src="assets/course-memes/expert-supervisor.jpg" data-meme-gif="assets/course-memes/expert-supervisor.gif" data-meme-still="assets/course-memes/expert-supervisor.jpg" alt="Roz from Monsters Inc watching sternly" loading="lazy"><button type="button" class="meme-toggle" aria-pressed="false">Play meme</button></div></figure>
+    <details class="lesson-check"><summary>Check yourself: does sparse routing guarantee lower latency?</summary><p><strong>No.</strong> It can reduce the amount of expert arithmetic for a token, but latency also depends on batching, routing balance, kernel efficiency, device placement, memory traffic and communication.</p></details>
+    <p class="lesson-transition" data-edit-id="expert-failure-transition">MoE changes how the feed-forward computation is allocated. It does not replace attention, KV-cache design, or the rest of the Transformer system. <a href="#single-pass-mhc">Next: how residual streams are mixed between blocks →</a></p>
+  </div>
+
+  <p class="source" data-edit-id="expert-routing-source">Sources and claim boundaries: see <a href="content/expert-routing-sources.md" target="_blank">expert-routing-sources.md</a>. The V4.1 configuration claims come from the saved DeepSeek-V4.1-Flash report and official reference implementation; all four-expert numbers above are explicitly illustrative.</p>
+<button class="task-complete" type="button" data-task-id="expert-routing">Mark this lesson complete</button>
+</section>
