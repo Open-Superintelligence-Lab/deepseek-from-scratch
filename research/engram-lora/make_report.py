@@ -1,6 +1,6 @@
 """Render small downloaded metric files; no weights or datasets needed locally."""
 from pathlib import Path
-import json,html
+import json,html,statistics
 p=Path(__file__).parent
 sections=[]
 for name,title in [('pilot-r01','Small data: 20 examples per intent'),('banking-full-r01','All available training examples')]:
@@ -43,7 +43,13 @@ if text_runs:
     for name,rows in text_runs:
         by={r['method']:r for r in rows}
         page+=f'<tr><td>{html.escape(name)}</td>'+''.join(f'<td>{by[m]["test"]["perplexity"]:.2f}</td>' for m in ['frozen','lora','engram'])+'</tr>'
-    page+='</table><p>Same data and evaluation blocks across seeds; initialization and training order vary. Classification above remains a single-seed experiment.</p></section>'
+    if len(text_runs)>1:
+        page+='<tr><td>Mean ± sample SD</td>'
+        for method in ['frozen','lora','engram']:
+            values=[next(r['test']['perplexity'] for r in rows if r['method']==method) for _,rows in text_runs]
+            page+=f'<td>{statistics.mean(values):.2f} ± {statistics.stdev(values):.2f}</td>'
+        page+='</tr>'
+    page+='</table><p>Same data and evaluation blocks across seeds; initialization and training order vary. Classification above remains a single-seed experiment. Standard deviation describes these runs; it is not a confidence interval or evidence across datasets.</p></section>'
     rows=text_runs[0][1]
     page+='<section><h2>Read every saved continuation from seed 42</h2><p>Prompts were fixed before training. Greedy generation, up to 40 new tokens. These are raw outputs, including errors and repetition; no instruction tuning was performed.</p>'
     for i,sample in enumerate(rows[0]['samples']):

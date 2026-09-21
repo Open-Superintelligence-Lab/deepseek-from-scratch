@@ -1,0 +1,23 @@
+{
+  "seed": 44,
+  "train_blocks": 512,
+  "validation_blocks": 64,
+  "block_length": 256,
+  "epochs": 2,
+  "batch": 4,
+  "learning_rates": [
+    0.0003,
+    0.001
+  ],
+  "data": "Salesforce/wikitext wikitext-2-raw-v1",
+  "selection": "lowest validation NLL",
+  "generation_prompts": [
+    "The history of artificial intelligence",
+    "The city of New York",
+    "In a scientific experiment,",
+    "The company announced that"
+  ],
+  "generation": "greedy, 40 tokens, full-prefix recomputation for ALL methods; not an optimized decode benchmark",
+  "gpu_contended": true,
+  "scope": "Small contiguous subsets of official splits, not a full WikiText benchmark; no cross-model transfer test"
+}

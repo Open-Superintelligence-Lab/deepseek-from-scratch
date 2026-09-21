@@ -1,0 +1,165 @@
+[
+  {
+    "method": "frozen",
+    "test": {
+      "nll": 3.4661635011434555,
+      "perplexity": 32.01368607286184,
+      "predicted_tokens": 32640,
+      "context_tokens": 256
+    },
+    "samples": [
+      {
+        "prompt": "The history of artificial intelligence",
+        "continuation": " is a long one, and it is not a new one. The first artificial intelligence was developed in the 1950s by Alan Turing, who was a British mathematician. Turing\u2019s",
+        "new_tokens": 40,
+        "seconds": 0.9059972670002026
+      },
+      {
+        "prompt": "The city of New York",
+        "continuation": " is a city of 100 million people. It is the largest city in the United States. It is the capital of the state of New York. It is the largest city in the United",
+        "new_tokens": 40,
+        "seconds": 0.8831555230026424
+      },
+      {
+        "prompt": "In a scientific experiment,",
+        "continuation": " the researchers used a small, 10-centimeter-long, 10-millimeter-wide, 10-millimeter-deep, 10-millimeter-",
+        "new_tokens": 40,
+        "seconds": 0.891959725999186
+      },
+      {
+        "prompt": "The company announced that",
+        "continuation": " it would be able to sell its products to the public in 2015.\n\nThe company is also working on a new product called the \u201cSport-Touch\u201d that will",
+        "new_tokens": 40,
+        "seconds": 0.8990680080023594
+      }
+    ]
+  },
+  {
+    "method": "lora",
+    "lr": 0.001,
+    "best_validation_nll": 2.5442460775375366,
+    "trainable_parameters": 460800,
+    "history": [
+      {
+        "epoch": 1,
+        "train_nll": 3.094130428507924,
+        "validation": {
+          "nll": 2.5720255225896835,
+          "perplexity": 13.092316384450061,
+          "predicted_tokens": 16320,
+          "context_tokens": 256
+        }
+      },
+      {
+        "epoch": 2,
+        "train_nll": 2.8889857716858387,
+        "validation": {
+          "nll": 2.5442460775375366,
+          "perplexity": 12.733624300876732,
+          "predicted_tokens": 16320,
+          "context_tokens": 256
+        }
+      }
+    ],
+    "training_wall_seconds": 29.026344728001277,
+    "peak_allocated_mb": 2046.66455078125,
+    "artifact_bytes": 1885583,
+    "reload_exact": true,
+    "test": {
+      "nll": 2.84101140871644,
+      "perplexity": 17.13308532881639,
+      "predicted_tokens": 32640,
+      "context_tokens": 256
+    },
+    "samples": [
+      {
+        "prompt": "The history of artificial intelligence",
+        "continuation": " is a long one . The first AI research was done in the 1950s . The first AI research was done in the 1960s . The first AI research was",
+        "new_tokens": 40,
+        "seconds": 0.971072666998225
+      },
+      {
+        "prompt": "The city of New York",
+        "continuation": " is the largest city in the United States . It is the capital of New York State , and the largest city in the United States . It is the home of the New York Stock Exchange , the New",
+        "new_tokens": 40,
+        "seconds": 0.941274903001613
+      },
+      {
+        "prompt": "In a scientific experiment,",
+        "continuation": " the researchers used a 1990s model of the human brain to simulate the brain of a 1950s model of the human brain . The researchers used a 19",
+        "new_tokens": 40,
+        "seconds": 0.9588399400017806
+      },
+      {
+        "prompt": "The company announced that",
+        "continuation": " it would be selling the product in 2012 . \n",
+        "new_tokens": 15,
+        "seconds": 0.3488803149994055
+      }
+    ]
+  },
+  {
+    "method": "engram",
+    "lr": 0.001,
+    "best_validation_nll": 2.85658460855484,
+    "trainable_parameters": 460352,
+    "history": [
+      {
+        "epoch": 1,
+        "train_nll": 3.4953874684870243,
+        "validation": {
+          "nll": 2.975422754883766,
+          "perplexity": 19.59790660928791,
+          "predicted_tokens": 16320,
+          "context_tokens": 256
+        }
+      },
+      {
+        "epoch": 2,
+        "train_nll": 3.288373300805688,
+        "validation": {
+          "nll": 2.85658460855484,
+          "perplexity": 17.40199071448683,
+          "predicted_tokens": 16320,
+          "context_tokens": 256
+        }
+      }
+    ],
+    "training_wall_seconds": 23.679902290998143,
+    "peak_allocated_mb": 1812.134765625,
+    "artifact_bytes": 1844869,
+    "reload_exact": true,
+    "test": {
+      "nll": 3.184285894036293,
+      "perplexity": 24.150036561623406,
+      "predicted_tokens": 32640,
+      "context_tokens": 256
+    },
+    "samples": [
+      {
+        "prompt": "The history of artificial intelligence",
+        "continuation": " is a long one, and it is not a very clear-cut one. The first AI was developed in the 1950s, and the first successful AI was developed in the ",
+        "new_tokens": 40,
+        "seconds": 0.8960647869971581
+      },
+      {
+        "prompt": "The city of New York",
+        "continuation": " is a city of 100,000 people. It is the largest city in the United States. It is also the largest city in the world. It is the capital of New",
+        "new_tokens": 40,
+        "seconds": 0.8818817589999526
+      },
+      {
+        "prompt": "In a scientific experiment,",
+        "continuation": " the researchers used a small, 10-inch-long (25-centimeter-long) glass tube to measure the amount of water in the water column. The researchers used a small",
+        "new_tokens": 40,
+        "seconds": 0.8911498929992376
+      },
+      {
+        "prompt": "The company announced that",
+        "continuation": " it would be able to sell its products to the public in 2015.\n\nThe company has also announced that it will be able to sell its products to the public in 2",
+        "new_tokens": 40,
+        "seconds": 0.8837884420026967
+      }
+    ]
+  }
+]

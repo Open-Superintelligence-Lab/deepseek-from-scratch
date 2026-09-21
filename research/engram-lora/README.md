@@ -2,7 +2,7 @@
 
 [Read the experiment in the course](../../index.html#engram-research) · [Results](report.html)
 
-We freeze SmolLM2-135M and compare a trainable Engram-inspired memory adapter with rank-8 LoRA. Classification and next-token prediction are separate experiments. These are preliminary, single-seed measurements, not an exact DeepSeek reproduction or a claim of a novel general architecture.
+We freeze SmolLM2-135M and compare a trainable Engram-inspired memory adapter with rank-8 LoRA. Classification and next-token prediction are separate experiments. These are preliminary measurements (one classifier seed; three text-generation seeds), not an exact DeepSeek reproduction or a claim of a novel general architecture.
 
 ## Reproduce
 
@@ -16,6 +16,9 @@ python train_banking.py --output banking-full-r01 --epochs 4 --per-class 0 --bat
 python analyze_banking.py
 python train_text.py --smoke --output text-smoke-r01
 python train_text.py --output text-pilot-r01
+python repeat_text.py
+# Optional classifier replication:
+python repeat_banking.py
 ```
 
 Scripts share a GPU lock, use one job at a time, and cap their PyTorch allocator at 30% of GPU memory. Adjust this cap for a different machine. Outputs go to `runs/`; checked-in `results/` contains compact metric snapshots, not model weights or datasets.
@@ -40,6 +43,6 @@ This is a small subset with 256-token context resets, not the standard full-data
 
 ## Limits and planned work
 
-One seed, a small base model, and a shared GPU. Wall-clock speed is affected by other workloads. Three-seed replication, verified-answer generation tasks, unrelated-task retention, and task-specific module swapping are planned. Transfer across different backbones is not tested. The baseline is a base language model, not an instruction-tuned assistant.
+One seed, a small base model, and a shared GPU. Wall-clock speed is affected by other workloads. Text seeds 42, 43 and 44 are complete, using fixed data subsets. Classification seeds 43 and 44 are queued/running; their seed also changes the stratified training/validation split. Verified-answer generation, unrelated-task retention, and task-specific module swapping are planned. Transfer across different backbones is not tested. The baseline is a base language model, not an instruction-tuned assistant.
 
 Original model and dataset licenses apply. BANKING77 attribution: PolyAI; WikiText: Salesforce Research; SmolLM2: Hugging Face. Original Engram: DeepSeek-AI. See their source repositories and the course attribution.

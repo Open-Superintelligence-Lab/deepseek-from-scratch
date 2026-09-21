@@ -169,8 +169,8 @@ def train_one(args,method,lr,train,val,tok,outdir):
     return report
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--smoke',action='store_true');parser.add_argument('--epochs',type=int,default=4);parser.add_argument('--per-class',type=int,default=20);parser.add_argument('--batch',type=int,default=16);parser.add_argument('--seed',type=int,default=42);parser.add_argument('--output',default='pilot-r01');args=parser.parse_args()
-    lock=open(ROOT/'training.lock','w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+    parser=argparse.ArgumentParser();parser.add_argument('--smoke',action='store_true');parser.add_argument('--wait-lock',action='store_true');parser.add_argument('--epochs',type=int,default=4);parser.add_argument('--per-class',type=int,default=20);parser.add_argument('--batch',type=int,default=16);parser.add_argument('--seed',type=int,default=42);parser.add_argument('--output',default='pilot-r01');args=parser.parse_args()
+    lock=open(ROOT/'training.lock','w');fcntl.flock(lock,fcntl.LOCK_EX if args.wait_lock else fcntl.LOCK_EX|fcntl.LOCK_NB)
     torch.set_num_threads(4);torch.cuda.set_per_process_memory_fraction(.30);torch.backends.cuda.matmul.allow_tf32=True
     out=ROOT/'runs'/args.output;out.mkdir(parents=True,exist_ok=True)
     tok=AutoTokenizer.from_pretrained(ROOT/'model',local_files_only=True);tok.pad_token=tok.eos_token;tok.padding_side='right'
