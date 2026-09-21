@@ -1,6 +1,6 @@
 # Create DeepSeek from scratch
 
-[Read the public course](https://vukrosic.github.io/deepseek-from-scratch/) · [Engram vs LoRA research](https://vukrosic.github.io/deepseek-from-scratch/#engram-research)
+[Read the public course](https://open-superintelligence-lab.github.io/deepseek-from-scratch/) · [Engram vs LoRA research](https://open-superintelligence-lab.github.io/deepseek-from-scratch/#engram-research)
 
 Independent, evolving educational course by Vuk Rosić. It does not claim to reproduce a full production DeepSeek model.
 
